@@ -52,3 +52,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['tracker'] = "tracker/mainpage";
+$route['tracker/login'] = "tracker/login";
+$route['tracker/log_auth'] = "tracker/login_logic";
+$route['tracker/register'] = "tracker/register";
+$route['tracker/reg_auth'] = "tracker/register_method";
+
+
+
