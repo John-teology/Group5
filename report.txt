@@ -1,0 +1,7 @@
+Scope control is one of the keys to effective project management. Good project management requires managing scope in such a way that the goals of a project can be obtained on time without leaving out resolution of items that are critical to the project’s success. Good scope control allows the changing and adding of critical tasks without adding in unnecessary items or items that would be best suited for a later version that if added could cause a project to miss it’s critical deadlines.
+Product scope is about all the functions related to the end-result, such as product features, functions, service and quality. 
+
+A project scope statement provides a detailed description of the work that must be done to deliver the output of a project on time and within the allotted budget.
+The scope baseline is the approved project scope and used during scope change management to determine and prevent scope creep. Scope baseline primarily comprises the project scope statement, work breakdown structure, and WBS dictionary. Only upon implementing this scope baseline can the project be directed in the right direction.
+
+Control Schedule is the process of monitoring the status of project activities to update project progress and manage changes to the schedule baseline to achieve the plan. The key benefit of this process is that it provides the means to recognize deviation from the plan and take corrective and preventive actions and thus minimize risk.
