@@ -30,6 +30,7 @@ class Tracker extends CI_Controller {
 
     public function login_logic()
     {
+        unset($_SESSION['registered']);
         unset($_SESSION['wrong']); // use to clear flash data
         $config_rules = array(
             array (
@@ -146,6 +147,8 @@ class Tracker extends CI_Controller {
                         "password" => $password1,
                     )
                     );
+                $this->session->set_flashdata("registered", "You succesfully registered!");
+                // sleep(4);
                 redirect("tracker/login");
                 
             }

@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class T_model extends CI_Model{
 
-    
+
      function login_validation($username,$password)
     {
         $this->db->where("username",$username);
@@ -20,7 +20,7 @@ class T_model extends CI_Model{
 
     function register_credentials($data)
     {
-        $this->db->insert("user",$data);
+        return $this->db->insert("user",$data);
     }   
     
 

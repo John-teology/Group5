@@ -15,6 +15,9 @@
     .error{
         color: red;
     }
+    .success{
+        color: green;
+    }
 </style>
 </head>
 <body>    

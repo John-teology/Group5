@@ -15,6 +15,9 @@
     .error{
         color: red;
     }
+      .success{
+        color: green;
+    }
 </style>
 </head>
 <body>    
@@ -37,6 +40,15 @@
     ?>
     <div class="error">
         <?php echo $this->session->flashdata("wrong") ?>
+    </div>
+    <?php 
+    }
+    ?>
+
+     <?php if($this->session->flashdata("registered")) { 
+    ?>
+    <div class="success">
+        <?php echo $this->session->flashdata("registered") ?>
     </div>
     <?php 
     }
