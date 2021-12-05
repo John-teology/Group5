@@ -31,14 +31,5 @@ class T_model extends CI_Model{
     }   
     
 
-    function try()
-    {
-        $this->db->select("password");
-        $this->db->where("username","putnaginamooo");
-        $result = $this->db->get("user")->row()->password;
-        return $this->encryption->decrypt($result);
-
-    }
-
 }
 ?>

@@ -156,22 +156,6 @@ class Tracker extends CI_Controller {
 
     }
 
-    public function test_encrypt(){
-      
-        // $plain_text = "putnaginamooo";
-        // $try = $this->encryption->encrypt ($plain_text);
-        // echo $try;
-        // echo "<br/>";
-        // $new=  $this->encryption->decrypt($try);
-        // print_r($new);
-
-        $data = $this->t_model->try();
-        // $new=  $this->encryption->decrypt($data);
-        echo $data;
-
-    
-    }
-
 
 }
 
