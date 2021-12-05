@@ -58,6 +58,8 @@ $route['tracker/login'] = "tracker/login";
 $route['tracker/log_auth'] = "tracker/login_logic";
 $route['tracker/register'] = "tracker/register";
 $route['tracker/reg_auth'] = "tracker/register_method";
+$route['tracker/encrypt'] = "tracker/test_encrypt";
+
 
 
 

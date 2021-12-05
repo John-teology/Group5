@@ -141,19 +141,35 @@ class Tracker extends CI_Controller {
             }
             else
             {
+                   
                 $this->t_model->register_credentials(
                     array(
                         "username" => $username,
-                        "password" => $password1,
+                        "password" => $this->encryption->encrypt ($password1)
                     )
                     );
                 $this->session->set_flashdata("registered", "You succesfully registered!");
-                // sleep(4);
                 redirect("tracker/login");
                 
             }
         }
 
+    }
+
+    public function test_encrypt(){
+      
+        // $plain_text = "putnaginamooo";
+        // $try = $this->encryption->encrypt ($plain_text);
+        // echo $try;
+        // echo "<br/>";
+        // $new=  $this->encryption->decrypt($try);
+        // print_r($new);
+
+        $data = $this->t_model->try();
+        // $new=  $this->encryption->decrypt($data);
+        echo $data;
+
+    
     }
 
 
