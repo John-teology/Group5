@@ -1,35 +1,32 @@
 CREATE TABLE Users (
     UserID int,
-    LastName varchar(50),
-    FirstName varchar(50),
     Username varchar(50),
-    Pwd varchar(50),
-    Email varchar(50),
-    DOB varchar(50)
+    Pwd varchar(300),
 );
 
 CREATE TABLE Establishment (
     EstablishmentID int,
     UserID int,
-    ContactTracingID int,
+    con_tra_ID int,
     EstablishmentName varchar(50),
     EstablishmentLocation varchar(50),
     EstablishmentDescription text
 );
 
 CREATE TABLE ContactTracing (
-    ContactTracingID int,
+    Con_tra_ID int,
     UserID int,
     EstablishmentID int,
-    StartTime timestamp,
-    HomeAddress varchar(50),
-    UserFullName varchar(50)
+    first_name varchar(50)
+    last_name varchar(50)
+    email varchar(50)
+    DOB varchar(50),
+
 );
 
 CREATE TABLE Report (
     ReportID int,
-    ContactTracingID int,
-    UserID int,
+    Con_Tra_ID int,
     EstablishmentID int
     
 );
