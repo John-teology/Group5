@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Tracker extends CI_Controller {
 
 
-		public function Mainpage()
+		public function mainpage()
 	{
 		// $this->load->view('pages/Mainpage');
         if($this->session->userdata("username") != "")
@@ -24,7 +24,7 @@ class Tracker extends CI_Controller {
     
 
     public function login()
-    {
+    {  
         $this->load->view("pages/login");
     }
 
@@ -36,12 +36,12 @@ class Tracker extends CI_Controller {
             array (
                 "field" => "username_txt",
                 "label" => "Username",
-                "rules" =>"required",
+                "rules" =>"trim|required",  // callback_ use to call any function you want
             ),
              array(
                 "field" => "password_txt",
                 "label" => "Password",
-                "rules" =>"required",
+                "rules" =>"trim|required",
             ),  
         );
         $this->form_validation->set_rules($config_rules);
@@ -63,27 +63,11 @@ class Tracker extends CI_Controller {
                 redirect("tracker");
             }
             else{
-                $this->session->set_flashdata("wrong", "You input wrong values!");
-                redirect("tracker/login");
+                $this->session->set_flashdata("wrong", "Invalid Credentials");
+                $this->login();
             }
             }
         
-    }
-
-    public function after_login()
-    {
-        if($this->session->userdata("username") != "")
-        {
-            $user = $this->session->userdata("username"); 
-            $this->load->view("pages/mainpage", array
-        (
-            "username" => $user,
-            "dog" => "hello",
-        ));
-        }
-        else{
-            redirect("tracker/login");
-        }
     }
 
 
@@ -96,6 +80,7 @@ class Tracker extends CI_Controller {
 
     public function register()
     {
+        unset($_SESSION['wrong']);
         $this->load->view("pages/register");
     }
 
@@ -108,17 +93,17 @@ class Tracker extends CI_Controller {
             array (
                 "field" => "username_txt",
                 "label" => "Username",
-                "rules" =>"required|is_unique[user.username]",
+                "rules" =>"trim|required|is_unique[user.username]",
             ),
              array(
                 "field" => "password1_txt",
                 "label" => "Password",
-                "rules" =>"required|min_length[8]|max_length[20]",
+                "rules" =>"trim|required|min_length[8]|max_length[20]",
             ),   
             array(
                 "field" => "password2_txt",
                 "label" => "rewrite-Password",
-                "rules" =>"required|min_length[8]|max_length[20]",
+                "rules" =>"trim|required|min_length[8]|max_length[20]",
             ),  
         );
 
@@ -155,7 +140,5 @@ class Tracker extends CI_Controller {
         }
 
     }
-
-
 }
 
