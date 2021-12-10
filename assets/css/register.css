@@ -76,7 +76,7 @@ body {
 }
 
 .error {
-	font-size: 13px;
+	font-size: 15px;
 	color: red;
 }
 
@@ -85,6 +85,8 @@ body {
 	margin-top: 35px;
 }
 
-.success {
-	color: green;
+#notequal {
+	padding-top: 10px;
+	font-size: 15px;
+	color: red;
 }

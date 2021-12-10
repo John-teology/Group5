@@ -40,7 +40,7 @@
                 <input type="password" class="form-control" value="<?php echo set_value("password1_txt") ?>" name="password1_txt" id="exampleInputPassword1" placeholder="Enter password">
                 <?php  echo form_error("password1_txt","<div class='error'>","</div>"); ?>
             </div>
-            <div class="div2">
+            <div class="div2" id="last_div">
                 <label for="exampleInputPassword1" class="form-label">Confirm Password:</label>
                 <i class="fa fa-lock"></i>
                 <input type="password" class="form-control" name="password2_txt" value="<?php echo set_value("password2_txt") ?>" id="exampleInputPassword" placeholder="Confirm your password">
@@ -48,7 +48,7 @@
             </div>
             <?php if($this->session->flashdata("not_equal")) { 
             ?>
-            <div class="error">
+            <div  id="notequal">
                 <?php echo $this->session->flashdata("not_equal") ?>
             </div>
             <?php 
