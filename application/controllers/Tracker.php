@@ -140,5 +140,9 @@ class Tracker extends CI_Controller {
         }
 
     }
+
+    public function createEstablishment() {
+        $this->load->view('pages/createEst');
+    }
 }
 
