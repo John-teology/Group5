@@ -102,7 +102,7 @@ class Tracker extends CI_Controller {
             ),   
             array(
                 "field" => "password2_txt",
-                "label" => "rewrite-Password",
+                "label" => "Confirm Password",
                 "rules" =>"trim|required|min_length[8]|max_length[20]",
             ),  
         );
