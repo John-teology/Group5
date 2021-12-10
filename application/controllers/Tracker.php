@@ -25,6 +25,8 @@ class Tracker extends CI_Controller {
 
     public function login()
     {  
+        
+        unset($_SESSION['not_equal']);
         $this->load->view("pages/login");
     }
 
@@ -80,6 +82,7 @@ class Tracker extends CI_Controller {
 
     public function register()
     {
+        unset($_SESSION['registered']);
         unset($_SESSION['wrong']);
         $this->load->view("pages/register");
     }
@@ -102,7 +105,7 @@ class Tracker extends CI_Controller {
             ),   
             array(
                 "field" => "password2_txt",
-                "label" => "rewrite-Password",
+                "label" => "Confirm Password",
                 "rules" =>"trim|required|min_length[8]|max_length[20]",
             ),  
         );
@@ -139,6 +142,10 @@ class Tracker extends CI_Controller {
             }
         }
 
+    }
+
+    public function createEstablishment() {
+        $this->load->view('pages/createEst');
     }
 }
 
