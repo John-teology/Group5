@@ -1,102 +1,98 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+	margin: 0;
+	padding: 0;
 }
 
 .header {
-    display: block;
-    /* position: fixed; */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #a493c0;
-    padding: 10px;
-    height: 50px;
-  }
-  
-  nav a:visited,
-  nav a:link {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  nav > ul {
-    display: inline;
-    padding: 0;
-  }
-  
-  nav > ul > li {
-    display: inline-block;
-    list-style: none;
-    margin: 0 5px 0 5px;
-    /*      */
-    font-size: 20px;
-  }
-
-  .li{
-      padding: 5px;
-  }
-
-  .li1{
-      padding: 0 0 0 58%;
-  }
-
-
-
-.div1{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 0 50px 0;
-    
+	display: block;
+	/* position: fixed; */
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #a493c0;
+	padding: 10px;
+	height: 50px;
 }
 
-.div1 .User{
-
-    width: 40px;
-    border: 10px solid green;
-    padding: 10px 50px 10px 10px;
-    margin: 10px 0 0 25%;
+nav a:visited,
+nav a:link {
+	color: #fff;
+	text-decoration: none;
 }
 
-.div1 .logout{
-    padding: 40px 0 0 60%;
+nav > ul {
+	display: inline;
+	padding: 0;
 }
 
-.bondpaper{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: auto;
-    border: black solid 10px;
-    background-color: white;
-    height: auto;
-    width: 900px;
-    margin: auto;
-  
-
+nav > ul > li {
+	display: inline-block;
+	list-style: none;
+	margin: 0 5px 0 5px;
+	/*      */
+	font-size: 20px;
 }
 
-.createE, .viewE{
-    padding: 0 0 0 10px;
-    border: blue solid 3px;
-    margin: 30px;
-    text-align: center;
-    padding: 80px;
-    border-radius: 10px;
+.li {
+	padding: 5px;
 }
 
-.box1, .box2{
-    border: 15px solid green;
-    display: grid;
-    grid-template-rows: auto ;
-    padding: 0 0 20px 0 ;
+.li1 {
+	padding: 0 0 0 58%;
 }
 
-.buttn{
-    height: 50px;
-    width: 80px;
-    margin: auto;
+.div1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 0 0 50px 0;
 }
 
-.title{
-    margin: 0 0 20px 0;
+.div1 .User {
+	width: 40px;
+	border: 10px solid green;
+	padding: 10px 50px 10px 10px;
+	margin: 10px 50px 0 25px;
+}
+
+.div1 .logout {
+	padding: 40px 0 0 60%;
+}
+
+.bondpaper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: auto;
+	border: black solid 10px;
+	background-color: white;
+	height: auto;
+	width: 900px;
+	margin: auto;
+}
+
+.createE,
+.viewE {
+	padding: 0 0 0 10px;
+	border: blue solid 3px;
+	margin: 30px;
+	text-align: center;
+	padding: 80px;
+	border-radius: 10px;
+}
+
+.box1,
+.box2 {
+	border: 15px solid green;
+	display: grid;
+	grid-template-rows: auto;
+	padding: 0 0 20px 0;
+}
+
+.buttn {
+	height: 50px;
+	width: 80px;
+	margin: auto;
+}
+
+.title {
+	margin: 0 0 20px 0;
 }
