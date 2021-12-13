@@ -78,7 +78,9 @@ class T_model extends CI_Model{
     {
         $this->db->select("*");
         $this->db->where("id",$id);
+
         $result = $this->db->get("contact_tracing")->row();
+        // SELECT * FROM contact_tracing WHERE id = 1
 
         return $result;
     }

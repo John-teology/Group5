@@ -67,13 +67,12 @@ $route['tracker/reg_auth'] = "tracker/register_method";
 $route['tracker/contact_tracing_form'] = "tracker/CT_form";
 $route['tracker/contact_tracing_auth'] = "tracker/CT_form_logic";
 $route['tracker/contact_tracing'] = "tracker/CT_display";
-$route['tracker/contact_tracing_update/(:num)'] = "tracker/CT_update/$1";
-$route['tracker/contact_tracing_update_auth/(:num)'] = "tracker/CT_update_logic/$1";
+$route['tracker/contact_tracing_update/(:any)'] = "tracker/CT_update/$1";
+$route['tracker/contact_tracing_update_auth/(:any)'] = "tracker/CT_update_logic/$1";
 
 
 // routes for creating establishment
 $route['tracker/createEstablishment'] = "tracker/createEstablishment";
-
 
 
 

@@ -10,7 +10,7 @@ class Tracker extends CI_Controller {
         if($this->session->userdata("username") != "")
         {
             $user = $this->session->userdata("username"); 
-            $this->load->view("pages/Mainpage", array
+            $this->load->view("mainpage", array
         (
             "username" => $user,
         ));
@@ -27,7 +27,7 @@ class Tracker extends CI_Controller {
     {  
         
         unset($_SESSION['not_equal']);
-        $this->load->view("pages/login");
+        $this->load->view("login/login");
     }
 
     public function login_logic()
@@ -84,7 +84,7 @@ class Tracker extends CI_Controller {
     {
         unset($_SESSION['registered']);
         unset($_SESSION['wrong']);
-        $this->load->view("pages/register");
+        $this->load->view("register/register");
     }
 
 
@@ -145,7 +145,14 @@ class Tracker extends CI_Controller {
     }
 
     public function createEstablishment() {
-        $this->load->view('pages/createEst');
+          if($this->session->userdata("username") != "")
+        {   
+        $this->load->view('establishment/createEst');
+           }
+        else{
+            redirect("tracker/login");
+        }
+
     }
 
     public function user_proc()
@@ -174,7 +181,7 @@ class Tracker extends CI_Controller {
     {
           if($this->session->userdata("username") != "")
         {   
-            $this->load->view('pages/contact_t_form');
+            $this->load->view('contact_tracing/contact_t_form');
         }
         else{
             redirect("tracker/login");
@@ -247,7 +254,7 @@ class Tracker extends CI_Controller {
                 $user = $this->session->userdata("username"); 
                 $user_id = $this->t_model->get_user_id($user);
                 $data = $this->t_model->get_user_ct($user_id);
-                $this->load->view('pages/contact_t',array(
+                $this->load->view('contact_tracing/contact_t',array(
                     "data"=>$data,
                 ));
             }
@@ -262,17 +269,16 @@ class Tracker extends CI_Controller {
         if($this->session->userdata("username") != "")
         {
             $data = $this->t_model->get_ct_by_id($id);
-            $this->load->view("pages/contact_t_update",array(
+            $this->load->view("contact_tracing/contact_t_update",array(
                 "data" => $data,
             ));
-
         }
         else{
             redirect("tracker/login");
         }
     }
 
-    public function CT_update_logic($id)
+    public function CT_update_logic($ct_id)
     {
         $config_rules = array(
             array (
@@ -305,28 +311,32 @@ class Tracker extends CI_Controller {
         $this->form_validation->set_rules($config_rules);
 
         if($this->form_validation->run() == false)
-        {
-            $this->CT_update($id);
-        }
+            {
+                 $this->CT_update($ct_id);
+
+            }
+
         else
-        {
-            $firstname = $this->input->post("firstname_txt");
-            $lastname = $this->input->post("lastname_txt");
-            $phone = $this->input->post("phone_txt");
-            $email = $this->input->post("email_txt");
-            $age = $this->input->post("age_txt");
-            $data= array(
-                "first_name" => $firstname,
-                "last_name" => $lastname,
-                "age" => $age,
-                "phone_number" => $phone,
-                "email" => $email,
+            {
+                $firstname = $this->input->post("firstname_txt");
+                $lastname = $this->input->post("lastname_txt");
+                $phone = $this->input->post("phone_txt");
+                $email = $this->input->post("email_txt");
+                $age = $this->input->post("age_txt");
+                $data= array(
+                    "first_name" => $firstname,
+                    "last_name" => $lastname,
+                    "age" => $age,
+                    "phone_number" => $phone,
+                    "email" => $email,
 
-            );
-            $this->t_model->update_ct($id,$data);
-        }
+                );
+                $this->t_model->update_ct($ct_id,$data);
 
-        redirect("tracker/contact_tracing");
+                redirect("tracker/contact_tracing");
+
+            }   
+
     }
 }
 
