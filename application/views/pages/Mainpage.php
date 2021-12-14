@@ -24,6 +24,9 @@
 
     <div class="div1">
         <h3 class="User"><?php echo $username ?></h3>
+        
+
+
         <!-- <a class="logout" href= "<?php echo site_url("tracker/logout") ?>" > Logout </a> -->
     </div>
 
