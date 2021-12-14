@@ -1,0 +1,88 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+	display: grid;
+	height: 100%;
+	place-items: center;
+	background-image: url(../../images/bg1_body.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.wrapper {
+	width: 380px;
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.wrapper .logo {
+	line-height: 10px;
+	background-color: #16a085;
+	border-radius: 5px 5px 0 0;
+}
+
+.wrapper .title {
+	padding: 0 0 10px 25px;
+}
+
+.wrapper .logo img {
+	width: 100px;
+	height: 100px;
+	margin: 20px 0 20px 35%;
+}
+
+.wrapper .form {
+	padding: 10px 20px 25px 20px;
+}
+
+.wrapper .form #div1 {
+	height: 45px;
+	margin-bottom: 15px;
+	position: relative;
+	margin: 35px 0 0 0;
+}
+
+.wrapper .form #div1 input {
+	height: 100%;
+	width: 100%;
+	padding-left: 60px;
+}
+
+.wrapper .form #div1 i {
+	position: absolute;
+	width: 47px;
+	height: 100%;
+	color: black;
+	font-size: 18px;
+	background-color: #16a085;
+	border: 1px solid #16a085;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrapper .form #login {
+	position: relative;
+	margin: 40px 0 0 25%;
+	height: 40px;
+	width: 50%;
+}
+
+.error {
+	color: red;
+}
+
+.create {
+	padding: 0 0 0 30%;
+}
+
+.success {
+	color: green;
+}

@@ -53,11 +53,29 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+// routes for mainpage buttons
 $route['tracker'] = "tracker/mainpage";
+$route['tracker/user_profile'] = "tracker/user_proc";
+
+// routes for login/register authetication
 $route['tracker/login'] = "tracker/login";
 $route['tracker/log_auth'] = "tracker/login_logic";
 $route['tracker/register'] = "tracker/register";
 $route['tracker/reg_auth'] = "tracker/register_method";
+
+// routes for Contact tracing form
+$route['tracker/contact_tracing_form'] = "tracker/CT_form";
+$route['tracker/contact_tracing_auth'] = "tracker/CT_form_logic";
+$route['tracker/contact_tracing'] = "tracker/CT_display";
+$route['tracker/contact_tracing_update/(:any)'] = "tracker/CT_update/$1";
+$route['tracker/contact_tracing_update_auth/(:any)'] = "tracker/CT_update_logic/$1";
+
+
+// routes for creating establishment
+$route['tracker/createEstablishment'] = "tracker/createEstablishment";
+
+
+
 
 
 

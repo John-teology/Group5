@@ -10,20 +10,13 @@
       rel="stylesheet"
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
+    />
+    
     /> -->
 
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/login.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/login/login.css'); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <style>
-    .error{
-        color: red;
-    }
-      .success{
-        color: green;
-    }
-    
-</style>
 </head>
 <body>    
     
@@ -52,8 +45,7 @@
                 <i class="fa fa-lock"></i>
                 <input type="password" class="form-control"  name="password_txt" id="exampleInputPassword1" placeholder="Enter password" value="<?php echo set_value('password_txt') ?>">
                 <?php  echo form_error("password_txt","<div class='error'>","</div>"); ?>
-            </div>
-                <?php if($this->session->flashdata("wrong")) { 
+                                <?php if($this->session->flashdata("wrong")) { 
             ?>
             <div class="error">
                 <?php echo $this->session->flashdata("wrong") ?>
@@ -70,6 +62,8 @@
             <?php 
             }
             ?>
+            </div>
+
 
             <button id="login" type="submit" class="btn btn-primary">Login</button>
             <?php echo form_close(); ?>

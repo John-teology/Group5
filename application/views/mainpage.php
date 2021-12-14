@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
 
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/Mainpage.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/mainpage.css'); ?>">
+  
 </head>
 <body>
 
@@ -23,12 +24,15 @@
 
 
     <div class="div1">
+      <a  href="<?php echo site_url("tracker/user_profile")?>">
         <h3 class="User"><?php echo $username ?></h3>
         
 
 
         <!-- <a class="logout" href= "<?php echo site_url("tracker/logout") ?>" > Logout </a> -->
     </div>
+        </a>
+    </div> 
 
     
     <div class="bondpaper">
