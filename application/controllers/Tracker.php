@@ -10,7 +10,7 @@ class Tracker extends CI_Controller {
         if($this->session->userdata("username") != "")
         {
             $user = $this->session->userdata("username"); 
-            $this->load->view("pages/Mainpage", array
+            $this->load->view("mainpage", array
         (
             "username" => $user,
         ));
@@ -27,7 +27,7 @@ class Tracker extends CI_Controller {
     {  
         
         unset($_SESSION['not_equal']);
-        $this->load->view("pages/login");
+        $this->load->view("login/login");
     }
 
     public function login_logic()
@@ -84,7 +84,7 @@ class Tracker extends CI_Controller {
     {
         unset($_SESSION['registered']);
         unset($_SESSION['wrong']);
-        $this->load->view("pages/register");
+        $this->load->view("register/register");
     }
 
 
@@ -145,7 +145,14 @@ class Tracker extends CI_Controller {
     }
 
     public function createEstablishment() {
-        $this->load->view('pages/createEst');
+          if($this->session->userdata("username") != "")
+        {   
+        $this->load->view('establishment/createEst');
+           }
+        else{
+            redirect("tracker/login");
+        }
+
     }
 
     public function user_proc()
@@ -174,7 +181,7 @@ class Tracker extends CI_Controller {
     {
           if($this->session->userdata("username") != "")
         {   
-            $this->load->view('pages/contact_t_form');
+            $this->load->view('contact_tracing/contact_t_form');
         }
         else{
             redirect("tracker/login");
@@ -207,7 +214,7 @@ class Tracker extends CI_Controller {
                 array (
                 "field" => "email_txt",
                 "label" => "Email",
-                "rules" =>"trim|required|min_length[8]|max_length[20]",
+                "rules" =>"trim|required|min_length[8]|max_length[30]",
             ),
         );
 
@@ -247,7 +254,7 @@ class Tracker extends CI_Controller {
                 $user = $this->session->userdata("username"); 
                 $user_id = $this->t_model->get_user_id($user);
                 $data = $this->t_model->get_user_ct($user_id);
-                $this->load->view('pages/contact_t',array(
+                $this->load->view('contact_tracing/contact_t',array(
                     "data"=>$data,
                 ));
             }
@@ -262,17 +269,16 @@ class Tracker extends CI_Controller {
         if($this->session->userdata("username") != "")
         {
             $data = $this->t_model->get_ct_by_id($id);
-            $this->load->view("pages/contact_t_update",array(
+            $this->load->view("contact_tracing/contact_t_update",array(
                 "data" => $data,
             ));
-
         }
         else{
             redirect("tracker/login");
         }
     }
 
-    public function CT_update_logic($id)
+    public function CT_update_logic($ct_id)
     {
         $config_rules = array(
             array (
@@ -298,7 +304,84 @@ class Tracker extends CI_Controller {
                 array (
                 "field" => "email_txt",
                 "label" => "Email",
-                "rules" =>"trim|required|min_length[8]|max_length[20]",
+                "rules" =>"trim|required|min_length[8]|max_length[30]",
+            ),
+        );
+
+        $this->form_validation->set_rules($config_rules);
+
+        if($this->form_validation->run() == false)
+            {
+                 $this->CT_update($ct_id);
+
+            }
+
+        else
+            {
+                $firstname = $this->input->post("firstname_txt");
+                $lastname = $this->input->post("lastname_txt");
+                $phone = $this->input->post("phone_txt");
+                $email = $this->input->post("email_txt");
+                $age = $this->input->post("age_txt");
+                $data= array(
+                    "first_name" => $firstname,
+                    "last_name" => $lastname,
+                    "age" => $age,
+                    "phone_number" => $phone,
+                    "email" => $email,
+
+                );
+                $this->t_model->update_ct($ct_id,$data);
+
+                redirect("tracker/contact_tracing");
+
+            }   
+
+    }
+
+    //Establishment Create
+    function Create() {
+        $this->load->view('establishment/Establishment_C');
+    }
+
+     function user_este()
+    {
+        if($this->session->userdata("username") != "")
+        {   
+            $user = $this->session->userdata("username"); 
+            $user_id = $this->t_model->get_user_id($user);
+            if($this->t_model->is_user_have_ctt($user_id))
+            {
+                redirect('tracker/Establishment_Create');
+            }
+            else
+            {
+                redirect("tracker/Establishment_Create");
+            }
+
+        }
+        else{
+            redirect("tracker/login");
+        }
+
+    }
+
+    function display_Es() {
+        $config_rules = array(
+            array (
+                "field" => "name_txt",
+                "label" => "Name",
+                "rules" =>"trim|required|min_length[1]|max_length[200]",
+            ),
+                array (
+                "field" => "location_txt",
+                "label" => "Location",
+                "rules" =>"trim|required|min_length[1]|max_length[100]",
+            ),
+                array (
+                "field" => "description_txt",
+                "label" => "Description",
+                "rules" =>"trim|required|min_length[1]|max_length[200]",
             ),
         );
 
@@ -306,27 +389,127 @@ class Tracker extends CI_Controller {
 
         if($this->form_validation->run() == false)
         {
-            $this->CT_update($id);
+            $this->Create();
         }
         else
         {
-            $firstname = $this->input->post("firstname_txt");
-            $lastname = $this->input->post("lastname_txt");
-            $phone = $this->input->post("phone_txt");
-            $email = $this->input->post("email_txt");
-            $age = $this->input->post("age_txt");
-            $data= array(
-                "first_name" => $firstname,
-                "last_name" => $lastname,
-                "age" => $age,
-                "phone_number" => $phone,
-                "email" => $email,
-
-            );
-            $this->t_model->update_ct($id,$data);
+            $user = $this->session->userdata("username"); 
+            $name = $this->input->post("name_txt");
+            $location = $this->input->post("location_txt");
+            $description = $this->input->post("description_txt");
+            // add_contract_tracing
+            $this->t_model->add_establishment_try(
+                        array(
+                            "userID" =>$this->t_model->get_user_id($user),
+                            "name" => $name,
+                            "location" => $location,
+                            "description" => $description,
+                        )
+                        );
+             redirect("tracker/displayEstab");
         }
-
-        redirect("tracker/contact_tracing");
     }
+
+    function displayEstab() {
+       
+
+        if($this->session->userdata("username") != "")
+        {
+            $user = $this->session->userdata("username"); 
+            $user_id = $this->t_model->get_user_id($user);
+            $data = $this->t_model->get_user_establishment($user_id);
+            $this->load->view('establishment/EstablishmentName',array(
+                "data"=>$data,
+                "username" => $user,
+            ));
+        }
+    else{
+        redirect("tracker/login");
+    }
+    }
+
+    function Esta_show($establishment_id) {
+        
+        if($this->session->userdata("username") != "")
+        {   
+           $data = $this->t_model->get_establishment_by_id($establishment_id);
+            $this->load->view('establishment/establishment_show', array(
+                "data" =>$data,
+            )) ;
+            
+        }
+        else{
+            redirect("tracker/login");
+        }
+    }
+
+
+
+    //Establishment Update
+
+    public function este_update($id)
+    {
+        if($this->session->userdata("username") != "")
+        {
+            $data = $this->t_model->get_establishment_by_id($id);
+            $this->load->view("establishment/establishment_update",array(
+                "data" => $data,
+            ));
+        }
+        else{
+            redirect("tracker/login");
+        }
+    }
+
+    public function este_update_logic($este_id)
+    {
+        $config_rules = array(
+            array (
+                "field" => "name_txt",
+                "label" => "name",
+                "rules" =>"trim|required|min_length[3]|max_length[100]",
+            ),
+                array (
+                "field" => "location_txt",
+                "label" => "location",
+                "rules" =>"trim|required|min_length[2]|max_length[100]",
+            ),
+                array (
+                "field" => "description_txt",
+                "label" => "description",
+                "rules" =>"trim|required|min_length[3]|max_length[500]",
+            ),
+        );
+
+        $this->form_validation->set_rules($config_rules);
+
+        if($this->form_validation->run() == false)
+            {
+                 $this->este_update($este_id);
+
+            }
+
+        else
+            {
+                $name = $this->input->post("name_txt");
+                $location = $this->input->post("location_txt");
+                $description = $this->input->post("description_txt");
+                $data= array(
+                    "name" => $name,
+                    "location" => $location,
+                    "description" => $description,
+
+                );
+                $this->t_model->update_establishment($este_id,$data);
+
+                redirect("tracker/displayEstab");
+
+            }   
+
+    }
+
+
+
+
 }
 

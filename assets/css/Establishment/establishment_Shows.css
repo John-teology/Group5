@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body{
+    background-color: #2C272e;
+}
+
+.container{
+
+    width: 800px;
+    background-color: #242526;
+    border-radius: 5px;
+    margin: 100px auto;
+    box-shadow: 0 0 20px grey;
+    padding: 20px;
+    height: 400px;
+}
+
+.wrapper{
+    width: 700px;
+    background-color: #242526;
+    border-radius: 5px;
+    margin: 100px auto;
+    box-shadow: 0 0 20px grey;
+    padding: 35px 20px 20px 45px;
+    height: 100px;
+}
+
+.container1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+    
+}
+
+.arr{
+    white-space: pre-line;
+    margin: 5px 0 0 0 ;
+
+}
+
+.flexi1{
+    padding: 5px 0 0 0;
+  
+}
+
+.arr1{
+    margin: 70px 0 0 0;
+}
+
+.arr2{
+    margin: 50px 0 0 0;
+}
+
+.name, .location, .description{
+    margin: 50px 0 0 0;
+}
+
+button{
+    background-color: #9AE66E;
+    width: 200px;
+    height: 50px;
+    margin: 0 0 10px 0;
+    
+}
+button a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.name, .location, .description, .arr1, .arr2{
+    color: #9AE66E;
+}

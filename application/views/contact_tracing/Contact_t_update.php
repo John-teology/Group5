@@ -11,14 +11,9 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-     <style>
-        .error{
-            color: red;
-        }
-        a{
-            text-decoration: none;
-        }
-    </style>
+     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/contact_tracing/contact_t_update.css'); ?>">
+
+ 
 </head>
 <body>
      <button>

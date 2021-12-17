@@ -1,0 +1,76 @@
+#header{
+    background-color: #9AE66E;
+}
+
+.div1{
+    margin: 10px 0 0 0;
+    /* background-color: grey; */
+    padding: 20px 10px 20px 10px;
+}
+
+body{
+    background-color: #2C272E;
+}
+
+/* .wrapper{
+    margin: 75px 0 0 0;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px ;
+    box-shadow: 0 0 20px grey;
+} */
+
+.scroll-div{
+    width: 400px;
+    /* background-color:grey; */
+    background-color: #242526;
+    height: 450px;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin: 100px 0 0 0 ;
+}
+
+.but1{
+    width: 90%;
+    height: 60px;
+    margin: 0 0 10px 0;
+    background-color: #9AE66E;
+}
+
+.but2{
+    margin: 10px 110px 50px 0;
+    background-color: #9AE66E;
+    color: black;
+    
+}
+
+.but3{
+    margin: 10px 0 0 100px;
+    background-color:#9AE66E ;
+
+}
+
+h5{
+    color: blue;
+    text-transform: capitalize;
+}
+
+.owner{
+    padding: 65px 0 0 40px;
+}
+
+i{
+    padding: 0 0 0 5px;
+}
+
+.profbut{
+    margin: 0 0 0 20px;
+}
+
+.navbar-brand{
+    color: black;
+}
+
+h5{
+    color: #3F3351;
+}

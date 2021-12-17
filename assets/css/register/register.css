@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+html, body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    /* background-image: url(../images/bg1_body.jpg); */
+    background-color: #2C272E;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.wrapper{
+    width: 380px;
+    background-color: #242526;
+    border-radius: 5px;
+}
+
+.wrapper .logo{
+    
+    line-height: 60px;
+    background-color: #9AE66E;
+    border-radius: 5px 5px 0 0;
+    padding: 10px 0 0 0 ;
+}
+
+.wrapper .title{
+    padding: 0 0 10px 25%;
+
+}
+
+.wrapper .form{
+    padding: 10px 20px 25px 20px
+}
+
+.wrapper .form #div2{
+    height: 45px;
+    margin-bottom: 15px;
+    position: relative;
+    margin: 35px 0 0 0;
+    
+}
+
+.wrapper .form #div2 input{
+    height: 100%;
+    width: 100%;
+    padding-left: 60px;
+}
+
+.wrapper .form #div2 i{
+    position: absolute;
+    width: 47px;
+    height: 100%;
+    color: black;
+    font-size: 18px;
+    background-color: #9AE66E;
+    border: 1px solid #16a085;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .form #signup{
+    position: relative;
+    margin: 40px 0 0 25% ;
+    height: 40px;
+    width: 50%;
+}
+
+.login_here{
+    padding: 20px 0 0 0;
+}
+
+.login_here a{
+    padding: 0 0 0 38%;
+}
+
+.log{
+    color:#9AE66E;
+}
+
+.form-label{
+    color: #9AE66E;
+}
+
+#signup{
+    border-radius: 20px;
+    background-color: #9AE66E;
+}
+
+input, i{
+    border-radius: 20px;
+}
