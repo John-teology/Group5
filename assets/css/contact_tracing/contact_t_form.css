@@ -1,3 +1,122 @@
 .error {
+
 	color: red;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    /* background-image: url(../images/bg1_body.jpg); */
+    background-color: #2C272E;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper{
+    width: 380px;
+    background-color: #242526;
+    border-radius: 15px;
+	line-height: 30px;
+	margin: 40px 0 0 0;
+
+}
+
+.wrapper .logo{
+    
+    line-height: 10px;
+    background-color: #9AE66E;
+    border-radius: 15px 15px 0 0;
+	padding: 40px 0 20px 0;
+    
+
+}
+
+.wrapper .title{
+    padding: 0 0 10px 25px;
+	margin: 0 0 0 65px;
+
+
+}
+
+.wrapper .logo img{
+    width: 100px;
+    height: 100px;
+    margin: 20px 0 20px 35%;
+}
+
+ 
+
+
+.wrapper .form{
+    padding: 10px 20px 25px 20px
+}
+
+.wrapper .form .div1{
+    height: 45px;
+    margin-bottom: 15px;
+    position: relative;
+    margin: 35px 0 0 0;
+    
+}
+
+.wrapper .form .div1 input{
+    height: 100%;
+    width: 100%;
+    padding-left: 10px;
+   
+}
+
+.wrapper .form .div1 i{
+    position: absolute;
+    width: 47px;
+    height: 100%;
+    color: black;
+    font-size: 18px;
+    background-color: #9AE66E;
+    border: 1px solid #16a085;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.wrapper .form #login{
+    position: relative;
+    margin: 40px 0 0 25% ;
+    height: 40px;
+    width: 50%;
+}
+
+.but1{
+	margin: 0 0 30px 0;
+	width: 150px;
+	height: 40px;
+	padding: 10px;
+	background-color: #9AE66E;
+}
+
+#but2{
+	border-radius: 20px 20px;
+	width: 110px;
+	height: 40px;
+	margin: 10px 0 0 115px;
+	background-color: #9AE66E;
+}
+
+input{
+	width: 100px;
+	height: 30px;
+}
+
+.form-label{
+	color: #9AE66E;
 }

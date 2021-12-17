@@ -25,7 +25,7 @@
 
     <div class="wrapper">
 
-                <div class="logo">
+                <div class="logo">  
                     <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="">
                     <h3 class="title">Establishment Traffic Control System</h3>
                 </div>
