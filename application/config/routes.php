@@ -75,6 +75,15 @@ $route['tracker/contact_tracing_update_auth/(:any)'] = "tracker/CT_update_logic/
 $route['tracker/createEstablishment'] = "tracker/createEstablishment";
 
 
+// route for establishment
+
+$route['tracker/user_prof_este'] = "tracker/user_este";
+
+$route['tracker/Establishment_Create'] = "tracker/Create";
+$route['tracker/Establishment_auth'] = "tracker/display_Es";
+$route['tracker/Establishment_specific/(:num)'] = "tracker/Esta_show/$1";
+
+
 
 
 

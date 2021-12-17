@@ -19,8 +19,7 @@
 
 </head>
 <body>    
-    
-    <?php  echo form_open("tracker/log_auth", array(
+<?php  echo form_open("tracker/log_auth", array(
     "method" => "post",
     "enctype" => "multipart/form-data")); ?>
 
@@ -45,7 +44,8 @@
                 <i class="fa fa-lock"></i>
                 <input type="password" class="form-control"  name="password_txt" id="exampleInputPassword1" placeholder="Enter password" value="<?php echo set_value('password_txt') ?>">
                 <?php  echo form_error("password_txt","<div class='error'>","</div>"); ?>
-                                <?php if($this->session->flashdata("wrong")) { 
+            </div>
+                <?php if($this->session->flashdata("wrong")) { 
             ?>
             <div class="error">
                 <?php echo $this->session->flashdata("wrong") ?>
@@ -62,8 +62,6 @@
             <?php 
             }
             ?>
-            </div>
-
 
             <button id="login" type="submit" class="btn btn-primary">Login</button>
             <?php echo form_close(); ?>
@@ -73,5 +71,6 @@
             </div> 
         </div>
     </div>
+    
 </body>
 </html> 

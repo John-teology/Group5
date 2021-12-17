@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    /* background-image: url(../images/bg1_body.jpg); */
+    background-color: #2C272E;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.header {
+    display: block;
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #9AE66E;
+    padding: 10px;
+    height: 50px;
+    
+  }
+  
+  nav a:visited,
+  nav a:link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav > ul {
+    display: inline;
+    padding: 0;
+  }
+  
+  nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+    /*      */
+    font-size: 20px;
+  }
+
+  
+
+  .li1{
+      padding: 0 0 0 38%;
+  }
+
+  .title1{
+    padding: 0 0 50px 200px;
+  }
+
+
+  .container{
+    width: 380px;
+    background-color: #242526;
+    border-radius: 20px;
+    /* box-shadow: 0 0 20px grey; */
+    margin: 0 auto;
+    margin: 60px 0 0 0;
+    height: 500px;
+    
+}
+
+.container .logo{
+    
+    line-height: 50px;
+    background-color: #9AE66E ;
+    border-radius: 5px 5px 0 0;
+    /* border-radius: 20px 20px; */
+}
+
+.container .title{
+    padding: 10px 0 10px 25%;
+
+}
+
+.container .form{
+    padding: 10px 20px 25px 20px
+}
+
+.container .form .div2{
+    height: 45px;
+    margin-bottom: 15px;
+    position: relative;
+    margin: 35px 0 0 0;
+    
+}
+
+.container .form .div2 input{
+    height: 100%;
+    width: 100%;
+    padding-left: 60px;
+}
+
+.container .form .div2 textarea{
+    height: 200%;
+    width: 100%;
+    padding-left: 60px;
+}
+
+
+.container .form .div2 i{
+    position: absolute;
+    width: 47px;
+    height: 100%;
+    color: black;
+    font-size: 18px;
+    background-color: #9AE66E;
+    border: 1px solid #16a085;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .form .div2 #ii{
+    position: absolute;
+    width: 47px;
+    height: 200%;
+    color: black;
+    font-size: 18px;
+    background-color: #9AE66E;
+    border: 1px solid #16a085;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.container .form .signup{
+    position: relative;
+    margin: 100px 0 0 25% ;
+    height: 40px;
+    width: 50%;
+    background-color: #9AE66E;
+    border-radius: 20px;
+
+}
+
+.form-control, i{
+    border-radius: 20px;
+}
+
+i{
+    border-radius: 20px;
+}
+
+.form-label{
+    color: #9AE66E;
+}
+
+.error{
+    color: red;
+}
+
