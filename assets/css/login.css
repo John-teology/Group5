@@ -2,33 +2,31 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
+	font-family: Segoe UI;
 }
 
 html,
 body {
+	background-color: #1a1f22;
 	display: grid;
 	height: 100%;
 	place-items: center;
-	background-image: url(../images/bg1_body.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 
 .wrapper {
 	width: 380px;
-	background-color: #fff;
-	border-radius: 5px;
+	background-color: #2a2e35;
+	border-radius: 20px 20px;
 }
 
 .wrapper .logo {
 	line-height: 10px;
-	background-color: #16a085;
-	border-radius: 5px 5px 0 0;
+	background-color: #2a2e35;
+	border-radius: 20px 20px 0 0;
 }
 
 .wrapper .title {
+	color: white;
 	padding: 0 0 10px 25px;
 }
 
@@ -43,6 +41,8 @@ body {
 }
 
 .wrapper .form #div1 {
+	font-weight: bold;
+	color: white;
 	height: 45px;
 	margin-bottom: 15px;
 	position: relative;
@@ -50,25 +50,35 @@ body {
 }
 
 .wrapper .form #div1 input {
+	background-color: #454e56;
+	border-color: #454e56;
+	border-radius: 20px 20px;
 	height: 100%;
 	width: 100%;
 	padding-left: 60px;
 }
 
 .wrapper .form #div1 i {
+	border-radius: 20px 20px;
 	position: absolute;
 	width: 47px;
 	height: 100%;
-	color: black;
+	color: white;
 	font-size: 18px;
-	background-color: #16a085;
-	border: 1px solid #16a085;
+	background-color: #00994d;
+	border: 1px solid #00994d;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
 .wrapper .form #login {
+	font-size: 16px;
+	background-color: #00994d;
+	border-color: #00994d;
+	border-radius: 20px 20px;
+	font-weight: bold;
+	color: white;
 	position: relative;
 	margin: 40px 0 0 25%;
 	height: 40px;
@@ -80,6 +90,7 @@ body {
 }
 
 .create {
+	color: white;
 	padding: 0 0 0 30%;
 }
 
