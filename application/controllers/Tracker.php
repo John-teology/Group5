@@ -214,7 +214,7 @@ class Tracker extends CI_Controller {
                 array (
                 "field" => "email_txt",
                 "label" => "Email",
-                "rules" =>"trim|required|min_length[8]|max_length[20]",
+                "rules" =>"trim|required|min_length[8]|max_length[30]",
             ),
         );
 
@@ -304,7 +304,7 @@ class Tracker extends CI_Controller {
                 array (
                 "field" => "email_txt",
                 "label" => "Email",
-                "rules" =>"trim|required|min_length[8]|max_length[20]",
+                "rules" =>"trim|required|min_length[8]|max_length[30]",
             ),
         );
 
@@ -338,6 +338,178 @@ class Tracker extends CI_Controller {
             }   
 
     }
+
+    //Establishment Create
+    public function Create() {
+        $this->load->view('establishment/Establishment_C');
+    }
+
+    public function user_este()
+    {
+        if($this->session->userdata("username") != "")
+        {   
+            $user = $this->session->userdata("username"); 
+            $user_id = $this->t_model->get_user_id($user);
+            if($this->t_model->is_user_have_ctt($user_id))
+            {
+                redirect('tracker/Establishment_Create');
+            }
+            else
+            {
+                redirect("tracker/Establishment_Create");
+            }
+
+        }
+        else{
+            redirect("tracker/login");
+        }
+
+    }
+
+    public function display_Es() {
+        $config_rules = array(
+            array (
+                "field" => "name_txt",
+                "label" => "Name",
+                "rules" =>"trim|required|min_length[1]|max_length[200]",
+            ),
+                array (
+                "field" => "location_txt",
+                "label" => "Location",
+                "rules" =>"trim|required|min_length[1]|max_length[100]",
+            ),
+                array (
+                "field" => "description_txt",
+                "label" => "Description",
+                "rules" =>"trim|required|min_length[1]|max_length[200]",
+            ),
+        );
+
+        $this->form_validation->set_rules($config_rules);
+
+        if($this->form_validation->run() == false)
+        {
+            $this->Create();
+        }
+        else
+        {
+            $user = $this->session->userdata("username"); 
+            $name = $this->input->post("name_txt");
+            $location = $this->input->post("location_txt");
+            $description = $this->input->post("description_txt");
+            // add_contract_tracing
+            $this->t_model->add_establishment_try(
+                        array(
+                            "userID" =>$this->t_model->get_user_id($user),
+                            "name" => $name,
+                            "location" => $location,
+                            "description" => $description,
+                        )
+                        );
+             redirect("tracker/displayEstab");
+        }
+    }
+
+    public function displayEstab() {
+       
+
+        if($this->session->userdata("username") != "")
+        {
+            $user = $this->session->userdata("username"); 
+            $user_id = $this->t_model->get_user_id($user);
+            $data = $this->t_model->get_user_establishment($user_id);
+            $this->load->view('establishment/EstablishmentName',array(
+                "data"=>$data,
+                "username" => $user,
+            ));
+        }
+    else{
+        redirect("tracker/login");
+    }
+    }
+
+    public function Esta_show($establishment_id) {
+        
+        if($this->session->userdata("username") != "")
+        {   
+           $data = $this->t_model->get_establishment_by_id($establishment_id);
+            $this->load->view('establishment/establishment_show', array(
+                "data" =>$data,
+            )) ;
+            
+        }
+        else{
+            redirect("tracker/login");
+        }
+    }
+
+
+
+    //Establishment Update
+
+    public function este_update($id)
+    {
+        if($this->session->userdata("username") != "")
+        {
+            $data = $this->t_model->get_establishment_by_id($id);
+            $this->load->view("establishment/establishment_update",array(
+                "data" => $data,
+            ));
+        }
+        else{
+            redirect("tracker/login");
+        }
+    }
+
+    public function este_update_logic($este_id)
+    {
+        $config_rules = array(
+            array (
+                "field" => "name_txt",
+                "label" => "name",
+                "rules" =>"trim|required|min_length[3]|max_length[100]",
+            ),
+                array (
+                "field" => "location_txt",
+                "label" => "location",
+                "rules" =>"trim|required|min_length[2]|max_length[100]",
+            ),
+                array (
+                "field" => "description_txt",
+                "label" => "description",
+                "rules" =>"trim|required|min_length[3]|max_length[500]",
+            ),
+        );
+
+        $this->form_validation->set_rules($config_rules);
+
+        if($this->form_validation->run() == false)
+            {
+                 $this->este_update($este_id);
+
+            }
+
+        else
+            {
+                $name = $this->input->post("name_txt");
+                $location = $this->input->post("location_txt");
+                $description = $this->input->post("description_txt");
+                $data= array(
+                    "name" => $name,
+                    "location" => $location,
+                    "description" => $description,
+
+                );
+                $this->t_model->update_establishment($este_id,$data);
+
+                redirect("tracker/displayEstab");
+
+            }   
+
+    }
+
+
+
 
 }
 
