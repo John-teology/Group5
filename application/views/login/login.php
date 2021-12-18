@@ -25,8 +25,13 @@
 
     <div class="wrapper">
 
+<<<<<<< HEAD
                 <div class="logo">
                 <img src="<?php echo base_url(); ?>assets/images/icon.png" alt="">
+=======
+                <div class="logo">  
+                    <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="">
+>>>>>>> f4ee66467eda1806b1996cca831bff21a7904013
                     <h3 class="title">Establishment Traffic Control System</h3>
                 </div>
 
