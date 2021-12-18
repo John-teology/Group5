@@ -24,15 +24,14 @@
     "enctype" => "multipart/form-data")); ?>
 
     <div class="wrapper">
-
                 <div class="logo">
-                    <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="">
+                <img src="<?php echo base_url(); ?>assets/images/icon.png" alt="">
                     <h3 class="title">Establishment Traffic Control System</h3>
                 </div>
 
         <div class="form">
             <div id="div1" class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Username:</label>
+                <label for="exampleInputEmail1" class="form-label">Username</label>
                 <i class="fa fa-user"></i> 
                 <input type="text"  class="form-control" name="username_txt" placeholder="Enter username" value="<?php echo set_value('username_txt') ?>">
                 <?php  echo form_error("username_txt","<div class='error'>","</div>"); ?>
@@ -40,7 +39,7 @@
 
             </div>
             <div id="div1" class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password:</label>
+                <label for="exampleInputPassword1" class="form-label">Password</label>
                 <i class="fa fa-lock"></i>
                 <input type="password" class="form-control"  name="password_txt" id="exampleInputPassword1" placeholder="Enter password" value="<?php echo set_value('password_txt') ?>">
                 <?php  echo form_error("password_txt","<div class='error'>","</div>"); ?>

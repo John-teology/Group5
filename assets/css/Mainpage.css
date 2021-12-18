@@ -4,10 +4,19 @@
 }
 
 body{
-    background-color: #2C272E;
+    background-color: #1a1f22;;
 }
 
 .header {
+	font-family: 'Segeo UI';
+	display: block;
+	/* position: fixed; */
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	padding: 10px;
+	height: 50px;
     display: block;
     /* position: fixed; */
     top: 0;
@@ -92,7 +101,7 @@ body{
 
 .bondpaper{
     display: grid;
-    grid-template-row: 1fr 1fr;
+    /* grid-template-row: 1fr 1fr; */
     /* border: solid 2px grey; */
     margin: auto;
     background-color: #242526;
@@ -115,6 +124,16 @@ body{
     color: black;
 }
 
+.div1 .User {
+	font-family: Century Gothic;
+	text-decoration: none;
+	text-decoration-color: black;
+	width: 40px;
+	border: 5px solid green;
+	border-radius: 20px 20px;
+	padding: 10px 50px 10px 10px;
+	margin: 10px 50px 0 25px;
+}
 .createE{
     text-decoration: none;
 }
