@@ -2,23 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: Segoe UI; 
 }
 
 html, body{
     display: grid;
     height: 100%;
     place-items: center;
-    /* background-image: url(../images/bg1_body.jpg); */
-    background-color: #2C272E;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background-color: #1a1f22;
     background-size: cover;
 }
 
 .wrapper{
     width: 380px;
-    background-color: #242526;
+    background-color: #2a2e35;;
     border-radius: 15px;
 
 }
@@ -26,20 +23,21 @@ html, body{
 .wrapper .logo{
     
     line-height: 10px;
-    background-color: #9AE66E;
+    background-color: #2a2e35;;
     border-radius: 15px 15px 0 0;
 
 }
 
 .wrapper .title{
+    color: white; 
     padding: 0 0 10px 25px;
 
 }
 
 .wrapper .logo img{
-    width: 100px;
-    height: 100px;
-    margin: 20px 0 20px 35%;
+    width: auto;
+    height: auto;
+    margin: 20px 0 20px 41%;
 }
  
 
@@ -49,30 +47,37 @@ html, body{
 }
 
 .wrapper .form #div1{
-    height: 45px;
-    margin-bottom: 15px;
-    position: relative;
-    margin: 35px 0 0 0;
-    
+    font-weight: bold;
+	color: white;
+	height: 45px;
+	margin-bottom: 15px;
+	position: relative;
+	margin: 35px 0 0 0;
 }
 
 .wrapper .form #div1 input{
-    height: 100%;
-    width: 100%;
-    padding-left: 60px;
+    color: white;
+    background-color: #454e56;
+    border-width: 0px;
+	border-color: #454e56;
+	border-radius: 20px 20px;
+	height: 100%;
+	width: 100%;
+	padding-left: 60px;
 }
 
 .wrapper .form #div1 i{
-    position: absolute;
-    width: 47px;
-    height: 100%;
-    color: black;
-    font-size: 18px;
-    background-color: #9AE66E;
-    border: 1px solid #16a085;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 20px 20px;
+	position: absolute;
+	width: 47px;
+	height: 100%;
+	color: white;
+	font-size: 18px;
+	background-color: #00994d;
+	border: 1px solid #00994d;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .wrapper .form #login{
@@ -83,21 +88,31 @@ html, body{
 }
 
 .error{
+    font-weight: lighter;
+    font-size: 13px;
     color: red;
 }
 
 .create{
     padding: 0 0 0 30%;
-    color: #9AE66E;
+    color: white;
 }
 
 .form-label{
-    color: #9AE66E;
+    margin: 40px 0 0 2%;
 }
 
 #login{
-    border-radius: 20px;
-    background-color: #9AE66E;
+    font-size: 16px;
+    border-width: 0px;
+	background-color: #00994d;
+	border-radius: 20px 20px;
+	font-weight: bold;
+	color: white;
+	position: relative;
+	margin: 40px 0 0 25%;
+	height: 40px;
+	width: 50%;
 }
 
 input{

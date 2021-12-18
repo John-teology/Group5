@@ -6,11 +6,11 @@
 }
 body
 {
-    background-color: #2C272E;
+    background-color: #1a1f22;;
     background-size: cover;
     background-position: center;
    
-    font-family: sans-serif;
+    font-family: 'Segoe UI';
 }
 
 .title{
@@ -24,14 +24,16 @@ body
 
 .menu-bar
 {
-    background-color: #9AE66E;
-    /* text-align: center; */
+    background-color: #2a2e35;
     margin: 0 0 70px 0;
    
 }
 
 .menu-bar .title{
-    margin: 20px 0 20px 20px;
+    font-size: 30px;
+    color: white;
+    margin: 20px 0 10px 75px;
+    height: 60px;
 }
 
 .menu-bar ul
@@ -49,11 +51,11 @@ body
 .menu-bar ul li a
 {
     text-decoration: none;
-    color: #9AE66E;
+    color: white;
 }
 .active, .menu-bar ul li:hover
 {
-    background: #9AE66E;
+    background: #2a2e35;
     border-radius: 3px;
 }
 .menu-bar .fa
@@ -68,9 +70,9 @@ body
 {
     display: block;
     position: absolute;
-    background: #242526;
+    background: #2a2e35;
     margin-top: 15px;
-    margin-left: -15px;
+    margin-left: -45px;
 }
 .menu-bar ul li:hover .sub-menu-1 ul
 {
@@ -81,7 +83,7 @@ body
 {
     width: 150px;
     padding: 10px;
-    border-bottom: 1px dotted #fff;
+    border-bottom: 1px solid #fff;
     background: transparent;
     border-radius: 0;
     text-align: left;
@@ -92,19 +94,18 @@ body
 }
 .menu-bar ul li:hover .sub-menu-1 ul li a:hover
 {
-    color: #b2ff00;
+    color: #00994d;
+    font-weight: bold;
 }
 
 
 /* body */
 .bondpaper{
     display: grid;
-    grid-template-row: 1fr 1fr;
-    /* border: solid 2px grey; */
     margin: auto;
-    background-color: #242526;
+    background-color: #2a2e35;
     height: auto;
-    width: 900px;
+    width: 500px;
     margin: auto;
     border-radius: 15px 15px 15px 15px;
   
@@ -113,13 +114,13 @@ body
 
 .createE, .viewE{
     padding: 0 0 0 10px;
-    /* border: blue solid 3px; */
-    background-color: #9AE66E;
+ 
+    background-color: #00994d;
     margin: 30px;
     text-align: center;
     padding: 80px;
     border-radius: 10px;
-    color: black;
+    color: white;
 }
 
 .createE{
@@ -131,7 +132,6 @@ a{
 }
 
 .box1, .box2{
-    /* border: 15px solid green; */
     display: grid;
     grid-template-rows: auto ;
     padding: 0 0 20px 0 ;
@@ -148,8 +148,15 @@ a{
 }
 
 .profbut{
+    color: white;
+    background-color: #00994d;
+    border-width: 0px;
+    border-color: #00994d;
     width: fit-content;
-    padding: 0px 20px;;
+    padding: 0px 30px;;
     height: 40px;
+    border-radius: 5px;
+    margin: 10px 10px 0 0;
+    margin-left: -20px;
 
 }

@@ -17,7 +17,7 @@
         <li class="li"><h1 class="title">Establishment Traffic Control System</h1></li>
           <li class="li1"><a class="user" href= "<?php echo site_url("tracker/user_profile")?>" > <h3 class="User"><?php echo $username ?></h3> </a></li>
             <ul class="Dropdown">
-              <li class="li11"><a class="logout" href= "<?php echo site_url("tracker/logout") ?>" > Log0ut </a></li>
+              <li class="li11"><a class="logout" href= "<?php echo site_url("tracker/logout") ?>" > Log Out </a></li>
               <li><a href="<?php echo site_url('tracker/displayEstab') ?>"><button>Establishment list</button></a></li>
               <li><a href="<?php echo site_url('tracker/user_profile') ?>"><button>Contact Trace Profile</button></a></li>
             </ul>
@@ -36,7 +36,7 @@
                     <ul>
                       <li><a href="<?php echo site_url('tracker/user_profile') ?>">Contact Trace Profile</a></li>
                       <li><a href="<?php echo site_url('tracker/displayEstab') ?>">Establishment list</a></li>
-                      <li class="li11"><a class="logout" href= "<?php echo site_url("tracker/logout") ?>" > Log0ut </a></li>
+                      <li class="li11"><a class="logout" href= "<?php echo site_url("tracker/logout") ?>" > Log Out </a></li>
                      
                     </ul>
                 </div>
