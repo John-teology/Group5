@@ -75,7 +75,7 @@ html, body{
     font-size: 20px;
     line-height: 50px;
     background-color: #2a2e35 ;
-    border-radius: 15px 15px 0 0;
+    border-radius: 20px 20px 0 0;
 }
 
 .container .title{
@@ -135,7 +135,8 @@ html, body{
     color: white;
     font-size: 18px;
     background-color: #00994d;
-    border: 1px solid #00994d;
+    border-color: #00994d;
+    border-width: 0px;
     display: flex;
     align-items: center;
     justify-content: center;

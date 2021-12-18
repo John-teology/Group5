@@ -70,7 +70,7 @@
     </div>
 
    
-        <a href="<?php echo site_url("tracker")?>"><button class="but1">back to homepage</button></a>
+        <a href="<?php echo site_url("tracker")?>"><button class="but1">Back to HomePage</button></a>
  
 
     
