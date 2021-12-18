@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: Segoe UI; 
 }
-
 html, body{
     display: grid;
     height: 100%;
@@ -15,7 +14,7 @@ html, body{
 
 .wrapper{
     width: 380px;
-    background-color: #2a2e35;;
+    background-color: #2a2e35;
     border-radius: 15px;
 
 }
@@ -25,7 +24,6 @@ html, body{
     line-height: 10px;
     background-color: #2a2e35;;
     border-radius: 15px 15px 0 0;
-    
 
 }
 
@@ -40,10 +38,6 @@ html, body{
     height: auto;
     margin: 20px 0 20px 41%;
 }
-
- 
-
-
 .wrapper .form{
     padding: 10px 20px 25px 20px
 }
@@ -58,7 +52,6 @@ html, body{
 }
 
 .wrapper .form #div1 input{
-<<<<<<< HEAD
     color: white;
     background-color: #454e56;
     border-width: 0px;
@@ -81,26 +74,6 @@ html, body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-=======
-    height: 100%;
-    width: 100%;
-    padding-left: 60px;
-    margin: 10px 0 10px 0;
-}
-
-.wrapper .form #div1 i{
-    position: absolute;
-    width: 47px;
-    height: 100%;
-    color: black;
-    font-size: 18px;
-    background-color: #9AE66E;
-    border: 1px solid #16a085;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0 0 0;
->>>>>>> f4ee66467eda1806b1996cca831bff21a7904013
 }
 
 .wrapper .form #login{
@@ -122,12 +95,7 @@ html, body{
 }
 
 .form-label{
-<<<<<<< HEAD
     margin: 40px 0 0 2%;
-=======
-    color: #9AE66E;
-    
->>>>>>> f4ee66467eda1806b1996cca831bff21a7904013
 }
 
 #login{
@@ -144,6 +112,7 @@ html, body{
 }
 
 input{
+    color: white;
     border-radius: 20px;
 }
 
