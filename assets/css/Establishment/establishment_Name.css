@@ -1,5 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+}
 #header{
-    background-color: #9AE66E;
+
+    display: block;
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2a2e35;
+    padding: 10px;
+    height: 90px;
 }
 
 .div1{
@@ -8,8 +22,15 @@
     padding: 20px 10px 20px 10px;
 }
 
-body{
-    background-color: #2C272E;
+html, body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    /* background-image: url(../images/bg1_body.jpg); */
+    background-color: #1a1f22;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* .wrapper{
@@ -21,9 +42,11 @@ body{
 } */
 
 .scroll-div{
+    color: white;
     width: 400px;
+    border-radius: 15px 15px;
     /* background-color:grey; */
-    background-color: #242526;
+    background-color: #2a2e35;
     height: 450px;
     overflow: hidden;
     overflow-y: scroll;
@@ -31,31 +54,43 @@ body{
 }
 
 .but1{
+    color: white;
     width: 90%;
     height: 60px;
     margin: 0 0 10px 0;
-    background-color: #9AE66E;
+    border-width: 0px;
+    background-color: #00994d;
+    border-color: #00994d;
+    border-radius: 10px 10px;
 }
 
 .but2{
     margin: 10px 110px 50px 0;
-    background-color: #9AE66E;
-    color: black;
-    
+    background-color: #00994d;
+    color: white;
+    padding: 5px 5px 5px 5px;
+    font-weight: bold;
+    border-width: 0px;
+    border-radius: 5px;
 }
 
 .but3{
     margin: 10px 0 0 100px;
-    background-color:#9AE66E ;
-
+    background-color:#00994d ;
+    color: white;
+    padding: 5px 5px 5px 5px;
+    font-weight: bold;
+    border-width: 0px;
+    border-radius: 5px;
 }
 
 h5{
-    color: blue;
+    color: white;
     text-transform: capitalize;
 }
 
 .owner{
+    color: white;
     padding: 65px 0 0 40px;
 }
 
@@ -64,13 +99,25 @@ i{
 }
 
 .profbut{
-    margin: 0 0 0 20px;
+    font-weight: bold;
+    margin: 20px 0 0 20px;
+    background-color:#00994d ;
+    color: white;
+    height: 40px;
+    border-color: #00994d;
+    border-radius: 5px;
+    margin-right: -150px;
+    width: fit-content;
+    padding: 0px 30px;;
+
 }
 
 .navbar-brand{
-    color: black;
+    color: white;
+    font-size: 30px;
+    margin: 0 15 10 0;
 }
 
 h5{
-    color: #3F3351;
+    color: white;
 }
