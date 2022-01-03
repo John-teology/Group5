@@ -21,7 +21,7 @@
     </head>
     <body>
 
-        <?php  echo form_open("tracker/display_Es", array(
+        <?php  echo form_open("tracker/Establishment_auth", array(
             "method" => "post",
             "enctype" => "multipart/form-data")); 
         ?>

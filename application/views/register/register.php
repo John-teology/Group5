@@ -18,7 +18,7 @@
  
 </head>
 <body>    
-<?php  echo form_open("tracker/reg_auth", array(
+<?php  echo form_open("tracker/register_auth", array(
     "method" => "post",
     "enctype" => "multipart/form-data")); ?>
     <div class="wrapper">

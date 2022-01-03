@@ -64,13 +64,15 @@
     
     <div class="bondpaper">
         <div class="box1">
-            <a href="<?php echo site_url("tracker/user_prof_este")?>"><h2 class="createE">Create Establishment</h2></a>
+            <a href="<?php echo site_url("tracker/Establishment_Create")?>"><h2 class="createE">Create Establishment</h2></a>
             <!-- <a  href="<?php echo site_url("tracker/user_prof_este")?>"> -->
             <!-- <button class="buttn"><a href="<?php echo site_url("tracker/user_prof_este")?>">Create</a></button> -->
 
         </div>
         <div class="box2">
+            <a href="<?php echo site_url("tracker/display_establishment")?>">
             <h2 class="viewE">View Establishment</h2>
+            </a>
         </div>
 
     </div>

@@ -19,7 +19,7 @@
 
 </head>
 <body>    
-<?php  echo form_open("tracker/log_auth", array(
+<?php  echo form_open("tracker/login_auth", array(
     "method" => "post",
     "enctype" => "multipart/form-data")); ?>
 

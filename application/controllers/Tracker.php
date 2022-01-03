@@ -30,7 +30,7 @@ class Tracker extends CI_Controller {
         $this->load->view("login/login");
     }
 
-    public function login_logic()
+    public function login_auth()
     {
         unset($_SESSION['registered']);
         unset($_SESSION['wrong']); // use to clear flash data
@@ -88,7 +88,7 @@ class Tracker extends CI_Controller {
     }
 
 
-    public function register_method()
+    public function register_auth()
     {
         unset($_SESSION['wrong']);
          unset($_SESSION['not_equal']);
@@ -155,7 +155,7 @@ class Tracker extends CI_Controller {
 
     }
 
-    public function user_proc()
+    public function user_profile()
     {
         if($this->session->userdata("username") != "")
         {   
@@ -177,7 +177,7 @@ class Tracker extends CI_Controller {
 
     }
 
-    public function CT_form()
+    public function contact_tracing_form()
     {
           if($this->session->userdata("username") != "")
         {   
@@ -188,7 +188,7 @@ class Tracker extends CI_Controller {
         }
     }
 
-    public function CT_form_logic()
+    public function contact_tracing_auth()
     {
         $config_rules = array(
             array (
@@ -222,7 +222,7 @@ class Tracker extends CI_Controller {
 
         if($this->form_validation->run() == false)
         {
-            $this->CT_form();
+            $this->contact_tracing_form();
         }
         else
         {
@@ -247,7 +247,7 @@ class Tracker extends CI_Controller {
         }
     }
 
-    public function CT_display()
+    public function contact_tracing()
     {
         if($this->session->userdata("username") != "")
             {
@@ -264,7 +264,7 @@ class Tracker extends CI_Controller {
 
     }
 
-    public function CT_update($id)
+    public function contact_tracing_update($id)
     {
         if($this->session->userdata("username") != "")
         {
@@ -278,7 +278,7 @@ class Tracker extends CI_Controller {
         }
     }
 
-    public function CT_update_logic($ct_id)
+    public function contact_tracing_update_auth($ct_id)
     {
         $config_rules = array(
             array (
@@ -312,7 +312,7 @@ class Tracker extends CI_Controller {
 
         if($this->form_validation->run() == false)
             {
-                 $this->CT_update($ct_id);
+                 $this->contact_tracing_update($ct_id);
 
             }
 
@@ -340,11 +340,11 @@ class Tracker extends CI_Controller {
     }
 
     //Establishment Create
-    public function Create() {
+    public function Establishment_Create() {
         $this->load->view('establishment/Establishment_C');
     }
 
-    public function user_este()
+    public function user_prof_este()
     {
         if($this->session->userdata("username") != "")
         {   
@@ -366,7 +366,7 @@ class Tracker extends CI_Controller {
 
     }
 
-    public function display_Es() {
+    public function Establishment_auth() {
         $config_rules = array(
             array (
                 "field" => "name_txt",
@@ -389,7 +389,7 @@ class Tracker extends CI_Controller {
 
         if($this->form_validation->run() == false)
         {
-            $this->Create();
+            $this->Establishment_Create();
         }
         else
         {
@@ -428,7 +428,7 @@ class Tracker extends CI_Controller {
     }
     }
 
-    public function Esta_show($establishment_id) {
+    public function Establishment_specific($establishment_id) {
         
         if($this->session->userdata("username") != "")
         {   
@@ -507,6 +507,22 @@ class Tracker extends CI_Controller {
             }   
 
     }
+
+    // DISPLAY ALL ESTABLISHMENT
+    public function display_establishment()
+    {
+        if($this->session->userdata("username") != "")
+        {
+            $list = $this->t_model->get_all_establishments();
+            $this->load->view("establishment/display_establishments", array(
+                "establishments" => $list,
+            ));
+        }
+        else{
+            redirect("tracker/login");
+        }
+    }
+    
 
 
 

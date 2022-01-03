@@ -140,5 +140,15 @@ class T_model extends CI_Model{
         $this->db->update('establishment_try', $data);
     }
 
+    function get_all_establishments()
+    {
+        $this->db->select("*");
+        $result = $this->db->get("establishment_try")->result_array();
+
+        return $result;
+
+
+    }
+
 }
 ?>
