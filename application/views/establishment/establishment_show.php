@@ -60,19 +60,36 @@
                     
                     <h4 class="arr1"><?php print_r($data->location)?></h4>
                     <h4 class="arr1"><?php print_r($data->description)?></h4>
+
+
                 </div>
         </div>
   </div>
 
 
-
+<?php
+if($data->userID == $userid)
+{
+?>
     <div class="wrapper">
             <a href="<?php echo site_url("tracker/este_update/$data->id") ?>"><button>Modify</button></a>
             <button>CONTACT TRACING</button>
             <button>ENTER ESTABLISHMENT</button>
-
-            
+    </div>
+<?php
+}
+?>
+ 
+<?php
+if($data->userID != $userid)
+{
+?>
+<div class="wrapper">
+            <button>ENTER ESTABLISHMENT</button>
      </div>
+<?php
+}
+?>
     
 </body>
 </html>

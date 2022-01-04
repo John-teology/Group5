@@ -1,49 +1,46 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Segoe UI; 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Segoe UI;
 }
-html, body{
-    display: grid;
-    height: 100%;
-    place-items: center;
-    background-color: #1a1f22;
-    background-size: cover;
-}
-
-.wrapper{
-    width: 380px;
-    background-color: #2a2e35;
-    border-radius: 15px;
-
+html,
+body {
+	display: grid;
+	height: 100%;
+	place-items: center;
+	background-color: #1a1f22;
+	background-size: cover;
 }
 
-.wrapper .logo{
-    
-    line-height: 10px;
-    background-color: #2a2e35;;
-    border-radius: 15px 15px 0 0;
-
+.wrapper {
+	width: 380px;
+	background-color: #2a2e35;
+	border-radius: 15px;
 }
 
-.wrapper .title{
-    color: white; 
-    padding: 0 0 10px 25px;
-
+.wrapper .logo {
+	line-height: 10px;
+	background-color: #2a2e35;
+	border-radius: 15px 15px 0 0;
 }
 
-.wrapper .logo img{
-    width: auto;
-    height: auto;
-    margin: 20px 0 20px 41%;
-}
-.wrapper .form{
-    padding: 10px 20px 25px 20px
+.wrapper .title {
+	color: white;
+	padding: 0 0 10px 25px;
 }
 
-.wrapper .form #div1{
-    font-weight: bold;
+.wrapper .logo img {
+	width: auto;
+	height: auto;
+	margin: 20px 0 20px 41%;
+}
+.wrapper .form {
+	padding: 10px 20px 25px 20px;
+}
+
+.wrapper .form #div1 {
+	font-weight: bold;
 	color: white;
 	height: 45px;
 	margin-bottom: 15px;
@@ -51,10 +48,10 @@ html, body{
 	margin: 35px 0 0 0;
 }
 
-.wrapper .form #div1 input{
-    color: white;
-    background-color: #454e56;
-    border-width: 0px;
+.wrapper .form #div1 input {
+	color: white;
+	background-color: #454e56;
+	border-width: 0px;
 	border-color: #454e56;
 	border-radius: 20px 20px;
 	height: 100%;
@@ -62,8 +59,8 @@ html, body{
 	padding-left: 60px;
 }
 
-.wrapper .form #div1 i{
-    border-radius: 20px 20px;
+.wrapper .form #div1 i {
+	border-radius: 20px 20px;
 	position: absolute;
 	width: 47px;
 	height: 100%;
@@ -76,31 +73,31 @@ html, body{
 	justify-content: center;
 }
 
-.wrapper .form #login{
-    position: relative;
-    margin: 40px 0 0 25% ;
-    height: 40px;
-    width: 50%;
+.wrapper .form #login {
+	position: relative;
+	margin: 40px 0 0 25%;
+	height: 40px;
+	width: 50%;
 }
 
-.error{
-    font-weight: lighter;
-    font-size: 13px;
-    color: red;
+.error {
+	font-weight: lighter;
+	font-size: 13px;
+	color: red;
 }
 
-.create{
-    padding: 0 0 0 30%;
-    color: white;
+.create {
+	padding: 0 0 0 30%;
+	color: white;
 }
 
-.form-label{
-    margin: 40px 0 0 2%;
+.form-label {
+	margin: 40px 0 0 2%;
 }
 
-#login{
-    font-size: 16px;
-    border-width: 0px;
+#login {
+	font-size: 16px;
+	border-width: 0px;
 	background-color: #00994d;
 	border-radius: 20px 20px;
 	font-weight: bold;
@@ -111,11 +108,11 @@ html, body{
 	width: 50%;
 }
 
-input{
-    color: white;
-    border-radius: 20px;
+input {
+	color: white;
+	border-radius: 20px;
 }
 
-i{
-    border-radius: 20px;
+i {
+	border-radius: 20px;
 }
