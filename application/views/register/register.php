@@ -27,20 +27,20 @@
             </div>
         <div class="form">
             <div id="div2" class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Username:</label>
+                <label for="exampleInputEmail1" class="form-label">Username</label>
                 <i class="fa fa-user"></i>
                 <input type="text" class="form-control" value="<?php echo set_value("username_txt") ?>" name="username_txt" placeholder="Enter username">
                 <?php  echo form_error("username_txt","<div class='error'>","</div>"); ?>
 
             </div>
             <div id="div2" class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password:</label>
+                <label for="exampleInputPassword1" class="form-label">Password</label>
                 <i class="fa fa-lock"></i>
                 <input type="password" class="form-control" value="<?php echo set_value("password1_txt") ?>" name="password1_txt" id="exampleInputPassword1" placeholder="Enter password">
                 <?php  echo form_error("password1_txt","<div class='error'>","</div>"); ?>
             </div>
             <div id="div2" class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Confirm Password:</label>
+                <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
                 <i class="fa fa-lock"></i>
                 <input type="password" class="form-control" name="password2_txt" value="<?php echo set_value("password2_txt") ?>" id="exampleInputPassword1" placeholder="Confirm your password">
                 <?php  echo form_error("password2_txt","<div class='error'>","</div>"); ?>
