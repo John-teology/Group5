@@ -150,5 +150,21 @@ class T_model extends CI_Model{
 
     }
 
+    function get_user_ct_by_id($userid)
+    {
+        $this->db->select("id");
+        $this->db->where("id",$userid);
+
+        $result = $this->db->get("contact_tracing")->row()->id;
+
+        return $result;
+
+    }
+
+    function add_report($data)
+    {
+        return $this->db->insert("report",$data);
+    }
+
 }
 ?>

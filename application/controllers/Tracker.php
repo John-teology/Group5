@@ -9,11 +9,18 @@ class Tracker extends CI_Controller {
 		// $this->load->view('pages/Mainpage');
         if($this->session->userdata("username") != "")
         {
+            if($this->session->userdata("entered")!= "")
+            {
+                $est_id = $this->session->userdata("entered");
+                redirect("tracker/establishment_entry/$est_id");
+            }
+        
             $user = $this->session->userdata("username"); 
-            $this->load->view("mainpage", array
-        (
-            "username" => $user,
-        ));
+                $this->load->view("mainpage", array
+            (
+                "username" => $user,
+            ));
+
         }
         else{
             redirect("tracker/login");
@@ -25,7 +32,10 @@ class Tracker extends CI_Controller {
 
     public function login()
     {  
-        
+          if($this->session->userdata("username") != "")
+        {
+            redirect("tracker");
+        }
         unset($_SESSION['not_equal']);
         $this->load->view("login/login");
     }
@@ -59,7 +69,7 @@ class Tracker extends CI_Controller {
             if($this->t_model->login_validation($username,$password))
             {
                 $session_data = array(
-                    'username' => $username
+                    'username' => $username,
                 );
                 $this->session->set_userdata($session_data);
                 redirect("tracker");
@@ -82,6 +92,10 @@ class Tracker extends CI_Controller {
 
     public function register()
     {
+           if($this->session->userdata("username") != "")
+        {
+            redirect("tracker");
+        }
         unset($_SESSION['registered']);
         unset($_SESSION['wrong']);
         $this->load->view("register/register");
@@ -145,13 +159,20 @@ class Tracker extends CI_Controller {
     }
 
     public function createEstablishment() {
-          if($this->session->userdata("username") != "")
-        {   
-        $this->load->view('establishment/createEst');
+        if($this->session->userdata("username") != "")
+            {   
+                    if($this->session->userdata("entered")!= "")
+                {
+                    $est_id = $this->session->userdata("entered");
+                    redirect("tracker/establishment_entry/$est_id");
+                }
+        
+                $this->load->view('establishment/createEst');
            }
-        else{
-            redirect("tracker/login");
-        }
+        else
+            {
+                redirect("tracker/login");
+            }
 
     }
 
@@ -159,6 +180,12 @@ class Tracker extends CI_Controller {
     {
         if($this->session->userdata("username") != "")
         {   
+            if($this->session->userdata("entered")!= "")
+                {
+                    $est_id = $this->session->userdata("entered");
+                    redirect("tracker/establishment_entry/$est_id");
+                }
+        
             $user = $this->session->userdata("username"); 
             $user_id = $this->t_model->get_user_id($user);
             if($this->t_model->is_user_have_ct($user_id))
@@ -181,6 +208,11 @@ class Tracker extends CI_Controller {
     {
           if($this->session->userdata("username") != "")
         {   
+            if($this->session->userdata("entered")!= "")
+                {
+                    $est_id = $this->session->userdata("entered");
+                    redirect("tracker/establishment_entry/$est_id");
+                }
             $this->load->view('contact_tracing/contact_t_form');
         }
         else{
@@ -251,6 +283,11 @@ class Tracker extends CI_Controller {
     {
         if($this->session->userdata("username") != "")
             {
+                if($this->session->userdata("entered")!= "")
+                {
+                    $est_id = $this->session->userdata("entered");
+                    redirect("tracker/establishment_entry/$est_id");
+                }
                 $user = $this->session->userdata("username"); 
                 $user_id = $this->t_model->get_user_id($user);
                 $data = $this->t_model->get_user_ct($user_id);
@@ -268,6 +305,11 @@ class Tracker extends CI_Controller {
     {
         if($this->session->userdata("username") != "")
         {
+            if($this->session->userdata("entered")!= "")
+                {
+                    $est_id = $this->session->userdata("entered");
+                    redirect("tracker/establishment_entry/$est_id");
+                }
             $data = $this->t_model->get_ct_by_id($id);
             $this->load->view("contact_tracing/contact_t_update",array(
                 "data" => $data,
@@ -341,13 +383,30 @@ class Tracker extends CI_Controller {
 
     //Establishment Create
     public function Establishment_Create() {
-        $this->load->view('establishment/Establishment_C');
+        if($this->session->userdata("username") != "")
+        {   
+            if($this->session->userdata("entered")!= "")
+                    {
+                        $est_id = $this->session->userdata("entered");
+                        redirect("tracker/establishment_entry/$est_id");
+                    }
+            $this->load->view('establishment/Establishment_C');
+         }
+        else{
+            redirect("tracker/login");
+        }
+
     }
 
     public function user_prof_este()
     {
         if($this->session->userdata("username") != "")
         {   
+             if($this->session->userdata("entered")!= "")
+                {
+                    $est_id = $this->session->userdata("entered");
+                    redirect("tracker/establishment_entry/$est_id");
+                }
             $user = $this->session->userdata("username"); 
             $user_id = $this->t_model->get_user_id($user);
             if($this->t_model->is_user_have_ctt($user_id))
@@ -415,10 +474,15 @@ class Tracker extends CI_Controller {
 
         if($this->session->userdata("username") != "")
         {
+            if($this->session->userdata("entered")!= "")
+                {
+                    $est_id = $this->session->userdata("entered");
+                    redirect("tracker/establishment_entry/$est_id");
+                }
             $user = $this->session->userdata("username"); 
             $user_id = $this->t_model->get_user_id($user);
             $data = $this->t_model->get_user_establishment($user_id);
-            $this->load->view('establishment/EstablishmentName',array(
+            $this->load->view('establishment/Establishmentown',array(
                 "data"=>$data,
                 "username" => $user,
             ));
@@ -432,9 +496,14 @@ class Tracker extends CI_Controller {
         
         if($this->session->userdata("username") != "")
         {   
+           if($this->session->userdata("entered")!= "")
+                {
+                    $est_id = $this->session->userdata("entered");
+                    redirect("tracker/establishment_entry/$est_id");
+                } 
            $username = $this->session->userdata("username");
            $data = $this->t_model->get_establishment_by_id($establishment_id);
-            $this->load->view('establishment/establishment_show', array(
+            $this->load->view('establishment/establishment_specific', array(
                 "data" =>$data,
                 "userid" => $this->t_model->get_user_id($username)
             )) ;
@@ -453,6 +522,11 @@ class Tracker extends CI_Controller {
     {
         if($this->session->userdata("username") != "")
         {
+            if($this->session->userdata("entered")!= "")
+                {
+                    $est_id = $this->session->userdata("entered");
+                    redirect("tracker/establishment_entry/$est_id");
+                }
             $data = $this->t_model->get_establishment_by_id($id);
             $this->load->view("establishment/establishment_update",array(
                 "data" => $data,
@@ -515,6 +589,7 @@ class Tracker extends CI_Controller {
     {
         if($this->session->userdata("username") != "")
         {
+            $this->session->unset_userdata('entered');
             $list = $this->t_model->get_all_establishments();
             $this->load->view("establishment/display_establishments", array(
                 "establishments" => $list,
@@ -526,6 +601,55 @@ class Tracker extends CI_Controller {
     }
     
 
+    // Enter an establishment
+    // public function establishment_entry($est_id){
+    //      if($this->session->userdata("username") != "")
+    //         {
+    //             $this->load->view("report/entered", array(
+    //                 'est_id' => $est_id
+    //             ));
+    //         }
+    //     else
+    //         {
+    //             redirect("tracker/login");
+    //         }
+        
+    // }
+    public function establishment_entry($est_id)
+    {
+        if($this->session->userdata("username") != "")
+        {
+            if($this->session->userdata("entered")!= "")
+                {
+                    $this->load->view("report/entered", array(
+                    'est_id' => $est_id
+                ));
+                }
+            else
+            {
+                $user_id = $this->t_model->get_user_id($this->session->userdata("username"));
+            $user_ct_id = $this->t_model->get_user_ct_by_id($user_id);
+            $this->t_model->add_report(array(
+                "ct_id"=> $user_ct_id,
+                " est_id"=> $est_id
+            ));
+            $this->session->set_userdata("entered",$est_id);
+            $this->load->view("report/entered", array(
+                    'est_id' => $est_id
+                ));
+            
+            }
+            
+
+
+            
+        }
+    else
+        {
+            redirect("tracker/login");
+        }
+    
+    }
 
 
 

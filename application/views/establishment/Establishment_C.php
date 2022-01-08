@@ -27,11 +27,13 @@
         ?>
 
         <div class="header">
+            <a href="<?php echo site_url("tracker")?>">
             <nav>
                 <ul>
                 <li class="li"><h1 class="title1">Establishment Traffic Control System</h1></li>
                 </ul>
             </nav>
+            </a>
         </div>
 
 

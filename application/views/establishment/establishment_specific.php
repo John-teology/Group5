@@ -19,34 +19,6 @@
 </head>
 <body >
 
-    <!-- <div class="container">
-        <div class="container1">
-            <h1 class="name">Establishment Name:</h1>
-            <h1 class="arr1"><?php print_r($data->name)?></h1>
-
-        </div>
-
-        <div class="container2">
-            <h1 class="location">Location:</h1>
-            <h4 class="arr1"><?php print_r($data->location)?></h4>
-
-        </div>
-        <div class="container3">
-
-            <div class="flexi">
-            <h1 class="description">Description:</h1>
-            </div>
-
-            <div class="flexi1">
-            <h4 class="arr1"><?php print_r($data->location)?></h4>
-            </div>
-        </div>
-        <div class="container4">
-            <h1 class="qr">QR CODE</h1>
-        </div>
-
-    </div> -->
-
     <div class="container">
         <div class="row">
             <div class="col">
@@ -74,7 +46,9 @@ if($data->userID == $userid)
     <div class="wrapper">
             <a href="<?php echo site_url("tracker/este_update/$data->id") ?>"><button>Modify</button></a>
             <button>CONTACT TRACING</button>
+            <a href="<?php echo site_url("tracker/establishment_entry/$data->id")?>" >
             <button>ENTER ESTABLISHMENT</button>
+            </a>
     </div>
 <?php
 }
@@ -85,7 +59,9 @@ if($data->userID != $userid)
 {
 ?>
 <div class="wrapper">
+             <a href="<?php echo site_url("tracker/establishment_entry/$data->id")?>" >
             <button>ENTER ESTABLISHMENT</button>
+            </a>
      </div>
 <?php
 }

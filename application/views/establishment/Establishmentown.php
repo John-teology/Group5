@@ -18,27 +18,7 @@
                 <button class="profbut"> <?php echo $username ?><i class="fa fa-user"></i> </button>
             </div>
         </div>
-
-
-       
-        
-
-
     <center>
-        <!-- <h3>
-            <?php print_r($data[3]->name)?>
-        </h3>
-         <h3>
-            <?php print_r($data[3]->location)?>
-        </h3>
-         <h3>
-            <?php print_r($data[3]->description)?>
-        </h3>    -->
-
-        <!-- <h3>
-            <?php print_r($data)?>
-        </h3> -->
-
         
 
         <div class="wrapper">
@@ -65,16 +45,6 @@
             <a href="<?php echo site_url("tracker")?>"><button class="but2">Back To HomePage</button></a>
         
             <a href="<?php echo site_url("tracker/user_prof_este")?>"><button class="but3">Create</button></a>
-        
-
-
-        
-
-       
-<!-- 
-        <button>
-            <a href="<?php echo site_url("tracker/contact_tracing_update/") ?>">Modify</a>
-        </button> -->
     </center>
 </body>
 </html>
