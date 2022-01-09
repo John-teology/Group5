@@ -6,9 +6,9 @@ class Tracker extends CI_Controller {
 
 		public function mainpage()
 	{
-		// $this->load->view('pages/Mainpage');
         if($this->session->userdata("username") != "")
         {
+            $this->session->unset_userdata('currentpage');
             if($this->session->userdata("entered")!= "")
             {
                 $est_id = $this->session->userdata("entered");
@@ -68,10 +68,11 @@ class Tracker extends CI_Controller {
 
             if($this->t_model->login_validation($username,$password))
             {
-                $session_data = array(
-                    'username' => $username,
-                );
-                $this->session->set_userdata($session_data);
+                $this->session->set_userdata("username",$username);
+                if($this->session->userdata("currentpage") != "")
+                {
+                    redirect($this->session->userdata("currentpage"));
+                }
                 redirect("tracker");
             }
             else{
@@ -158,23 +159,23 @@ class Tracker extends CI_Controller {
 
     }
 
-    public function createEstablishment() {
-        if($this->session->userdata("username") != "")
-            {   
-                    if($this->session->userdata("entered")!= "")
-                {
-                    $est_id = $this->session->userdata("entered");
-                    redirect("tracker/establishment_entry/$est_id");
-                }
+    // public function createEstablishment() {
+    //     if($this->session->userdata("username") != "")
+    //         {   
+    //                 if($this->session->userdata("entered")!= "")
+    //             {
+    //                 $est_id = $this->session->userdata("entered");
+    //                 redirect("tracker/establishment_entry/$est_id");
+    //             }
         
-                $this->load->view('establishment/createEst');
-           }
-        else
-            {
-                redirect("tracker/login");
-            }
+    //             $this->load->view('establishment/createEst');
+    //        }
+    //     else
+    //         {
+    //             redirect("tracker/login");
+    //         }
 
-    }
+    // }
 
     public function user_profile()
     {
@@ -208,6 +209,7 @@ class Tracker extends CI_Controller {
     {
           if($this->session->userdata("username") != "")
         {   
+            $this->session->unset_userdata('currentpage');
             if($this->session->userdata("entered")!= "")
                 {
                     $est_id = $this->session->userdata("entered");
@@ -216,6 +218,7 @@ class Tracker extends CI_Controller {
             $this->load->view('contact_tracing/contact_t_form');
         }
         else{
+            $this->session->set_userdata("currentpage","tracker/contact_tracing_form");
             redirect("tracker/login");
         }
     }
@@ -283,6 +286,7 @@ class Tracker extends CI_Controller {
     {
         if($this->session->userdata("username") != "")
             {
+                $this->session->unset_userdata('currentpage');
                 if($this->session->userdata("entered")!= "")
                 {
                     $est_id = $this->session->userdata("entered");
@@ -296,6 +300,7 @@ class Tracker extends CI_Controller {
                 ));
             }
         else{
+            $this->session->set_userdata("currentpage","tracker/contact_tracing");
             redirect("tracker/login");
         }
 
@@ -305,6 +310,7 @@ class Tracker extends CI_Controller {
     {
         if($this->session->userdata("username") != "")
         {
+            $this->session->unset_userdata('currentpage');
             if($this->session->userdata("entered")!= "")
                 {
                     $est_id = $this->session->userdata("entered");
@@ -316,6 +322,7 @@ class Tracker extends CI_Controller {
             ));
         }
         else{
+            $this->session->set_userdata("currentpage","tracker/contact_tracing_update/$id");
             redirect("tracker/login");
         }
     }
@@ -385,6 +392,7 @@ class Tracker extends CI_Controller {
     public function Establishment_Create() {
         if($this->session->userdata("username") != "")
         {   
+            $this->session->unset_userdata('currentpage');
             if($this->session->userdata("entered")!= "")
                     {
                         $est_id = $this->session->userdata("entered");
@@ -393,37 +401,38 @@ class Tracker extends CI_Controller {
             $this->load->view('establishment/Establishment_C');
          }
         else{
+            $this->session->set_userdata("currentpage","tracker/Establishment_Create");
             redirect("tracker/login");
         }
 
     }
 
-    public function user_prof_este()
-    {
-        if($this->session->userdata("username") != "")
-        {   
-             if($this->session->userdata("entered")!= "")
-                {
-                    $est_id = $this->session->userdata("entered");
-                    redirect("tracker/establishment_entry/$est_id");
-                }
-            $user = $this->session->userdata("username"); 
-            $user_id = $this->t_model->get_user_id($user);
-            if($this->t_model->is_user_have_ctt($user_id))
-            {
-                redirect('tracker/Establishment_Create');
-            }
-            else
-            {
-                redirect("tracker/Establishment_Create");
-            }
+    // public function user_prof_este()
+    // {
+    //     if($this->session->userdata("username") != "")
+    //     {   
+    //          if($this->session->userdata("entered")!= "")
+    //             {
+    //                 $est_id = $this->session->userdata("entered");
+    //                 redirect("tracker/establishment_entry/$est_id");
+    //             }
+    //         $user = $this->session->userdata("username"); 
+    //         $user_id = $this->t_model->get_user_id($user);
+    //         if($this->t_model->is_user_have_ctt($user_id))
+    //         {
+    //             redirect('tracker/Establishment_Create');
+    //         }
+    //         else
+    //         {
+    //             redirect("tracker/Establishment_Create");
+    //         }
 
-        }
-        else{
-            redirect("tracker/login");
-        }
+    //     }
+    //     else{
+    //         redirect("tracker/login");
+    //     }
 
-    }
+    // }
 
     public function Establishment_auth() {
         $config_rules = array(
@@ -469,11 +478,12 @@ class Tracker extends CI_Controller {
         }
     }
 
-    public function displayEstab() {
+    public function MyEstablishments() {
        
 
         if($this->session->userdata("username") != "")
         {
+            $this->session->unset_userdata('currentpage');
             if($this->session->userdata("entered")!= "")
                 {
                     $est_id = $this->session->userdata("entered");
@@ -488,6 +498,7 @@ class Tracker extends CI_Controller {
             ));
         }
     else{
+        $this->session->set_userdata("currentpage","tracker/MyEstablishments");
         redirect("tracker/login");
     }
     }
@@ -496,6 +507,7 @@ class Tracker extends CI_Controller {
         
         if($this->session->userdata("username") != "")
         {   
+            $this->session->unset_userdata('currentpage');
            if($this->session->userdata("entered")!= "")
                 {
                     $est_id = $this->session->userdata("entered");
@@ -510,6 +522,7 @@ class Tracker extends CI_Controller {
             
         }
         else{
+            $this->session->set_userdata("currentpage","tracker/Establishment_specific/$establishment_id");
             redirect("tracker/login");
         }
     }
@@ -518,10 +531,11 @@ class Tracker extends CI_Controller {
 
     //Establishment Update
 
-    public function este_update($id)
+    public function Establishment_update($id)
     {
         if($this->session->userdata("username") != "")
         {
+            $this->session->unset_userdata('currentpage');
             if($this->session->userdata("entered")!= "")
                 {
                     $est_id = $this->session->userdata("entered");
@@ -533,6 +547,7 @@ class Tracker extends CI_Controller {
             ));
         }
         else{
+            $this->session->set_userdata("currentpage","tracker/Establishment_update/$id");
             redirect("tracker/login");
         }
     }
@@ -561,7 +576,7 @@ class Tracker extends CI_Controller {
 
         if($this->form_validation->run() == false)
             {
-                 $this->este_update($este_id);
+                 $this->Establishment_update($este_id);
 
             }
 
@@ -578,7 +593,7 @@ class Tracker extends CI_Controller {
                 );
                 $this->t_model->update_establishment($este_id,$data);
 
-                redirect("tracker/displayEstab");
+                redirect("tracker/MyEstablishments");
 
             }   
 
@@ -589,6 +604,7 @@ class Tracker extends CI_Controller {
     {
         if($this->session->userdata("username") != "")
         {
+            $this->session->unset_userdata('currentpage');
             $this->session->unset_userdata('entered');
             $list = $this->t_model->get_all_establishments();
             $this->load->view("establishment/display_establishments", array(
@@ -596,56 +612,52 @@ class Tracker extends CI_Controller {
             ));
         }
         else{
+            $this->session->set_userdata("currentpage","tracker/display_establishment");
             redirect("tracker/login");
         }
     }
-    
-
-    // Enter an establishment
-    // public function establishment_entry($est_id){
-    //      if($this->session->userdata("username") != "")
-    //         {
-    //             $this->load->view("report/entered", array(
-    //                 'est_id' => $est_id
-    //             ));
-    //         }
-    //     else
-    //         {
-    //             redirect("tracker/login");
-    //         }
-        
-    // }
+    //add ka lang ng dates
     public function establishment_entry($est_id)
     {
         if($this->session->userdata("username") != "")
         {
+            $user_id = $this->t_model->get_user_id($this->session->userdata("username"));
+            $user_ct_id = $this->t_model->get_user_ct_by_id($user_id);
+            $this->session->unset_userdata('currentpage');
             if($this->session->userdata("entered")!= "")
                 {
-                    $this->load->view("report/entered", array(
-                    'est_id' => $est_id
-                ));
+                        $this->load->view("report/entered", array(
+                        'est_id' => $est_id,
+                        // "u" => $user_id
+                    ));
                 }
             else
             {
-                $user_id = $this->t_model->get_user_id($this->session->userdata("username"));
-            $user_ct_id = $this->t_model->get_user_ct_by_id($user_id);
-            $this->t_model->add_report(array(
-                "ct_id"=> $user_ct_id,
-                " est_id"=> $est_id
-            ));
-            $this->session->set_userdata("entered",$est_id);
-            $this->load->view("report/entered", array(
-                    'est_id' => $est_id
-                ));
+              
+                // if(empty($user_ct_id))
+                //     {
+                //         redirect("tracker/contact_tracing_form");
+                //     }
+                if($this->t_model->is_report_not_inside($user_ct_id,$est_id))
+                    {
+                        $this->t_model->add_report(array(
+                        "ct_id"=> $user_ct_id,
+                        " est_id"=> $est_id
+                        ));
+                    }
+                $this->session->set_userdata("entered",$est_id);
+                $this->load->view("report/entered", array(
+                        'usserid' => $est_id,
+                        "ct_id" => $user_ct_id,
+                        // "u" => $user_id
+
+                    ));
             
             }
-            
-
-
-            
         }
     else
         {
+            $this->session->set_userdata("currentpage","tracker/Establishment_entry/$est_id");
             redirect("tracker/login");
         }
     

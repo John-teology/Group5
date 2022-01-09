@@ -44,7 +44,7 @@ if($data->userID == $userid)
 {
 ?>
     <div class="wrapper">
-            <a href="<?php echo site_url("tracker/este_update/$data->id") ?>"><button>Modify</button></a>
+            <a href="<?php echo site_url("tracker/Establishment_update/$data->id") ?>"><button>Modify</button></a>
             <button>CONTACT TRACING</button>
             <a href="<?php echo site_url("tracker/establishment_entry/$data->id")?>" >
             <button>ENTER ESTABLISHMENT</button>
