@@ -661,6 +661,34 @@ class Tracker extends CI_Controller {
     
     }
 
+    public function contact_tracing_report($est_id){
+        $data = $this->t_model->get_ct_ids($est_id);
+        if(empty($data))
+        {
+             $this->load->view("report/ct_report",array(
+            "empty" => 0
+
+            ));
+
+        }
+        else
+        {
+            $contact_id = array();
+            for($i = 0; $i < count($data); $i++)
+            {
+                array_push($contact_id,$data[$i]->ct_id);
+            }
+            $contact_d = $this->t_model->get_ct_details($contact_id);
+            $this->load->view("report/ct_report",array(
+                "data" => $contact_d,
+                "empty" => 1
+
+            ));
+
+        }
+       
+    }
+
 
 
 }

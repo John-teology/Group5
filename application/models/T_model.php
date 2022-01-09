@@ -182,5 +182,23 @@ class T_model extends CI_Model{
         }
         return false;
     }
+
+    function get_ct_ids($est_id)
+    {
+        $this->db->select("ct_id");
+        $this->db->where("est_id",$est_id);
+
+        $result = $this->db->get("report")->result();
+        return $result;
+        
+    }
+    function get_ct_details($data)
+    {
+        $this->db->select("*");
+        $this->db->where_in('id', $data);
+
+        $result = $this->db->get("contact_tracing")->result();
+        return $result;
+
+    }
 }
-?>
