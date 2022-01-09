@@ -153,7 +153,7 @@ class T_model extends CI_Model{
     function get_user_ct_by_id($userid)
     {
         $this->db->select("id");
-        $this->db->where("id",$userid);
+        $this->db->where("user_id",$userid);
 
         $result = $this->db->get("contact_tracing")->row()->id;
 
@@ -169,16 +169,18 @@ class T_model extends CI_Model{
     function is_report_not_inside($user_ct_id,$est_id)
     { // this check if a single report is one for a day
         $this->db->select("id");
-        $this->db->where("ct_id",$user_ct_id);
-        $this->db->where("ct_id",$est_id);
-        $this->db->where("date_t",date("Y-m-d"));
+        $this->db->where(array(
+            "ct_id" => $user_ct_id,
+            "est_id" => $est_id,
+            "date_t" => date("Y-m-d")
+        ));
 
         $result = $this->db->get("report")->result();
         if(empty($result))
         {
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 }
 ?>

@@ -10,7 +10,6 @@
     <h1>welcome</h1>
    <a href="<?php echo site_url("tracker/display_establishment") ?>">LEave</a>
    <?php
-    echo $u;
 
    ?>
 </body>

@@ -621,23 +621,22 @@ class Tracker extends CI_Controller {
     {
         if($this->session->userdata("username") != "")
         {
-            $user_id = $this->t_model->get_user_id($this->session->userdata("username"));
-            $user_ct_id = $this->t_model->get_user_ct_by_id($user_id);
+            
             $this->session->unset_userdata('currentpage');
             if($this->session->userdata("entered")!= "")
                 {
                         $this->load->view("report/entered", array(
                         'est_id' => $est_id,
-                        // "u" => $user_id
                     ));
                 }
             else
             {
-              
-                // if(empty($user_ct_id))
-                //     {
-                //         redirect("tracker/contact_tracing_form");
-                //     }
+                $user_id = $this->t_model->get_user_id($this->session->userdata("username"));
+                $user_ct_id = $this->t_model->get_user_ct_by_id($user_id);
+                if(empty($user_ct_id))
+                    {
+                        redirect("tracker/contact_tracing_form");
+                    }
                 if($this->t_model->is_report_not_inside($user_ct_id,$est_id))
                     {
                         $this->t_model->add_report(array(
@@ -649,17 +648,16 @@ class Tracker extends CI_Controller {
                 $this->load->view("report/entered", array(
                         'usserid' => $est_id,
                         "ct_id" => $user_ct_id,
-                        // "u" => $user_id
 
                     ));
             
             }
         }
-    else
-        {
-            $this->session->set_userdata("currentpage","tracker/Establishment_entry/$est_id");
-            redirect("tracker/login");
-        }
+        else
+            {
+                $this->session->set_userdata("currentpage","tracker/Establishment_entry/$est_id");
+                redirect("tracker/login");
+            }
     
     }
 
