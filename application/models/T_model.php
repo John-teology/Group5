@@ -201,4 +201,15 @@ class T_model extends CI_Model{
         return $result;
 
     }
+
+    function get_report_id($data)
+    {
+        $this->db->select("id");
+        $this->db->where_in($data);
+
+        $result = $this->db->get("report")->row()->id;
+
+        return $result;
+
+    }
 }

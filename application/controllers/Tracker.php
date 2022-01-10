@@ -623,14 +623,14 @@ class Tracker extends CI_Controller {
         {
             
             $this->session->unset_userdata('currentpage');
-            if($this->session->userdata("entered")!= "")
-                {
-                        $this->load->view("report/entered", array(
-                        'est_id' => $est_id,
-                    ));
-                }
-            else
-            {
+            // if($this->session->userdata("entered")!= "")
+            //     {
+            //             $this->load->view("report/entered", array(
+            //             'est_id' => $est_id,
+            //         ));
+            //     }
+            // else
+            // {
                 $user_id = $this->t_model->get_user_id($this->session->userdata("username"));
                 $user_ct_id = $this->t_model->get_user_ct_by_id($user_id);
                 if(empty($user_ct_id))
@@ -645,13 +645,21 @@ class Tracker extends CI_Controller {
                         ));
                     }
                 $this->session->set_userdata("entered",$est_id);
+                $data = array(
+                    "ct_id" => $user_ct_id,
+                    " est_id"=> $est_id,
+                    "date_t" => date("Y-m-d")
+                );
+
+                $report_id = $this->t_model->get_report_id($data);
                 $this->load->view("report/entered", array(
                         'usserid' => $est_id,
                         "ct_id" => $user_ct_id,
+                        "report_id"=> $report_id
 
                     ));
             
-            }
+            // }
         }
         else
             {
@@ -681,7 +689,8 @@ class Tracker extends CI_Controller {
             $contact_d = $this->t_model->get_ct_details($contact_id);
             $this->load->view("report/ct_report",array(
                 "data" => $contact_d,
-                "empty" => 1
+                "empty" => 1,
+                "test" => $contact_id
 
             ));
 
