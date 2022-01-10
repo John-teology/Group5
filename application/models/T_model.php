@@ -13,8 +13,8 @@ class T_model extends CI_Model{
             $this->db->select("password");
             $this->db->where("username",$username);
             $pass = $this->db->get("user")->row()->password; 
-            // $decrypt = $this->encryption->decrypt($pass);
-            if($password == $pass)
+            $decrypt = $this->encryption->decrypt($pass);
+            if($password == $decrypt)
             {
                 return true;
             }
@@ -205,9 +205,26 @@ class T_model extends CI_Model{
     function get_report_id($data)
     {
         $this->db->select("id");
-        $this->db->where_in($data);
+        $this->db->where($data);
 
         $result = $this->db->get("report")->row()->id;
+
+        return $result;
+
+    }
+
+    function report_to_What($report_id,$data)
+    {
+        $this->db->where('id', $report_id);
+        $this->db->update('report', $data);
+    }
+
+    function get_report_status($data)
+    {
+        $this->db->select("id");
+        $this->db->where($data);
+
+        $result = $this->db->get("report")->result();
 
         return $result;
 
