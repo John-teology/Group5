@@ -148,7 +148,8 @@ class Tracker extends CI_Controller {
                 $this->t_model->register_credentials(
                     array(
                         "username" => $username,
-                        "password" => $this->encryption->encrypt($password1),
+                        // "password" => $this->encryption->encrypt($password1),
+                        "password" => $password1
                     )
                     );
                 $this->session->set_flashdata("registered", "You succesfully registered!");
