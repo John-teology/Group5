@@ -44,7 +44,7 @@
 
             <a href="<?php echo site_url("tracker")?>"><button class="but2">Back To HomePage</button></a>
         
-            <a href="<?php echo site_url("tracker/user_prof_este")?>"><button class="but3">Create</button></a>
+            <a href="<?php echo site_url("tracker/Establishment_Create")?>"><button class="but3">Create</button></a>
     </center>
 </body>
 </html>
