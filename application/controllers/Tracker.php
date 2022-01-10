@@ -475,7 +475,7 @@ class Tracker extends CI_Controller {
                             "description" => $description,
                         )
                         );
-             redirect("tracker/displayEstab");
+             redirect("tracker/MyEstablishments");
         }
     }
 
