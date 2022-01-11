@@ -59,10 +59,8 @@ body {
 	margin: 50px 0 0 0;
 }
 
-.name,
-.location,
-.description {
-	margin: 50px 0 0 0;
+.name, .location, .description{
+    margin: 50px 0 0 30px;
 }
 
 button {
