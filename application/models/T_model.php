@@ -229,4 +229,15 @@ class T_model extends CI_Model{
         return $result;
 
     }
+
+    function delete_establishmemt($est_id)
+    {
+        $this->db->where('id', $est_id);
+        $this->db->delete('establishment_try');
+    }
+     function delete_report($est_id)
+    {
+        $this->db->where('est_id', $est_id);
+        $this->db->delete('report');
+    }
 }

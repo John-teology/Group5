@@ -149,7 +149,6 @@ class Tracker extends CI_Controller {
                     array(
                         "username" => $username,
                         "password" => $this->encryption->encrypt($password1),
-                        
                     )
                     );
                 $this->session->set_flashdata("registered", "You succesfully registered!");
@@ -519,7 +518,7 @@ class Tracker extends CI_Controller {
            $data = $this->t_model->get_establishment_by_id($establishment_id);
            if(empty($data))
            {
-               redirect("tracker/error");
+               redirect("tracker");
            }
            $report = array(
                     " est_id"=> $establishment_id,
@@ -642,7 +641,12 @@ class Tracker extends CI_Controller {
             
             $this->session->unset_userdata('currentpage');
         
-                $user_id = $this->t_model->get_user_id($this->session->userdata("username"));
+                $user_id = $this->t_model->get_user_id ($this->session->userdata("username"));
+                $dat = $this->t_model->get_establishment_by_id($est_id);
+                if(empty($dat))
+                {
+                    redirect("tracker/display_establishment");
+                }
                 $user_ct_id = $this->t_model->get_user_ct_by_id($user_id);
                 if(empty($user_ct_id))
                     {
@@ -712,11 +716,13 @@ class Tracker extends CI_Controller {
         }
        
     }
-    function error()
-    {
-        $this->load->view("error");
-    }
 
+    function delete_establishment_r($est_id)
+    {
+        $this->t_model->delete_establishmemt($est_id);
+        $this->t_model->delete_report($est_id);
+        redirect("tracker/Myestablishments");
+    }
 
 
 }

@@ -6,8 +6,9 @@
     font-size: 15px;
 }
 
-html, body{
-    background-color: #1a1f22;
+html,
+body {
+	background-color: #1a1f22;
 }
 
 .container{
@@ -23,25 +24,36 @@ html, body{
     width: 700px;
     background-color: #1a1f22;
     border-radius: 15px;
-    margin: 100px auto;
+    margin: 10px auto;
     padding: 35px 20px 20px 45px;
     height: 100px;
 }
 
 .container1{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.container2{
-    grid-template-columns: 1fr 1fr;
-}
-
-.container3{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-   
+    width: 1250px;
+    background-color: #00994d;
+    border-radius: 15px;
+    margin: 20px auto;
     
+    height: 400px;
+} 
+
+/* .container {
+	width: 800px;
+	background-color: #2a2e35;
+	border-radius: 15px;
+	margin: 100px auto;
+	padding: 20px;
+	height: 400px;
+} */
+
+.wrapper {
+	width: 900px;
+	background-color: #2a2e35;
+	border-radius: 15px;
+	margin: 100px auto;
+	padding: 35px 20px 20px 45px;
+	height: 100px;
 }
 
 .arr{
@@ -78,15 +90,25 @@ button{
     right: 43%;
     top: 75%;
 }
-button a{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+button a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
 }
 
 
-.name, .location, .description, .arr1, .arr2{
+.name, .location, .description, .arr1, .arr2, .arr3{
     color: white;
     line-height: 1;
   
+}
+
+.buto1{
+    margin: 0 0 0 30%;
+
+}
+
+.location1{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
 }
