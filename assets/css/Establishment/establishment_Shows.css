@@ -39,40 +39,31 @@ body {
     background-color: #00994d;
     border-radius: 15px;
     margin: 20px auto;
-    
-    height: 400px;
+    height: 100px;
+    text-align: center;
 } 
-
-/* .container {
-	width: 800px;
-	background-color: #2a2e35;
-	border-radius: 15px;
-	margin: 100px auto;
-	padding: 20px;
-	height: 400px;
-} */
-
-.wrapper {
-	width: 900px;
-	background-color: #2a2e35;
-	border-radius: 15px;
-	margin: 100px auto;
-	padding: 35px 20px 20px 45px;
-	height: 100px;
-}
 
 .container1 {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
 
+.container2{
+    width: 1250px;
+    background-color: #00994d;
+    border-radius: 15px;
+    margin: 20px auto;
+    height: 350px;
+    /* text-align: center; */
+} 
 .container2 {
-	grid-template-columns: 1fr 1fr;
+    display: grid;
+	grid-template-columns: 0.2fr;
 }
 
 .container3 {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
 }
 
 .arr {
@@ -85,13 +76,7 @@ body {
 }
 
 .arr1{
-    margin: 55px 0 0 0;
-
-    
-}
-
-.arr3{
-    margin: 20px 0 0 30px;
+    margin: 45px 0 0 0;
 }
 
 .arr2{
@@ -99,8 +84,20 @@ body {
     text-align: center;
 }
 
-.name, .location, .description{
-    margin: 40px 0 0 30px;
+.arr3{
+    margin: 47px 0 0 10px;
+}
+
+.arr4 {
+    margin: 10px 0 0 30px;
+}
+.name, .location, .description, .description1{
+    margin: 30px 0 0 30px;
+}
+
+.location1{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
 }
 
 button {
@@ -111,14 +108,8 @@ button {
 	width: 200px;
 	height: 50px;
 }
-button a {
-	text-decoration: none;
-	color: white;
-	font-weight: bold;
-}
 
-
-.name, .location, .description, .arr1, .arr2, .arr3{
+.name, .location, .description, .description1, .arr1, .arr2, .arr3, .arr4{
     color: white;
 }
 
@@ -127,7 +118,7 @@ button a {
 
 }
 
-.location1{
+/* .description1{
     display: grid;
-    grid-template-columns: 0.2fr 1fr;
-}
+    grid-template-columns: 1fr 1fr;
+} */

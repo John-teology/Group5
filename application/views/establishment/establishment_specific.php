@@ -18,27 +18,27 @@
 
 </head>
 <body >
-
     <div class="container">
+        <h1 class="arr2"><?php print_r($data->name)?></h1>
+        
+
         <div class="row">
             <div class="col">
-                <h1 class="name">Establishment Name:</h1>
-                <h1 class="location">Location:</h1>
-                <h1 class="description">Description:</h1>
-                <h1 class="description">Number of Customer:</h1>
-            </div>
-                <div class="col">
-                    <h1 class="arr2"><?php print_r($data->name)?></h1>
-                    
-                    <h4 class="arr1"><?php print_r($data->location)?></h4>
-                    <h4 class="arr1"><?php print_r($data->description)?></h4>
+                <div class="container1">
+                    <h1 class="description">Number of Customer:</h1>
                     <h4 class="arr1"><?php echo $cust_num; ?></h4>
-
-
-
                 </div>
+                <div class="container2">
+                    <div class="location1">
+                        <h1 class="location">Location:</h1>
+                        <h4 class="arr3"><?php print_r($data->location)?></h4>
+                    </div>
+                        <h1 class="description1">Description:</h1>
+                        <h4 class="arr4"><?php print_r($data->description)?></h4>
+                </div>
+            </div>
         </div>
-  </div>
+    </div>
 
 
 <?php
