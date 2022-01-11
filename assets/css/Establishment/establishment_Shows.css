@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI';
+    font-family: 'Helvetica';
+    font-size: 15px;
 }
 
 html, body{
@@ -15,13 +16,12 @@ html, body{
     background-color: #2a2e35;
     border-radius: 15px;
     margin: 100px auto;
-    padding: 20px;
     height: 400px;
 }
 
 .wrapper{
     width: 700px;
-    background-color: #2a2e35;
+    background-color: #1a1f22;
     border-radius: 15px;
     margin: 100px auto;
     padding: 35px 20px 20px 45px;
@@ -45,26 +45,26 @@ html, body{
 }
 
 .arr{
-    white-space: pre-line;
-    margin: 5px 0 0 0 ;
+    margin: 10px 0 0 0 ;
 
 }
 
 .flexi1{
-    padding: 5px 0 0 0;
+    padding: 10px 0 0 0;
   
 }
 
 .arr1{
-    margin: 70px 0 0 0;
+    margin: 65px 0 0 0;
 }
 
 .arr2{
-    margin: 50px 0 0 0;
+    margin: 40px 0 0 0;
 }
 
 .name, .location, .description{
-    margin: 50px 0 0 0;
+    margin: 50px 0 0 30px;
+    line-height: 1;
 }
 
 button{
@@ -74,6 +74,9 @@ button{
     background-color: #00994d;
     width: 200px;
     height: 50px;
+    position: absolute;
+    right: 43%;
+    top: 75%;
 }
 button a{
     text-decoration: none;
@@ -84,4 +87,6 @@ button a{
 
 .name, .location, .description, .arr1, .arr2{
     color: white;
+    line-height: 1;
+  
 }

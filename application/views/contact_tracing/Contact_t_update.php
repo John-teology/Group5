@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,18 +13,52 @@
       crossorigin="anonymous"
     />
      <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/contact_tracing/contact_t_update.css'); ?>">
-
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
  
+    <style>
+        body{
+            background-color: #1a1f22;
+        }
+        .btn{
+            background-color: #00994d;
+            border-color: #00994d;
+            border-radius: 10px;
+            border-width: 0px;
+            font-weight: bold;
+        }
+        .btn:hover {
+        background-color: #00994d;
+        }
+        .header-title:hover {
+            text-decoration: none;
+        }
+    </style>
+
 </head>
 <body>
-     <button>
+
+    
+        <div id="header" class="navbar">
+            <div class="container">
+                <a class="header-title" href="<?php echo site_url("tracker")?>" class="navbar-brand"><strong>Establishment Tracking Control System</strong></a>
+            </div> 
+        </div>
+        
+     <!-- <button>
         <a href="<?php echo site_url("tracker/contact_tracing")?>">back</a>
-    </button>
+    </button> -->
     <?php  echo form_open("tracker/contact_tracing_update_auth/$data->id", array(
         "method" => "post",
         "enctype" => "multipart/form-data")); ?>
-    
+    <div class="wrapper">
 
+<div class="logo">  
+    
+    <h4 class="title"> Update Contact Tracing Form</h4>
+</div>
+<div class="form">  
+<div class="div1">
+<div class="wrapper">
     <label for="exampleInputPassword1" class="form-label">First Name</label>
     <input type="text" class="form-control"  name="firstname_txt"  placeholder="Enter your First Name" value="<?php print_r($data->first_name)?>" >
     <?php  echo form_error("firstname_txt","<div class='error'>","</div>"); ?>
