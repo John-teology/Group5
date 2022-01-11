@@ -25,13 +25,15 @@
                 <h1 class="name">Establishment Name:</h1>
                 <h1 class="location">Location:</h1>
                 <h1 class="description">Description:</h1>
+                <h1 class="description">Number of Customer:</h1>
             </div>
                 <div class="col">
                     <h1 class="arr2"><?php print_r($data->name)?></h1>
                     
-                    
                     <h4 class="arr1"><?php print_r($data->location)?></h4>
                     <h4 class="arr1"><?php print_r($data->description)?></h4>
+                    <h4 class="arr1"><?php echo $cust_num; ?></h4>
+
 
 
                 </div>
