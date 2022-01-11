@@ -1,87 +1,88 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI';
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Segoe UI";
 }
 
-html, body{
-    background-color: #1a1f22;
+html,
+body {
+	background-color: #1a1f22;
 }
 
-.container{
-
-    width: 800px;
-    background-color: #2a2e35;
-    border-radius: 15px;
-    margin: 100px auto;
-    padding: 20px;
-    height: 400px;
+.container {
+	width: 800px;
+	background-color: #2a2e35;
+	border-radius: 15px;
+	margin: 100px auto;
+	padding: 20px;
+	height: 400px;
 }
 
-.wrapper{
-    width: 700px;
-    background-color: #2a2e35;
-    border-radius: 15px;
-    margin: 100px auto;
-    padding: 35px 20px 20px 45px;
-    height: 100px;
+.wrapper {
+	width: 900px;
+	background-color: #2a2e35;
+	border-radius: 15px;
+	margin: 100px auto;
+	padding: 35px 20px 20px 45px;
+	height: 100px;
 }
 
-.container1{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.container1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
-.container2{
-    grid-template-columns: 1fr 1fr;
+.container2 {
+	grid-template-columns: 1fr 1fr;
 }
 
-.container3{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-   
-    
+.container3 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
-.arr{
-    white-space: pre-line;
-    margin: 5px 0 0 0 ;
-
+.arr {
+	white-space: pre-line;
+	margin: 5px 0 0 0;
 }
 
-.flexi1{
-    padding: 5px 0 0 0;
-  
+.flexi1 {
+	padding: 5px 0 0 0;
 }
 
-.arr1{
-    margin: 70px 0 0 0;
+.arr1 {
+	margin: 70px 0 0 0;
 }
 
-.arr2{
-    margin: 50px 0 0 0;
+.arr2 {
+	margin: 50px 0 0 0;
 }
 
-.name, .location, .description{
-    margin: 50px 0 0 0;
+.name,
+.location,
+.description {
+	margin: 50px 0 0 0;
 }
 
-button{
-    color: white;
-    font-weight: bold;
-    border-width: 0px;
-    background-color: #00994d;
-    width: 200px;
-    height: 50px;
+button {
+	color: white;
+	font-weight: bold;
+	border-width: 0px;
+	background-color: #00994d;
+	width: 200px;
+	height: 50px;
 }
-button a{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+button a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
 }
 
-
-.name, .location, .description, .arr1, .arr2{
-    color: white;
+.name,
+.location,
+.description,
+.arr1,
+.arr2 {
+	color: white;
 }

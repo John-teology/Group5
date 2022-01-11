@@ -55,6 +55,10 @@ if($data->userID == $userid)
             <a href="<?php echo site_url("tracker/establishment_entry/$data->id")?>" >
             <button>ENTER ESTABLISHMENT</button>
             </a>
+
+             <a href="<?php echo site_url("tracker/delete_establishment_r/$data->id")?>" >
+            <button>DELETE</button>
+            </a>
     </div>
 <?php
 }

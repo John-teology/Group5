@@ -13,8 +13,8 @@ class T_model extends CI_Model{
             $this->db->select("password");
             $this->db->where("username",$username);
             $pass = $this->db->get("user")->row()->password; 
-            // $decrypt = $this->encryption->decrypt($pass);
-            if($password == $pass)
+            $decrypt = $this->encryption->decrypt($pass);
+            if($password == $decrypt)
             {
                 return true;
             }
@@ -228,5 +228,16 @@ class T_model extends CI_Model{
 
         return $result;
 
+    }
+
+    function delete_establishmemt($est_id)
+    {
+        $this->db->where('id', $est_id);
+        $this->db->delete('establishment_try');
+    }
+     function delete_report($est_id)
+    {
+        $this->db->where('est_id', $est_id);
+        $this->db->delete('report');
     }
 }
