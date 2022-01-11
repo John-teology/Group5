@@ -36,6 +36,7 @@
 
                 </div>
         </div>
+        <?php echo $ct_id; ?>
   </div>
 
 

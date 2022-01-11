@@ -515,10 +515,12 @@ class Tracker extends CI_Controller {
                     redirect("tracker/establishment_entry/$est_id");
                 } 
            $username = $this->session->userdata("username");
+           $user_id = $this->t_model->get_user_id($this->session->userdata("username"));
            $data = $this->t_model->get_establishment_by_id($establishment_id);
             $this->load->view('establishment/establishment_specific', array(
                 "data" =>$data,
-                "userid" => $this->t_model->get_user_id($username)
+                "userid" => $this->t_model->get_user_id($username),
+                "ct_id"=>$this->t_model->get_user_ct_by_id($user_id),
             )) ;
             
         }
