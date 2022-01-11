@@ -64,7 +64,7 @@ html, body{
 }
 
 .name, .location, .description{
-    margin: 50px 0 0 0;
+    margin: 50px 0 0 30px;
 }
 
 button{
