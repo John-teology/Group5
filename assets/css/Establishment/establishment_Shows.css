@@ -1,91 +1,80 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:'Helvetica';
-    font-size: 15px;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Helvetica";
+	font-size: 15px;
 }
 
-html,body {
+html,
+body {
 	background-color: #1a1f22;
 }
 
-.container{
-
-    width: 800px;
-    background-color: #2a2e35;
-    border-radius: 15px;
-    margin: 40px auto;
-    padding: 5px;
-    height: 700px;
-    
+.container {
+	width: 800px;
+	background-color: #2a2e35;
+	border-radius: 15px;
+	margin: 40px auto;
+	padding: 5px;
+	height: 700px;
 }
 
-.col{
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+.col {
+	grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-/* .wrapper{
-    width: 900px;
-    background-color: #2a2e35;
-    margin: 100px auto;
-    height: 400px;
-} */
-
-.container1{
-    width: 1000px;
-    background-color: #00994d;
-    border-radius: 10px;
-    margin: 20px auto;
-    height: 99px;
-    text-align: center;
-} 
+.container1 {
+	width: 1000px;
+	background-color: #00994d;
+	border-radius: 10px;
+	margin: 20px auto;
+	height: 99px;
+	text-align: center;
+}
 
 .container1 {
 	display: grid;
 	grid-template-columns: 1.8fr 1fr;
 }
 
-.container1 .arr1{
-    margin: 36px auto 0 -30px;
-    font-size: 28px;
+.container1 .arr1 {
+	margin: 36px auto 0 -30px;
+	font-size: 28px;
 }
 
-.container1 .description{
-    margin: 35px auto 10px 50%;
-    text-align: center;
-    font-size: 28px;
+.container1 .description {
+	margin: 35px auto 10px 50%;
+	text-align: center;
+	font-size: 28px;
 }
 
-.location{
-    padding: -10px 0 0 0;
+.location {
+	padding: -10px 0 0 0;
 }
 
-.description1{
-    padding: -10px 0 0 0;
+.description1 {
+	padding: -10px 0 0 0;
 }
 
-
-
-.container2{
-    width: 1000px;
-    background-color: #00994d;
-    border-radius: 10px;
-    margin: 20px auto;
-    height: 400px;
-    /* text-align: center; */
- } 
 .container2 {
-    display: grid;
+	width: 1000px;
+	background-color: #00994d;
+	border-radius: 10px;
+	margin: 20px auto;
+	height: 400px;
+	/* text-align: center; */
+}
+.container2 {
+	display: grid;
 	grid-template-columns: 1fr;
-} 
+}
 
 .container3 {
-    width: 200px;
-    background-color: #af6826;
-    border-radius: 5px;
-    margin: 20px auto;
-    height: 150px;
+	width: 200px;
+	border-radius: 5px;
+	margin: 20px auto;
+	height: 150px;
 }
 
 .arr {
@@ -97,8 +86,8 @@ html,body {
 	padding: 5px 0 0 0;
 }
 
-.arr1{
-    margin: 45px 0 0 0;
+.arr1 {
+	margin: 45px 0 0 0;
 }
 /* .container {
 	width: 800px;
@@ -118,60 +107,68 @@ html,body {
 	height: 10px;
 }
 
-.arr{
-    margin: 10px 0 0 0 ;
-
+.arr {
+	margin: 10px 0 0 0;
 }
 
-.arr1{
-    margin: 65px 0 0 0;
+.arr1 {
+	margin: 65px 0 0 0;
 }
 
-.arr2{
-    margin: 40px 0 0 0;
-    text-align: center;
+.arr2 {
+	margin: 40px 0 0 0;
+	text-align: center;
 }
 
-.arr3{
-    margin: 60px 0 0 10px;
+.arr3 {
+	margin: 60px 0 0 10px;
 }
 
 .arr4 {
-    margin: 10px 0 0 30px;
+	margin: 10px 0 0 30px;
 }
-.name, .location, .description, .description1{
-    margin: 30px 0 0 30px;
-}
-
-.location1{
-    display: grid;
-    grid-template-columns: 0.2fr 1fr;
-}
-.name, .location, .description{
-    margin: 50px 0 0 30px;
-    line-height: 1;
+.name,
+.location,
+.description,
+.description1 {
+	margin: 30px 0 0 30px;
 }
 
-button{
-    color: white;
-    font-weight: bold;
-    border-width: 0px;
-    background-color: #00994d;
-    width: 200px;
-    margin: 0px 0 0 20%;
-    height: 50px;
-    
+.location1 {
+	display: grid;
+	grid-template-columns: 0.2fr 1fr;
+}
+.name,
+.location,
+.description {
+	margin: 50px 0 0 30px;
+	line-height: 1;
 }
 
-.name, .location, .description, .description1, .arr1, .arr2, .arr3, .arr4{
-    color: white;
-    line-height: 1;
-  
+button {
+	color: white;
+	font-weight: bold;
+	border-width: 0px;
+	background-color: #00994d;
+	width: 200px;
+	margin: 0px 0 0 20%;
+	height: 50px;
 }
 
-.buto1{
-    margin: -10px 0 0 10%;
+.name,
+.location,
+.description,
+.description1,
+.arr1,
+.arr2,
+.arr3,
+.arr4 {
+	color: white;
+	line-height: 1;
+}
 
+.buto1 {
+	margin: -10px 0 0 10%;
 }
 
 /* .description1{

@@ -29,22 +29,7 @@
                 <div class="container1">
                     <h1 class="description">Number of Customers:</h1>
                     <h4 class="arr1"><?php echo $cust_num; ?></h4>
-<<<<<<< HEAD
-                    <!-- <div id="output"></div>
-                    <img src="qrcode-encoding.png" alt=""> -->
-
-                    <script>
-                        var qrcode = new QRCode("output", {
-                            text: "<?php echo site_url("tracker/Establishment_specific/$est_id")?>",
-                            width: 180,
-                            height: 180,
-                            colorDark : "green",
-                            colorLight : "#ffffff",
-                            correctLevel : QRCode.CorrectLevel.H
-                        });
-                    </script>
                     
-=======
                 </div>
                 <div class="container2">
                     <div class="location1">
@@ -55,8 +40,7 @@
                         <h1 class="description1">Description:</h1>
                         <h4 class="arr4"><?php print_r($data->description)?></h4>
                     </div>
-                    <div class="container3">
->>>>>>> 25063310fa006216f3929a07a7f4409deebfe64c
+                    <div class="container3" id="output">
 
                 </div>
                 </div>
@@ -64,6 +48,16 @@
             </div>
         </div>
     </div>
+     <script>
+                        var qrcode = new QRCode("output", {
+                            text: "<?php echo site_url("tracker/Establishment_specific/$est_id")?>",
+                            width: 200,
+                            height: 150,
+                            colorDark : "black",
+                            colorLight : "#ffffff",
+                            correctLevel : QRCode.CorrectLevel.H
+                        });
+                    </script>
 
 
 <?php

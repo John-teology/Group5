@@ -606,8 +606,9 @@ class Tracker extends CI_Controller {
             $data = array(
                 "inside" => 0
             );
-            $this->t_model->report_to_what($this->session->userdata("entered"),$data); // this will change 0 to the 1 since the user left the estblishment
+            $this->t_model->report_to_what($this->session->userdata("report"),$data); // this will change 0 to the 1 since the user left the estblishment
             $this->session->unset_userdata('entered');
+            $this->session->unset_userdata('report');
             $list = $this->t_model->get_all_establishments();
             $this->load->view("establishment/display_establishments", array(
                 "establishments" => $list,
@@ -662,8 +663,9 @@ class Tracker extends CI_Controller {
                 );
             $this->t_model->report_to_what($report_id,$data); // to change column inside into 1 since it was a NULL when it was created
 
-            $this->session->set_userdata("entered",$report_id); // to track what establishment it was
+            $this->session->set_userdata("entered",$est_id); // to bring back to the current state
 
+            $this->session->set_userdata("report",$report_id); // this will hold the report id
 
             $list = $this->t_model->get_establishment_by_id($est_id);
             $this->load->view("report/entered", array(
