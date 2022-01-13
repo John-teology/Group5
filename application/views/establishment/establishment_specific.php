@@ -13,7 +13,9 @@
         body{
             background-color: #1a1f22;
         }
-
+        button {
+            border-radius: 10px;
+        }
     </style>
 
 </head>
@@ -25,7 +27,7 @@
         <div class="row">
             <div class="col">
                 <div class="container1">
-                    <h1 class="description">Number of Customer:</h1>
+                    <h1 class="description">Number of Customers:</h1>
                     <h4 class="arr1"><?php echo $cust_num; ?></h4>
                 </div>
                 <div class="container2">
@@ -53,7 +55,7 @@ if($data->userID == $userid)
 ?>
     <div class="wrapper">
             <a href="<?php echo site_url("tracker/Establishment_update/$data->id") ?>">
-            <button>Modify</button>
+            <button>MODIFY</button>
             </a>
 
             <a href="<?php echo site_url("tracker/contact_tracing_report/$data->id")?>">

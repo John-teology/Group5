@@ -1,44 +1,94 @@
  body{
     display: grid;
-    height: 100%;
+    height: 110%;
     place-items: center;
     background-color: #1a1f22;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 20px;
-    font-family: 'Helvetica';
+    font-family: 'Helvetica'; 
     box-sizing: border-box;
 }
 .box{
-    width: 500px;
+    width: 380px;
     height: 500px;
     text-align: center;
-    margin: 100px 0 0 0;
-    background-color:  #2a2e35;
-    border-radius: 20px;
-    padding: 10px 10px 20px 10px;
+    margin: 105px 0 0 0;
+    background-color: #1a1f22;
+    border-radius: 15px;
+    padding: 10px 10px 0px 10px;
 }
-a{
-    color: white;
-	text-decoration: none;
-    padding: 30% 10px 10px 5px;
-}
+
 .scroll{
     color: white;
-    width: 500px;
-    border-radius: 10px 10px;
+    width: 400px;
+    border-radius: 15px 15px 15px 15px;
     background-color:#2a2e35;
-    height: 400px;
+    height: 450px;
     overflow: hidden;
     overflow-y: scroll;
 
 }
-h4{
-    background: #00994d;
-    border-radius: 10px 10px 10px 10px;
-    width: 80%;
+.ton1{
+	background-color: #00994d;
+    color: white;
+    width: 85%;
     height: 60px;
-    margin: 0 10px 10px 45px;
+    margin: 20px 0 -10px 0;
+    border-radius: 10px;
+    border-width: 0px;
+    font-size: 17px;
+}
+h4{ 
+    color: white; 
+    text-transform: capitalize; 
+    margin: -15px 0px 0px 0;
+    font-size: 19px;
+    padding: -50px 5px 5px 5px;
+    font-weight: normal;
+}
+.header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2a2e35;
+    padding: 10px;
+    height: 70px;
+    
+  }
+  
+  .title1{
+    color: white;
+    margin: 20px 50px 50px 50px;
+    font-size: 25px;
+    text-decoration: none;
+  }
+   
+  nav a:visited,
+  nav a:link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav > ul {
+    display: inline;
+    padding: 0;
+  }
+  
+  nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+    /*      */
+    font-size: 20px;
+  }
+  .li1{
+    padding: 0 0 0 38%;
 }
 
+.title1:hover{
+    color: blue;
+}

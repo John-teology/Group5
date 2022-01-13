@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Segoe UI";
+	font-family: 'Helvetica';
 }
 
 html,body {
@@ -19,23 +19,14 @@ html,body {
     
 }
 
-.wrapper{
-    width: 700px;
-    background-color: #2a2e35;
-    border-radius: 15px;
-    margin: 10px auto;
-    padding: 35px 20px 20px 45px;
-    height: 100px;
-}
-
 .col{
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 .container1{
-    width: 1250px;
+    width: 1100px;
     background-color: #00994d;
-    border-radius: 15px;
+    border-radius: 10px;
     margin: 10px auto;
     height: 430px;
 } 
@@ -86,7 +77,8 @@ button a {
 }
 
 .buto1{
-    margin: 0 0 0 30%;
+    margin: -15px 0 25px 43%;
+    font-size: 15px;
 
 }
 

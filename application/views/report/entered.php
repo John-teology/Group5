@@ -12,6 +12,10 @@
         body{
             background-color: #1a1f22;
         }
+        button{
+            border-radius: 10px;
+        }
+        }
 
     </style>
 </head>
@@ -20,7 +24,7 @@
 
     <div class="container">
             <h1 class="arr2"><?php print_r($data->name)?></h1>
-            <h3 class="arr2">Welcome! We're glad that you're here</h3>
+            <h3 class="arr2">Welcome! We're glad that you're here!</h3>
         <div class="container1">
             <div class="row">
                     <div class="col">
