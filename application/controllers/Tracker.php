@@ -149,6 +149,7 @@ class Tracker extends CI_Controller {
                     array(
                         "username" => $username,
                         "password" => $this->encryption->encrypt($password1),
+                        
                     )
                     );
                 $this->session->set_flashdata("registered", "You succesfully registered!");
