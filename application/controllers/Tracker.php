@@ -515,10 +515,23 @@ class Tracker extends CI_Controller {
                     redirect("tracker/establishment_entry/$est_id");
                 } 
            $username = $this->session->userdata("username");
+           $user_id = $this->t_model->get_user_id($this->session->userdata("username"));
            $data = $this->t_model->get_establishment_by_id($establishment_id);
+           if(empty($data))
+           {
+               redirect("tracker");
+           }
+           $report = array(
+                    " est_id"=> $establishment_id,
+                    "date_t" => date("Y-m-d"),
+                    "inside" => 1
+                );
+            $status = $this->t_model->get_report_status($report);
             $this->load->view('establishment/establishment_specific', array(
                 "data" =>$data,
-                "userid" => $this->t_model->get_user_id($username)
+                "userid" => $this->t_model->get_user_id($username),
+                "ct_id"=>$this->t_model->get_user_ct_by_id($user_id),
+                "cust_num" => count($status)
             )) ;
             
         }
@@ -606,6 +619,10 @@ class Tracker extends CI_Controller {
         if($this->session->userdata("username") != "")
         {
             $this->session->unset_userdata('currentpage');
+            $data = array(
+                "inside" => 0
+            );
+            $this->t_model->report_to_what($this->session->userdata("entered"),$data);
             $this->session->unset_userdata('entered');
             $list = $this->t_model->get_all_establishments();
             $this->load->view("establishment/display_establishments", array(
@@ -624,15 +641,13 @@ class Tracker extends CI_Controller {
         {
             
             $this->session->unset_userdata('currentpage');
-            // if($this->session->userdata("entered")!= "")
-            //     {
-            //             $this->load->view("report/entered", array(
-            //             'est_id' => $est_id,
-            //         ));
-            //     }
-            // else
-            // {
-                $user_id = $this->t_model->get_user_id($this->session->userdata("username"));
+        
+                $user_id = $this->t_model->get_user_id ($this->session->userdata("username"));
+                $dat = $this->t_model->get_establishment_by_id($est_id);
+                if(empty($dat))
+                {
+                    redirect("tracker/display_establishment");
+                }
                 $user_ct_id = $this->t_model->get_user_ct_by_id($user_id);
                 if(empty($user_ct_id))
                     {
@@ -645,7 +660,6 @@ class Tracker extends CI_Controller {
                         " est_id"=> $est_id
                         ));
                     }
-                $this->session->set_userdata("entered",$est_id);
                 $data = array(
                     "ct_id" => $user_ct_id,
                     " est_id"=> $est_id,
@@ -653,14 +667,18 @@ class Tracker extends CI_Controller {
                 );
 
                 $report_id = $this->t_model->get_report_id($data);
+                $this->session->set_userdata("entered",$report_id);
+                  $data = array(
+                        "inside" => 1
+                    );
+                $this->t_model->report_to_what($this->session->userdata("entered"),$data);
+                $list = $this->t_model->get_establishment_by_id($est_id);
                 $this->load->view("report/entered", array(
                         'usserid' => $est_id,
                         "ct_id" => $user_ct_id,
-                        "report_id"=> $report_id
+                        "data" => $list,
 
                     ));
-            
-            // }
         }
         else
             {
@@ -670,6 +688,7 @@ class Tracker extends CI_Controller {
     
     }
 
+    // alisin ang decrypt
     public function contact_tracing_report($est_id){
         $data = $this->t_model->get_ct_ids($est_id);
         if(empty($data))
@@ -699,6 +718,12 @@ class Tracker extends CI_Controller {
        
     }
 
+    function delete_establishment_r($est_id)
+    {
+        $this->t_model->delete_establishmemt($est_id);
+        $this->t_model->delete_report($est_id);
+        redirect("tracker/Myestablishments");
+    }
 
 
 }
