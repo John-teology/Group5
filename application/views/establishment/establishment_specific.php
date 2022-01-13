@@ -33,9 +33,16 @@
                         <h1 class="location">Location:</h1>
                         <h4 class="arr3"><?php print_r($data->location)?></h4>
                     </div>
+                    <div class="container2_1">
                         <h1 class="description1">Description:</h1>
                         <h4 class="arr4"><?php print_r($data->description)?></h4>
+                    </div>
+                    
+                    <div class="container3">
+
                 </div>
+                </div>
+                
             </div>
         </div>
     </div>

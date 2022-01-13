@@ -17,7 +17,7 @@ body {
     border-radius: 15px;
     margin: 40px auto;
     padding: 20px;
-    height: 600px;
+    height: 700px;
     
 }
 
@@ -45,25 +45,46 @@ body {
 
 .container1 {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1.8fr 1fr;
 }
+
+.container1 .arr1{
+    margin: 45px 410px 0 0;
+}
+
+.container1 .description{
+    margin: 30px 0 0 390px;
+}
+
+.location{
+    padding: -10px 0 0 0;
+}
+
+.description1{
+    padding: -10px 0 0 0;
+}
+
+
 
 .container2{
     width: 1250px;
     background-color: #00994d;
     border-radius: 15px;
     margin: 20px auto;
-    height: 350px;
+    height: 450px;
     /* text-align: center; */
-} 
+ } 
 .container2 {
     display: grid;
-	grid-template-columns: 0.2fr;
-}
+	grid-template-columns: 1fr;
+} 
 
 .container3 {
-	display: grid;
-	grid-template-rows: 1fr 1fr;
+    width: 200px;
+    background-color: #af6826;
+    border-radius: 15px;
+    margin: 20px auto;
+    height: 150px;
 }
 
 .arr {
