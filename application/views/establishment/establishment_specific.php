@@ -37,7 +37,6 @@
                         <h1 class="description1">Description:</h1>
                         <h4 class="arr4"><?php print_r($data->description)?></h4>
                     </div>
-                    
                     <div class="container3">
 
                 </div>
@@ -53,7 +52,9 @@ if($data->userID == $userid)
 {
 ?>
     <div class="wrapper">
-            <a href="<?php echo site_url("tracker/Establishment_update/$data->id") ?>"><button>Modify</button></a>
+            <a href="<?php echo site_url("tracker/Establishment_update/$data->id") ?>">
+            <button>Modify</button>
+            </a>
 
             <a href="<?php echo site_url("tracker/contact_tracing_report/$data->id")?>">
             <button>CONTACT TRACING</button>

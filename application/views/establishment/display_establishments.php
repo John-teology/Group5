@@ -9,19 +9,27 @@
 </head>
 <body>
     <div class="box">
-    <?php
-        for($i = 0; $i < count($establishments); $i++){
-            $id = $establishments[$i]['id']
-    ?>
-    <a href= "<?php echo site_url("tracker/Establishment_specific/$id")?>">
-        <?php 
-        echo "<br/>";
-              print_r($establishments[$i]['name']);
-        ?>
-    </a>
-    <?php
-        }
-    ?>       
-   </div>
+        <div class="scroll">
+            <div class="div1"></div>
+            
+                <?php
+                $establishment_p = "Establishment";
+                    for($i = 0; $i < count($establishments); $i++){
+                        $id = $establishments[$i]['id']
+                ?>
+                <a href= "<?php echo site_url("tracker/Establishment_specific/$id")?>">
+                <button class="ton1"><strong><?php echo $establishment_p?></strong></button>
+                <h4>
+                    <?php 
+                    echo "<br/>";
+                       print_r($establishments[$i]['name']);
+                    ?></h4>
+                </a>
+                <?php
+                    }
+                ?>  
+            </div>
+        </div>     
+    </div>
 </body>
 </html>

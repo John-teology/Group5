@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 20px;
-    font-family: 'Segoe UI';
+    font-family: 'Helvetica';
     box-sizing: border-box;
 }
 .box{
@@ -22,4 +22,23 @@
 a{
     color: white;
 	text-decoration: none;
+    padding: 30% 10px 10px 5px;
 }
+.scroll{
+    color: white;
+    width: 500px;
+    border-radius: 10px 10px;
+    background-color:#2a2e35;
+    height: 400px;
+    overflow: hidden;
+    overflow-y: scroll;
+
+}
+h4{
+    background: #00994d;
+    border-radius: 10px 10px 10px 10px;
+    width: 80%;
+    height: 60px;
+    margin: 0 10px 10px 45px;
+}
+
