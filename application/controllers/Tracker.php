@@ -159,23 +159,6 @@ class Tracker extends CI_Controller {
 
     }
 
-    // public function createEstablishment() {
-    //     if($this->session->userdata("username") != "")
-    //         {   
-    //                 if($this->session->userdata("entered")!= "")
-    //             {
-    //                 $est_id = $this->session->userdata("entered");
-    //                 redirect("tracker/establishment_entry/$est_id");
-    //             }
-        
-    //             $this->load->view('establishment/createEst');
-    //        }
-    //     else
-    //         {
-    //             redirect("tracker/login");
-    //         }
-
-    // }
 
     public function user_profile()
     {
@@ -520,6 +503,7 @@ class Tracker extends CI_Controller {
                redirect("tracker");
            }
            $report = array(
+               // this will select all report that inside column is equal to 1
                     " est_id"=> $establishment_id,
                     "date_t" => date("Y-m-d"),
                     "inside" => 1
@@ -528,7 +512,8 @@ class Tracker extends CI_Controller {
             $this->load->view('establishment/establishment_specific', array(
                 "data" =>$data,
                 "userid" => $this->t_model->get_user_id($username),
-                "cust_num" => count($status)
+                "cust_num" => count($status),
+                "est_id" => $establishment_id
             )) ;
             
         }
@@ -619,7 +604,7 @@ class Tracker extends CI_Controller {
             $data = array(
                 "inside" => 0
             );
-            $this->t_model->report_to_what($this->session->userdata("entered"),$data);
+            $this->t_model->report_to_what($this->session->userdata("entered"),$data); // this will change 0 to the 1 since the user left the estblishment
             $this->session->unset_userdata('entered');
             $list = $this->t_model->get_all_establishments();
             $this->load->view("establishment/display_establishments", array(
@@ -639,43 +624,52 @@ class Tracker extends CI_Controller {
             
             $this->session->unset_userdata('currentpage');
         
-                $user_id = $this->t_model->get_user_id ($this->session->userdata("username"));
-                $dat = $this->t_model->get_establishment_by_id($est_id);
-                if(empty($dat))
+            $user_id = $this->t_model->get_user_id ($this->session->userdata("username"));
+            $dat = $this->t_model->get_establishment_by_id($est_id);
+            if(empty($dat))
+            {
+                // this will check if valid ba yung establish id that user's entered
+                redirect("tracker/display_establishment");
+            }
+            $user_ct_id = $this->t_model->get_user_ct_by_id($user_id);
+            if(empty($user_ct_id))
                 {
-                    redirect("tracker/display_establishment");
+                    // this will check if the user already has ct form
+                    redirect("tracker/contact_tracing_form");
                 }
-                $user_ct_id = $this->t_model->get_user_ct_by_id($user_id);
-                if(empty($user_ct_id))
-                    {
-                        redirect("tracker/contact_tracing_form");
-                    }
-                if($this->t_model->is_report_not_inside($user_ct_id,$est_id))
-                    {
-                        $this->t_model->add_report(array(
-                        "ct_id"=> $user_ct_id,
-                        " est_id"=> $est_id
-                        ));
-                    }
-                $data = array(
-                    "ct_id" => $user_ct_id,
-                    " est_id"=> $est_id,
-                    "date_t" => date("Y-m-d")
-                );
-
-                $report_id = $this->t_model->get_report_id($data);
-                $this->session->set_userdata("entered",$report_id);
-                  $data = array(
-                        "inside" => 1
-                    );
-                $this->t_model->report_to_what($this->session->userdata("entered"),$data);
-                $list = $this->t_model->get_establishment_by_id($est_id);
-                $this->load->view("report/entered", array(
-                        'usserid' => $est_id,
-                        "ct_id" => $user_ct_id,
-                        "data" => $list,
-
+            if($this->t_model->is_report_not_inside($user_ct_id,$est_id))
+                {
+                    // if its the same person on the same day, hindi na iaadd
+                    $this->t_model->add_report(array(
+                    "ct_id"=> $user_ct_id,
+                    " est_id"=> $est_id
                     ));
+                }
+
+            $report = array(
+                "ct_id" => $user_ct_id,
+                " est_id"=> $est_id,
+                "date_t" => date("Y-m-d")
+            );
+
+            $report_id = $this->t_model->get_report_id($report); // to get report id  nung current user na naka enter sa est
+
+
+                $data = array(
+                    "inside" => 1
+                );
+            $this->t_model->report_to_what($report_id,$data); // to change column inside into 1 since it was a NULL when it was created
+
+            $this->session->set_userdata("entered",$report_id); // to track what establishment it was
+
+
+            $list = $this->t_model->get_establishment_by_id($est_id);
+            $this->load->view("report/entered", array(
+                    'usserid' => $est_id,
+                    "ct_id" => $user_ct_id,
+                    "data" => $list,
+
+                ));
         }
         else
             {

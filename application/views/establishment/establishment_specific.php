@@ -15,7 +15,7 @@
         }
 
     </style>
-
+    <script src="<?php echo site_url("assets/JS/qrcode.js") ?>"></script>
 </head>
 <body >
 
@@ -33,6 +33,20 @@
                     <h4 class="arr1"><?php print_r($data->location)?></h4>
                     <h4 class="arr1"><?php print_r($data->description)?></h4>
                     <h4 class="arr1"><?php echo $cust_num; ?></h4>
+                    <!-- <div id="output"></div>
+                    <img src="qrcode-encoding.png" alt=""> -->
+
+                    <script>
+                        var qrcode = new QRCode("output", {
+                            text: "<?php echo site_url("tracker/Establishment_specific/$est_id")?>",
+                            width: 180,
+                            height: 180,
+                            colorDark : "green",
+                            colorLight : "#ffffff",
+                            correctLevel : QRCode.CorrectLevel.H
+                        });
+                    </script>
+                    
 
 
 

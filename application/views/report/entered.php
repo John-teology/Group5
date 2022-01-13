@@ -24,20 +24,6 @@
     </style>
 </head>
 <body>
-<<<<<<< HEAD
-    <div class="container">
-        <h1>welcome</h1>
-    </div>
-    <div class="container1">
-        <a href="<?php echo site_url("tracker/display_establishment") ?>">
-            <button>Leave</button>
-        </a>
-    </div> 
-    
-   <!-- <?php // print_r($report_id);
-    echo phpversion();
-   ?> -->
-=======
     
     <div class="container">
         <div class="row">
@@ -64,6 +50,5 @@
             </a>
      </div>
 
->>>>>>> fed8720ede9f6f50089ac2faa7390884606b6c0a
 </body>
 </html>
