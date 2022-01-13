@@ -11,13 +11,20 @@
     <button>
         <a href="<?php echo site_url("tracker")?>">back to homepage</a>
     </button>
+    
     <center>
+    <div class="box">
+    <div class="container1">
+
+                <div class="div1">
         <h3>
             <?php print_r($data->first_name)?>
         </h3>
+
          <h3>
             <?php print_r($data->last_name)?>
         </h3>
+        
          <h3>
             <?php print_r($data->phone_number)?>
         </h3>
@@ -27,11 +34,15 @@
          <h3>
             <?php print_r($data->email)?>
         </h3>
-       
+        </div>
+            
+        </div>        
 
+        
         <button>
             <a href="<?php echo site_url("tracker/contact_tracing_update/$data->id") ?>">Modify</a>
         </button>
+        
     </center>
 </body>
 </html>

@@ -149,6 +149,7 @@ class Tracker extends CI_Controller {
                     array(
                         "username" => $username,
                         "password" => $this->encryption->encrypt($password1),
+                        
                     )
                     );
                 $this->session->set_flashdata("registered", "You succesfully registered!");
@@ -497,6 +498,7 @@ class Tracker extends CI_Controller {
                     redirect("tracker/establishment_entry/$est_id");
                 } 
            $username = $this->session->userdata("username");
+           $user_id = $this->t_model->get_user_id($this->session->userdata("username"));
            $data = $this->t_model->get_establishment_by_id($establishment_id);
            if(empty($data))
            {

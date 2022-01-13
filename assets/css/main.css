@@ -1,7 +1,15 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica';
+}
+body
+{
+    background-color: #1a1f22;;
+    background-size: cover;
+    background-position: center;
 }
 body {
 	background-color: #1a1f22;
@@ -20,16 +28,73 @@ body {
 	margin: 5px 0 0 750px;
 }
 
-.menu-bar {
-	background-color: #2a2e35;
-	margin: 0 0 70px 0;
+.menu-bar .title{
+    font-size: 25px;
+    color: white;
+    margin: 30px 15px 0px 35px;
+    height: 70px;
 }
 
-.menu-bar .title {
-	font-size: 30px;
-	color: white;
-	margin: 20px 0 10px 75px;
-	height: 60px;
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+    color: black;
+}
+.menu-bar ul li
+{
+    width: 100px;
+    margin: 15px;
+    padding: 15px;
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: white;
+}
+.active, .menu-bar ul li:hover
+{
+    background: #2a2e35;
+    border-radius: 3px;
+}
+.menu-bar .fa
+{
+    margin-right: 8px;
+}
+.sub-menu-1
+{
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background: #2a2e35;
+    margin-top: 15px;
+    margin-left: -100px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+    color: #00994d;
+    font-weight: bold;
 }
 
 .menu-bar ul {
@@ -85,14 +150,15 @@ body {
 }
 
 /* body */
-.bondpaper {
-	display: grid;
-	margin: auto;
-	background-color: #2a2e35;
-	height: auto;
-	width: 500px;
-	margin: auto;
-	border-radius: 15px 15px 15px 15px;
+.bondpaper{
+    display: grid;
+    margin: -20px auto 25px;
+    background-color: #2a2e35;
+    height: auto;
+    width: 500px;
+    border-radius: 15px 15px 15px 15px;
+  
+
 }
 
 .createE,
@@ -131,7 +197,23 @@ a {
 .title {
 	margin: 0 0 20px 0;
 }
+.title{
+    font-size: 30px;
+}
 
+.profbut{
+    color: white;
+    background-color: #00994d;
+    border-width: 0px;
+    border-color: #00994d;
+    width: fit-content;
+    padding: 0px 30px;;
+    height: 40px;
+    border-radius: 5px;
+    margin: 10px 10px 0 10px;
+    margin-left: -65px;
+}
+/* 
 .profbut {
 	color: white;
 	background-color: #00994d;
@@ -143,4 +225,4 @@ a {
 	border-radius: 5px;
 	margin: 10px 10px 0 0;
 	margin-left: -20px;
-}
+} */

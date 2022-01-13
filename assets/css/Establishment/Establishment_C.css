@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI';
+    font-family: 'Helvetica';
 }
 
 html, body{
@@ -19,13 +19,13 @@ html, body{
 
 .header {
     display: block;
-     position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: #2a2e35;
     padding: 10px;
-    height: 90px;
+    height: 100px;
     
   }
   
@@ -56,7 +56,8 @@ html, body{
 
   .title1{
     color: white;
-    padding: 10px 20px 50px 80px;
+    padding: 20px 20px 50px 80px;
+    font-size: 25px;
   }
 
 
@@ -66,7 +67,7 @@ html, body{
     background-color: #2a2e35;
     border-radius: 15px;
     margin: 0 auto;
-    margin: 60px 0 0 0;
+    margin: 90px 0 0 0;
     height: 500px;
     
 }
@@ -102,6 +103,7 @@ html, body{
     height: 100%;
     width: 100%;
     padding-left: 60px;
+    font-size: 14px;
 }
 
 .container .form .div2 textarea{
@@ -112,6 +114,7 @@ html, body{
     width: 100%;
     padding-top: 10px;
     padding-left: 60px;
+    font-size: 14px;
 }
 
 
@@ -178,3 +181,10 @@ i{
     color: red;
 }
 
+.title1:hover{
+    color: blue;
+}
+.title{
+    font-size: 20px;
+    margin: 0 0 0 10px;
+}

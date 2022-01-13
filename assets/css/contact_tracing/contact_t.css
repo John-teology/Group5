@@ -1,13 +1,55 @@
 h3 {
-	color: white;
+	color: rgb(250, 245, 245);
+
 }
 html, body{
-	background-color: #2a2e35;;
-}
-a {
-	text-decoration: none;
+	
+    
+    background-color: #1a1f22;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Segoe UI';
+    box-sizing: border-box;
+    font-size: 20px;
 }
 
+
+a {
+	text-decoration: none;
+    color: white;
+}
+.container1{
+    width: 500px;
+    background-color: #00994d;
+    border-radius: 15px;
+    margin: 20px auto;
+    border: 5px solid black;
+    height: 350px;
+    text-align: center;
+}
+.container1{
+   display:grid;
+}
+button{
+    color: white;
+    font-weight: bold;
+    border-width: 0px;
+    background-color: #00994d;
+    border-radius: 10px;
+    width: 50x;
+    height: 40px;
+    border: 3px solid black;
+}
+.box{
+    width: 600px;
+    height: 450px;
+    text-align: center;
+    margin: 100px 0 0 0;
+    background-color:  #2a2e35;
+    border-radius: 20px;
+    padding: 10px 10px 20px 10px;
+}
 .wrapper.logo {
     display: block;
      position: fixed;
@@ -17,4 +59,5 @@ a {
     background-color:black;
     padding: 10px;
     height: 90px;
+    
 }
