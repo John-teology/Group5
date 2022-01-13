@@ -13,7 +13,7 @@ class T_model extends CI_Model{
             $this->db->select("password");
             $this->db->where("username",$username);
             $pass = $this->db->get("user")->row()->password; 
-            // $decrypt = $this->encryption->decrypt($pass);
+            $decrypt = $this->encryption->decrypt($pass);
             if($password == $pass)
             {
                 return true;
