@@ -91,7 +91,7 @@ if($data->userID != $userid)
 ?>
 <div class="wrapper">
              <a href="<?php echo site_url("tracker/establishment_entry/$data->id")?>" >
-            <button>ENTER ESTABLISHMENT</button>
+            <button id="id1">ENTER ESTABLISHMENT</button>
             </a>
      </div>
 <?php
