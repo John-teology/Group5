@@ -18,6 +18,9 @@
         }
     </style>
     <script src="<?php echo site_url("assets/JS/qrcode.js") ?>"></script>
+    <script src="<?php echo site_url("assets/JS/html2canvas.min.js") ?>"></script>
+    <script src="<?php echo site_url("assets/JS/establishment_specific.js") ?>"></script>
+
 </head>
 <body >
     <div class="container">
@@ -40,16 +43,25 @@
                         <h1 class="description1">Description:</h1>
                         <h4 class="arr4"><?php print_r($data->description)?></h4>
                     </div>
-                    <div class="container3" id="output">
+                    <?php
+                    if($data->userID == $userid)
+                    {
+                    ?>
+                    <button class="container3"  id = "dl_qr">
+                    <div  id="output"></div>
+                    </button>
 
-                </div>
-                </div>
                 
+
+                <?php
+                    }
+                    ?>
+                </div>      
             </div>
         </div>
     </div>
-     <script>
-                        var qrcode = new QRCode("output", {
+    <script>
+        var qrcode = new QRCode("output", {
                             text: "<?php echo site_url("tracker/Establishment_specific/$est_id")?>",
                             width: 200,
                             height: 150,
@@ -57,7 +69,23 @@
                             colorLight : "#ffffff",
                             correctLevel : QRCode.CorrectLevel.H
                         });
-                    </script>
+    </script>
+
+    <script>
+        document.getElementById("dl_qr").onclick = () => {
+            const qr_code = document.getElementById("output");
+
+            html2canvas(qr_code).then((canvas) => {
+                const base64image = canvas.toDataURL("image/png");
+                var anchor = document.createElement("a");
+                anchor.setAttribute("href", base64image);
+                anchor.setAttribute("download", "<?php print_r($data->name) ?>_qr.png");
+                anchor.click(); 
+                anchor.remove(); 
+            });
+        }
+    </script>
+                
 
 
 <?php

@@ -7,7 +7,6 @@
 
 body {
 	background-color: #1a1f22;
-	/* background-color: whitesmoke; */
 	background-size: cover;
 	background-position: center;
 
@@ -22,6 +21,10 @@ body {
 	margin: 5px 0 0 750px;
 }
 
+.menu-bar {
+	background-color: #2a2e35;
+	margin: 0 0 70px 0;
+}
 .menu-bar .title {
 	font-size: 25px;
 	color: white;
