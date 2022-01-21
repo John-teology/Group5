@@ -14,6 +14,27 @@ html, body{
     font-size: 20px;
 }
 
+/* header */
+
+.title{
+    color: white;
+    
+}
+
+.title #title{
+    font-size: 30px;
+    color: white;
+}
+
+.menu-bar{
+    background-color: #2a2e35;
+    padding: 20px 40px;
+}
+
+#anchor{
+    text-decoration: none;
+    color: white;
+}
 
 a {
 	text-decoration: none;
@@ -25,11 +46,12 @@ a {
     border-radius: 15px;
     margin: 20px auto;
     border: 5px solid black;
-    height: 350px;
+    height: 400px;
     text-align: center;
 }
 .container1{
    display:grid;
+   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 button{
     color: white;
@@ -60,4 +82,31 @@ button{
     padding: 10px;
     height: 90px;
     
+}
+
+@media screen and (max-width: 480px) {
+    .box{
+        width: 300px;
+        height: auto;
+        text-align: center;
+        margin: 90px 0 0 0;
+        background-color:  #2a2e35;
+        border-radius: 20px;
+        padding: 10px 20px 20px 10px;
+        
+    }
+
+    .container1{
+        margin: 10px;
+        width: auto;
+
+    }
+
+    .email{
+        font-size: 17px;
+    }
+
+    .title #title{
+        font-size: 16px;
+    }
 }

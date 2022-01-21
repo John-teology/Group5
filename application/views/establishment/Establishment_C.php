@@ -6,14 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Establishment</title>
     
-        <!-- <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/assets/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-        crossorigin="anonymous"
-        /> -->
-        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-        <!-- <link rel="stylesheet" href="style.css" href="<?php echo base_url().'assets/css/bootstrap.min.css';?>"> -->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/Establishment/Establishment_C.css'); ?>">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -27,12 +19,12 @@
         ?>
 
         <div class="header">
-            <a href="<?php echo site_url("tracker")?>">
-            <nav>
-                <ul>
-                <li class="li"><h1 class="title1">Establishment Traffic Control System</h1></li>
-                </ul>
-            </nav>
+            <a href="<?php echo site_url("tracker/display_establishment")?>">
+                <nav>
+                    <ul>
+                    <li class="li"><h1 class="title1">Establishment Traffic Control System</h1></li>
+                    </ul>
+                </nav>
             </a>
         </div>
 
@@ -63,7 +55,6 @@
                         <label class="form-label">Description</label>
                         <i id="ii" class="fa fa-sticky-note"></i>
                         <textarea type="" class="form-control"  name="description_txt"  placeholder="Enter your Description" value="<?php echo set_value('description_txt') ?>" cols="30" rows="10"></textarea>
-                        <!-- <input type="" class="form-control"  name="description_txt"  placeholder="Enter your Description" value="<?php echo set_value('description_txt') ?>" > -->
                         <?php  echo form_error("description_txt","<div class='error'>","</div>"); ?>
                     </div>
 
@@ -74,7 +65,7 @@
                 
             </div>        
         </div>
-            <!-- <a href="<?php echo site_url('tracker/displayEstab') ?>"><button>Establishment list</button></a> -->
+          
 
     </body>
 </html>

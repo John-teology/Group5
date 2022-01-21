@@ -240,4 +240,10 @@ class T_model extends CI_Model{
         $this->db->where('est_id', $est_id);
         $this->db->delete('report');
     }
+
+    public function search($keyword) {
+        $this->db->like('name', $keyword);
+        $query = $this->db->get('establishment_try');
+        return $query->result();
+    }
 }
