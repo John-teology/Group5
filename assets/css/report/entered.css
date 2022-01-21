@@ -9,8 +9,31 @@ html,body {
 	background-color: #1a1f22;
 }
 
-.container{
-    width: 800px;
+.menu-bar{
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #2a2e35;
+	padding: 15px 0 0 0;
+	height: auto;
+	width: 100%;
+	margin: 0 0 40px 0;
+	color: white;
+}
+
+#anchor{
+    text-decoration: none;
+    color: white;
+}
+
+.menu-bar .title{
+	
+	flex: 50%;
+	padding: 0 0 0 5%;
+}
+
+
+.containerf{
+    width: 1200px;
     background-color: #2a2e35;
     border-radius: 15px;
     margin: 40px auto;
@@ -86,3 +109,52 @@ button a {
     display: grid;
     grid-template-columns: 0.2fr 1fr;
 }
+
+@media screen and (max-width: 480px) {
+    body{
+        margin: auto;
+    }
+
+    .container1{
+        width: 230px;
+        background-color: #00994d;
+        border-radius: 10px;
+        margin: 10px auto;
+        height: auto;
+    } 
+
+    .containerf{
+        width: 270px;
+        background-color: #2a2e35;
+        border-radius: 15px;
+        /* margin: 40px auto; */
+        margin: auto;
+        padding: 20px;
+        height: auto;
+        
+    }
+
+    #h2{
+        font-size: 17px;
+    }
+
+    
+
+    .location1{
+        display: block;
+        margin: 0 0 20px 0;
+    }
+
+    .arr1{
+        margin: 10px 0 0 30px;
+        
+    }
+
+    .buto1{
+        margin: 15px 0 25px 20%;
+        font-size: 15px;
+    
+    }
+
+}
+

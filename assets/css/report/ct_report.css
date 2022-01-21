@@ -1,0 +1,84 @@
+
+body{
+    background-color: #1a1f22;
+}
+
+.menu-bar{
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #2a2e35;
+	padding: 15px 0 0 0;
+	height: auto;
+	width: 100%;
+	margin: 0 0 100px 0;
+	color: white;
+}
+
+.menu-bar .title{
+	flex: 50%;
+	padding: 0 0 0 5%;
+}
+
+#anchor{
+    text-decoration: none;
+    color: white;
+}
+
+#head{
+    background-color: #00994d;
+}
+
+#tr{
+    background-color: #2a2e35;
+}
+
+td{
+    color: white;
+}
+
+
+  thead tr{
+    width: 50px;
+}
+
+.wrap{
+   width: 310px;
+}
+
+.wrapper .wrap{
+    display: inline-block;
+    margin: 0;
+    background-color:#2a2e35;
+    height: auto;
+}
+
+.wrapper{
+    margin: 0 0 0 10px;
+}
+
+.wrapper .container{
+    
+}
+
+@media screen and (max-width: 480px) {
+
+    .wrapper .wrap{
+        display: block;
+        margin: 0;
+        font-size: 30px;
+    }
+
+    .wrap{
+        width: 1000px;
+    }
+        
+    .menu-bar{
+        width: 1000px;
+    }
+
+    .menu-bar .title h2{
+        font-size: 40px;
+        
+    }
+
+}

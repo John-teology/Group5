@@ -14,7 +14,7 @@
 <body>
         <div id="header" class="navbar  fixed-top">
             <div class="container">
-                <a href="<?php echo site_url("tracker")?>" class="navbar-brand"><strong>Establishment Tracking Control System</strong></a>
+                <a href="<?php echo site_url("tracker/display_establishment")?>" class="navbar-brand"><strong>Establishment Tracking Control System</strong></a>
                 <button class="profbut"> <?php echo $username ?><i class="fa fa-user"></i> </button>
             </div>
         </div>
@@ -41,8 +41,6 @@
                 </div>
             </div>
         </div>
-
-            <a href="<?php echo site_url("tracker")?>"><button class="but2">Back To HomePage</button></a>
         
             <a href="<?php echo site_url("tracker/Establishment_Create")?>"><button class="but3">Create</button></a>
     </center>
