@@ -20,18 +20,31 @@
     <div class="box">
         <div class="scroll">
             <div class="div1"></div>
-            
+              
+
                 <?php
                 $establishment_p = "Establishment:";
                     for($i = 0; $i < count($establishments); $i++){
-                        $id = $establishments[$i]['id']
-                ?>
+                        $id = $establishments[$i]['id'];
+                        $report = array(
+                    // this will select all report that inside column is equal to 1
+                            " est_id"=> $id,
+                            "date_t" => date("Y-m-d"),
+                            "inside" => 1
+                        );
+                            $status = $this->t_model->get_report_status($report);
+?>
                 <a href= "<?php echo site_url("tracker/Establishment_specific/$id")?>">
                 <button class="ton1"><strong><?php echo $establishment_p?></strong>
                 <h4>
                     <?php 
                     echo "<br/>";
                        print_r($establishments[$i]['name']);
+                       print_r($establishments[$i]['location']);
+                        echo count($status);
+
+
+
                     ?></h4>
                     </button>
                 </a>

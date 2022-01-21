@@ -606,6 +606,7 @@ class Tracker extends CI_Controller {
             $data = array(
                 "inside" => 0
             );
+            
             $this->t_model->report_to_what($this->session->userdata("report"),$data); // this will change 0 to the 1 since the user left the estblishment
             $this->session->unset_userdata('entered');
             $this->session->unset_userdata('report');
