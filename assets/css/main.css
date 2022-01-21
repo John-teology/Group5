@@ -1,3 +1,4 @@
+@media screen and (min-width: 60px) {
 * {
 	padding: 0;
 	margin: 0;
@@ -7,7 +8,7 @@
 
 body {
 	background-color: #1a1f22;
-	/* background-color: whitesmoke; */
+	
 	background-size: cover;
 	background-position: center;
 
@@ -21,6 +22,11 @@ body {
 #profile {
 	margin: 5px 0 0 750px;
 }
+.menu-bar{
+	background-color: blue;
+	width: auto;
+	height: 50px;
+}
 
 .menu-bar .title {
 	font-size: 25px;
@@ -29,59 +35,13 @@ body {
 	height: 70px;
 }
 
-.menu-bar ul {
-	display: inline-flex;
-	list-style: none;
-	color: black;
-}
-.menu-bar ul li {
-	width: 100px;
-	margin: 15px;
-	padding: 15px;
-}
-.menu-bar ul li a {
-	text-decoration: none;
-	color: white;
-}
-.active,
-.menu-bar ul li:hover {
-	background: #2a2e35;
-	border-radius: 3px;
-}
-.menu-bar .fa {
-	margin-right: 8px;
-}
-.sub-menu-1 {
-	display: none;
-}
-.menu-bar ul li:hover .sub-menu-1 {
-	display: block;
-	position: absolute;
-	background: #2a2e35;
-	margin-top: 15px;
-	margin-left: -100px;
-}
-/* .menu-bar ul li:hover .sub-menu-1 ul {
-	display: block;
-	margin: 10px;
-} */
-.menu-bar ul li:hover .sub-menu-1 ul li {
-	width: 150px;
-	padding: 10px;
-	border-bottom: 1px solid #fff;
-	background: transparent;
-	border-radius: 0;
-	text-align: left;
-}
-/* .menu-bar ul li:hover .sub-menu-1 ul li:last-child {
-	border-bottom: none;
-} */
-.menu-bar ul li:hover .sub-menu-1 ul li a:hover {
-	color: #00994d;
-	font-weight: bold;
+/* try bootstrap */
+.dropdown{
+	
 }
 
-.menu-bar ul {
+
+/* .menu-bar ul {
 	display: inline-flex;
 	list-style: none;
 	color: black;
@@ -131,7 +91,7 @@ body {
 .menu-bar ul li:hover .sub-menu-1 ul li a:hover {
 	color: #00994d;
 	font-weight: bold;
-}
+} */
 
 /* body */
 .bondpaper {
@@ -194,4 +154,5 @@ a {
 	border-radius: 5px;
 	margin: 10px 10px 0 10px;
 	margin-left: -65px;
+}
 }

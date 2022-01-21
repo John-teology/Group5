@@ -6,48 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
 
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/main.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/Mainpage.css'); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <style>
+        body{
+            background-color: #1a1f22;
+        }
+    </style>
 </head>
 <body>
+    
+
+
 
   
-
+        <!-- Header Navigation Bar -->
     <div class="menu-bar">
-        <ul>
-              <h1 class="title">Establishment Traffic Control System</h1>
-              
-             <li id="profile">
-                 <a href="#"><i><button class="profbut"><h3> <?php echo $username ?> </h4></button></i></a>
-                
-                <div class="sub-menu-1">
-                    <ul>
-                      <li><a href="<?php echo site_url('tracker/user_profile') ?>">Contact Trace Profile</a></li>
-                      <li><a href="<?php echo site_url('tracker/MyEstablishments') ?>">Establishment list</a></li>
-                      <li class="li11"><a class="logout" href= "<?php echo site_url("tracker/logout") ?>" > Log Out </a></li>
-                     
-                    </ul>
+        <div class="title">
+            <h2>Establishment Traffic Control System</h2>
+        </div>
+        <div class="dropdown">
+                <button id="profile" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <?php echo $username ?>
+                </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="<?php echo site_url('tracker/user_profile') ?>">Contact Trace Profile</a></li>
+                <li><a class="dropdown-item" href="<?php echo site_url('tracker/MyEstablishments') ?>">Establishment list</a></li>
+                <li><a class="dropdown-item" href="<?php echo site_url("tracker/logout") ?>" > Log Out </a></li>
+            </ul>
+        </div>
+        
+    </div>
+
+                <!-- body Content -->
+            <div class="container">
+                <div id="try" class="row-30">
+                    <div  id="box1" class="col-6">
+                        <a class="text-center" href="<?php echo site_url("tracker/Establishment_Create")?>"><h2 class="createE">Create Establishment</h2></a>
+                    </div>
                 </div>
-            </li>
-               
-        </ul>
-    </div>
-
-
-
+                <br>
+                <div class="row">
+                    <div id="box2" class="col-6">
+                        <a class="text-center" href="<?php echo site_url("tracker/display_establishment")?>"><h2 class="viewE">View Establishment</h2></a>
+                    </div>
+                </div>
+            </div>
     
-    <div class="bondpaper">
-        <div class="box1">
-            <a href="<?php echo site_url("tracker/Establishment_Create")?>"><h2 class="createE">Create Establishment</h2></a>
-          
 
-        </div>
-        <div class="box2">
-            <a href="<?php echo site_url("tracker/display_establishment")?>">
-            <h2 class="viewE">View Establishment</h2>
-            </a>
-        </div>
-
-    </div>
 </body>
 </html>

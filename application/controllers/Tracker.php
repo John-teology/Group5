@@ -73,7 +73,7 @@ class Tracker extends CI_Controller {
                 {
                     redirect($this->session->userdata("currentpage"));
                 }
-                redirect("tracker");
+                redirect("tracker/display_establishment");
             }
             else{
                 $this->session->set_flashdata("wrong", "Invalid Credentials");
@@ -602,6 +602,7 @@ class Tracker extends CI_Controller {
     {
         if($this->session->userdata("username") != "")
         {
+            $user = $this->session->userdata("username"); 
             $this->session->unset_userdata('currentpage');
             $data = array(
                 "inside" => 0
@@ -612,6 +613,7 @@ class Tracker extends CI_Controller {
             $list = $this->t_model->get_all_establishments();
             $this->load->view("establishment/display_establishments", array(
                 "establishments" => $list,
+                "username" => $user,
             ));
         }
         else{
@@ -718,6 +720,13 @@ class Tracker extends CI_Controller {
         $this->t_model->delete_establishmemt($est_id);
         $this->t_model->delete_report($est_id);
         redirect("tracker/Myestablishments");
+    }
+
+
+    public function key() {
+        $keyword = $this->input->post('name');
+        $data['establishments'] = $this->t_model->search($keyword);
+        $this->load->view('display_results', $data);
     }
 
 
