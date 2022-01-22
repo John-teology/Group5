@@ -1,8 +1,8 @@
 body {
 	background-color: #1a1f22;
-	background-position: center center;
+
 	background-size: cover;
-	margin-top: 100px;
+
 	font-family: "Helvetica";
 }
 
@@ -16,6 +16,12 @@ body {
 	width: 100%;
 	margin: 0 0 100px 0;
 	color: white;
+	position: fixed;
+}
+
+.spacer {
+	height: 200px;
+	background-color: #1a1f22;
 }
 
 .menu-bar .title {
@@ -136,15 +142,15 @@ nav > ul > li {
 	height: auto;
 	font-size: 40px;
 	margin: 0 0 20px 0;
-	width: 400px;
-}
-
-.bodyf {
-	margin: 100px 0 0 0;
 }
 
 .anchor {
 	text-decoration: none;
+	color: white;
+}
+
+.anchor:hover {
+	color: white;
 }
 
 #usersnum {
