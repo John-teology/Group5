@@ -25,7 +25,7 @@
         <div class="menu-bar">
             
             <div class="title">
-                <a id="anchor" href="<?php echo site_url("tracker/display_establishment")?>"><h2 id="h2">Establishment Traffic Control System</h2></a>
+                <a id="anchor" href="<?php echo site_url("tracker")?>"><h2 id="h2">Establishment Traffic Control System</h2></a>
             </div>
             
         </div>
