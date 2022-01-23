@@ -16,14 +16,14 @@ html, body{
 
 /* header */
 
-.title{
-    color: white;
-    
-}
-
 .title #title{
     font-size: 30px;
     color: white;
+    font-weight: bold;
+}
+.title #title:hover{
+    color: blue;
+
 }
 
 .menu-bar{
@@ -43,9 +43,8 @@ a {
 .container1{
     width: 550px;
     background-color: #00994d;
-    border-radius: 1px;
+    border-radius: 10px;
     margin: 20px auto;
-    border: 5px solid black;
     height: 400px;
     text-align: center;
 }

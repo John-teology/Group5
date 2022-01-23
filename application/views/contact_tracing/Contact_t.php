@@ -12,6 +12,11 @@
         body{
             background-color: #1a1f22;
         }
+        button{
+            border-radius: 10px;
+            margin: 10px 0 10px 0;
+            font-size: 18px;
+        }
     </style>
 
 </head>

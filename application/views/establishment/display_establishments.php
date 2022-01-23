@@ -77,7 +77,7 @@
                                 <div class="col"></div>
 
                                 <div class="col">
-                                    <i class="fa fa-globe" style="font-size:36px"></i>
+                                    <i class="fa fa-globe" style="font-size:36px "></i>
                                     <?php
                                          print_r($establishments[$i]['location']);
                                     ?>

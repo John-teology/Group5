@@ -18,6 +18,12 @@
             text-decoration: none;
             color: white;
         }
+        button{
+            border-radius: 10px;
+            font-weight:bolder;
+            font-size: 15px;
+            margin: 20px 0 0 10px;
+        }
     </style>
     <script src="<?php echo site_url("assets/JS/qrcode.js") ?>"></script>
     <script src="<?php echo site_url("assets/JS/html2canvas.min.js") ?>"></script>

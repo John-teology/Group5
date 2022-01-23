@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Helvetica";
+	font-family: 'Helvetica';
 	font-size: 15px;
     
 }
@@ -31,22 +31,28 @@ body{
 }
 
 .title1{
-    margin: 0 0 10px 40px;
-    padding: 0 0 0 0;
+    margin: 10px 0 20px 40px;
+    padding: 10px 0 10px 0;
+    font-weight: bold;
 }
-
+.title1:hover{
+    color: blue;
+}
 .container{
     background-color: #00994d;
+    border-radius: 10px;
 
 }
 
 .container00{
     background-color: #2a2e35;
+    border-radius: 15px;
 }
 
 .containerss{
     margin: 0 0 10px 0;
     background-color:#00994d ;
+    border-radius: 10px;
 }
 
 .wrapper{
@@ -54,11 +60,12 @@ body{
     height: auto;
     max-width: 2000px;
     padding: 20px 40px 10px 40px;
+    border-radius: 15px;
     /* width: 800px; */
 }
 
 #output{
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
 }
 
 
@@ -73,6 +80,7 @@ h1, h4{
 
 .numberC{
     text-align: center;
+    font-size: 30px;
 }
 
 
@@ -83,7 +91,8 @@ h1, h4{
     text-align: center;
     color: #868686;
     font-size: 0.75rem;
-    margin: 50px 0 0 0;
+    margin:30px 0 20px 0;
+    border-radius: 15px;
     
 }
 .bondpaper ul {
@@ -104,8 +113,10 @@ h1, h4{
 button{
     background-color: #00994d;
     color: white;
-    padding: 10px 10px;
+    padding: 10px 20px;
     width: 300px;
+    border-width: 0px;
+    font-weight: bolder;
 }
 
 @media screen and (max-width: 480px) {
