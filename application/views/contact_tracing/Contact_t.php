@@ -6,33 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact_tracing_information</title>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/contact_tracing/contact_t.css'); ?>">
-   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/contact_tracing/contact_t_update.css'); ?>">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
       
     <style>
         body{
             background-color: #1a1f22;
+            font-family: 'Helvetica';
         }
-<<<<<<< HEAD
-        .btn{
-            background-color: #00994d;
-            border-color: #00994d;
-            border-radius: 10px;
-            border-width: 0px;
-            font-weight: bold;
-        }
-        .btn:hover {
-        background-color: #00994d;
-        }
-        .header-title:hover {
-            text-decoration: none;
-=======
         button{
             border-radius: 10px;
             margin: 10px 0 10px 0;
             font-size: 18px;
->>>>>>> 5e6d1307cd6955427bba4120e22a2e9ccca4ae48
+        }
+        .btn{
+            background-color: #00994d;
+            border-width: 0px;
+            margin: 20px 0 0 38%;
+            border-radius: 10px;
+        }
+        .btn:hover {
+        background-color: #00994d;
+        }
+        a{
+            color:white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover{
+            color: white;
         }
     </style>
 
