@@ -16,7 +16,7 @@ body{
 	display: flex;
 	flex-wrap: wrap;
 	background-color: #2a2e35;
-	padding: 20px 0 20px 0;
+	padding: 15px 0 0 0;
 	height: auto;
 	width: 100%;
 	margin: 0 0 100px 0;
@@ -48,10 +48,12 @@ body{
 .container00{
     background-color: #2a2e35;
     border-radius: 15px;
+    width: 500px;
 }
 
 .containerss{
     margin: 0 0 10px 0;
+    padding: 10px 0 0 0;
     background-color:#00994d ;
     border-radius: 10px;
 }
@@ -59,14 +61,14 @@ body{
 .wrapper{
     background-color: #2a2e35;
     height: auto;
-    max-width: 2000px;
-    padding: 20px 40px 10px 40px;
+    max-width: 3000px;
+    padding: 20px 40px 50px 40px;
     border-radius: 15px;
     /* width: 800px; */
 }
 
 #output{
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
 }
 
 
@@ -86,39 +88,30 @@ h1, h4{
 
 
 /* button */
-.bondpaper {
-    background: #2a2e35;
-    padding: 32px 32px;
-    text-align: center;
-    color: #868686;
-    font-size: 0.75rem;
-    margin:30px 0 20px 0;
-    border-radius: 15px;
-    
-}
+
 .bondpaper ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 .bondpaper li {
-    display: inline-block;
+    display: inline;
 }
 .bondpaper li a {
-    padding: 6px;
+    padding: 10px;
     font-size: 0.875rem;
     text-decoration: none;
-    color: #c3c3c3;
 }
 
 button{
-    background-color: #00994d;
     color: white;
-    padding: 10px 20px;
-    width: 300px;
-    border-width: 0px;
-    font-weight: bolder;
-    transition-duration: 0.4s;
+	font-weight: bold;
+	border-width: 0px;
+	background-color: #00994d;
+	width: 200px;
+	height: 50px;
+    margin-bottom: 10%;
+    display: inline;
 }
 
 button:hover{

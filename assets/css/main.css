@@ -12,7 +12,7 @@
 		background-size: cover;
 		background-position: center;
 
-		font-family: "Segoe UI";
+		font-family: 'Helvetica';
 	}
 
 	.title {
@@ -67,6 +67,7 @@
 
 	a {
 		text-decoration: none;
+		font-weight: bold;
 	}
 
 	.box1,
