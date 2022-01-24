@@ -540,7 +540,7 @@ class Tracker extends CI_Controller {
                 );
                 $this->t_model->update_establishment($este_id,$data);
 
-                redirect("tracker/MyEstablishments");
+                redirect("tracker/Establishment_specific/$este_id");
 
             }   
 

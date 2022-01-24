@@ -67,11 +67,12 @@
 
             <label for="exampleInputPassword1" class="form-label">Email</label>
             <input type="email" class="form-control"  name="email_txt"  placeholder="Enter your Email" value="<?php print_r($data->email) ?>" disabled>
-            
+
             <button class="btn btn-primary">
                 <a id="anchor" href="<?php echo site_url("tracker/contact_tracing_update/$data->id") ?>">Modify</a>
             </button>
         </div>
+
   
    
         
