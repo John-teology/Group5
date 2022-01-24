@@ -4,31 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Tracker extends CI_Controller {
 
 
-		public function mainpage()
-	{
-        if($this->session->userdata("username") != "")
-        {
-            $this->session->unset_userdata('currentpage');
-            if($this->session->userdata("entered")!= "")
-            {
-                $est_id = $this->session->userdata("entered");
-                redirect("tracker/establishment_entry/$est_id");
-            }
-        
-            $user = $this->session->userdata("username"); 
-                $this->load->view("mainpage", array
-            (
-                "username" => $user,
-            ));
-
-        }
-        else{
-            redirect("tracker/login");
-        }
-	}
-
-
-    
 
     public function login()
     {  
@@ -73,7 +48,7 @@ class Tracker extends CI_Controller {
                 {
                     redirect($this->session->userdata("currentpage"));
                 }
-                redirect("tracker/display_establishment");
+                redirect("tracker");
             }
             else{
                 $this->session->set_flashdata("wrong", "Invalid Credentials");
@@ -129,7 +104,7 @@ class Tracker extends CI_Controller {
 
         if($this->form_validation->run() == false)
         {
-            $this->register();
+            $this->login();
         }
         else
         {
@@ -391,32 +366,6 @@ class Tracker extends CI_Controller {
 
     }
 
-    // public function user_prof_este()
-    // {
-    //     if($this->session->userdata("username") != "")
-    //     {   
-    //          if($this->session->userdata("entered")!= "")
-    //             {
-    //                 $est_id = $this->session->userdata("entered");
-    //                 redirect("tracker/establishment_entry/$est_id");
-    //             }
-    //         $user = $this->session->userdata("username"); 
-    //         $user_id = $this->t_model->get_user_id($user);
-    //         if($this->t_model->is_user_have_ctt($user_id))
-    //         {
-    //             redirect('tracker/Establishment_Create');
-    //         }
-    //         else
-    //         {
-    //             redirect("tracker/Establishment_Create");
-    //         }
-
-    //     }
-    //     else{
-    //         redirect("tracker/login");
-    //     }
-
-    // }
 
     public function Establishment_auth() {
         $config_rules = array(
@@ -591,7 +540,7 @@ class Tracker extends CI_Controller {
                 );
                 $this->t_model->update_establishment($este_id,$data);
 
-                redirect("tracker/MyEstablishments");
+                redirect("tracker/Establishment_specific/$este_id");
 
             }   
 
@@ -618,7 +567,7 @@ class Tracker extends CI_Controller {
             ));
         }
         else{
-            $this->session->set_userdata("currentpage","tracker/display_establishment");
+            $this->session->set_userdata("currentpage","tracker");
             redirect("tracker/login");
         }
     }
@@ -635,7 +584,7 @@ class Tracker extends CI_Controller {
             if(empty($dat))
             {
                 // this will check if valid ba yung establish id that user's entered
-                redirect("tracker/display_establishment");
+                redirect("tracker");
             }
             $user_ct_id = $this->t_model->get_user_ct_by_id($user_id);
             if(empty($user_ct_id))
@@ -688,31 +637,46 @@ class Tracker extends CI_Controller {
 
     // alisin ang decrypt
     public function contact_tracing_report($est_id){
-        $data = $this->t_model->get_ct_ids($est_id);
-        if(empty($data))
+
+          if($this->session->userdata("username") != "")
         {
-             $this->load->view("report/ct_report",array(
-            "empty" => 0
+            if($this->session->userdata("entered")!= "")
+            {
+                $est_id = $this->session->userdata("entered");
+                redirect("tracker/establishment_entry/$est_id");
+            }
+            
+            $data = $this->t_model->get_ct_ids($est_id);
+            if(empty($data))
+            {
+                $this->load->view("report/ct_report",array(
+                "empty" => 0
 
-            ));
+                ));
 
+            }
+            else
+            {
+                $contact_id = array();
+                for($i = 0; $i < count($data); $i++)
+                {
+                    array_push($contact_id,$data[$i]->ct_id);
+                }
+                $contact_d = $this->t_model->get_ct_details($contact_id);
+                $this->load->view("report/ct_report",array(
+                    "data" => $contact_d,
+                    "empty" => 1,
+                    "test" => $contact_id
+
+                ));
+
+            }
         }
         else
-        {
-            $contact_id = array();
-            for($i = 0; $i < count($data); $i++)
             {
-                array_push($contact_id,$data[$i]->ct_id);
+                $this->session->set_userdata("currentpage","tracker/contact_tracing_report/$est_id");
+                redirect("tracker/login");
             }
-            $contact_d = $this->t_model->get_ct_details($contact_id);
-            $this->load->view("report/ct_report",array(
-                "data" => $contact_d,
-                "empty" => 1,
-                "test" => $contact_id
-
-            ));
-
-        }
        
     }
 
@@ -729,7 +693,15 @@ class Tracker extends CI_Controller {
         $data['establishments'] = $this->t_model->search($keyword);
         $this->load->view('display_results', $data);
     }
+    
+    public function api()
+    {
+        $list = $this->t_model->get_all_establishments();
+        print_r(json_encode($list,JSON_PRETTY_PRINT));
+        
 
+    }
 
 }
+
 

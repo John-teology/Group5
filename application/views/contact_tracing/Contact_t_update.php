@@ -44,9 +44,7 @@
             </div> 
         </div>
         
-     <!-- <button>
-        <a href="<?php echo site_url("tracker/contact_tracing")?>">back</a>
-    </button> -->
+    
     <?php  echo form_open("tracker/contact_tracing_update_auth/$data->id", array(
         "method" => "post",
         "enctype" => "multipart/form-data")); ?>

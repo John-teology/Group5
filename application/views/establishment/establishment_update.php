@@ -22,7 +22,7 @@
         <div class="header">
             <nav>
                 <ul>
-                <a href="<?php echo site_url("tracker/display_establishment")?>"><li class="li"><h1 class="title1">Establishment Traffic Control System</h1></li></a>
+                <a href="<?php echo site_url("tracker")?>"><li class="li"><h1 class="title1">Establishment Traffic Control System</h1></li></a>
                 </ul>
             </nav>
         </div>

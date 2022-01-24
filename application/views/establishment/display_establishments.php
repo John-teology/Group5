@@ -14,6 +14,7 @@
             background-color: #1a1f22;
         }
     </style>
+    <script src="<?php echo site_url("assets/JS/display_establishment.js") ?>"></script>
 </head>
 <body>
 
@@ -35,59 +36,68 @@
         </div>
         
     </div>
-
+    <div class="spacer"></div>
+    
+    <div id="estab">
+        
     <?php
-                    $establishment_p = "Establishment: ";
-                    $noOfCustomer = "No. of Customer: ";
-                    $place = "Place: ";
+        $establishment_p = "Establishment: ";
+        $noOfCustomer = "No. of Customer: ";
+        $place = "Place: ";
 
-                        for($i = 0; $i < count($establishments); $i++){
-                            $id = $establishments[$i]['id'];
+            for($i = 0; $i < count($establishments); $i++){
+                $id = $establishments[$i]['id'];
 
-                    $report = array(
-                    // this will select all report that inside column is equal to 1
-                    " est_id"=> $id,
-                    "date_t" => date("Y-m-d"),
-                    "inside" => 1
-                                );
-                    $status = $this->t_model->get_report_status($report);
+        $report = array(
+        // this will select all report that inside column is equal to 1
+        " est_id"=> $id,
+        "date_t" => date("Y-m-d"),
+        "inside" => 1
+                    );
+        $status = $this->t_model->get_report_status($report);
 
-                ?>
+    ?>
                     
-                    <a class="anchor" href= "<?php echo site_url("tracker/Establishment_specific/$id")?>">
-                    
-                        <div class="container-xxl">
-                            <div class="row">
-                                    <div class="col"></div>
-                                    <div class="col">
-                                        <i class="fa fa-building-o" style="font-size:36px"></i>
-                                        <strong><?php print_r($establishments[$i]['name']);?></strong>
-                                    </div>
-                                    <div class="col"></div>
-                            </div>
-
-                            <div class="row">
-                            
-                                <div class="col">
-                                    <i id="usersnum" class="fa fa-users" style="font-size:36px"></i>
-                                    <?php
-                                        echo count($status);
-                                    ?>
-                                </div>
-                                <div class="col"></div>
-
-                                <div class="col">
-                                    <i class="fa fa-globe" style="font-size:36px "></i>
-                                    <?php
-                                         print_r($establishments[$i]['location']);
-                                    ?>
-                                </div> 
-                            </div>
+            <div class="container-xxl">
+                <a class="anchor" href= "<?php echo site_url("tracker/Establishment_specific/$id")?>">
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col">
+                            <i class="fa fa-building-o" style="font-size:36px"></i>
+                            <strong><?php print_r($establishments[$i]['name']);?></strong>
                         </div>
+                        <div class="col"></div>
+                    </div>
+
+                <div class="row">
+                
+                    <div class="col">
+                        <i id="usersnum" class="fa fa-users" style="font-size:36px"></i>
+                        <?php
+                            echo count($status);
+                        ?>
+                    </div>
+                    <div class="col"></div>
+
+                    <div class="col">
+                        <i class="fa fa-globe" style="font-size:36px"></i>
+                        <?php
+                                print_r($establishments[$i]['location']);
+                        ?>
+                    </div> 
+                </div>
+                </a>
+
+            </div>
                      
-                    </a>
-                <?php
-                    }
-                ?>  
+    <?php
+        }
+    ?>  
+
+    </div>
+
+    <div id="addnew"></div>
+
+
 </body>
 </html>

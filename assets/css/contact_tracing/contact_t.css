@@ -1,17 +1,15 @@
 h3 {
 	color: rgb(250, 245, 245);
-
 }
-html, body{
-	
-    
-    background-color: #1a1f22;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Segoe UI';
-    box-sizing: border-box;
-    font-size: 20px;
+html,
+body {
+	background-color: #1a1f22;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: "Segoe UI";
+	box-sizing: border-box;
+	font-size: 20px;
 }
 
 /* header */
@@ -28,19 +26,19 @@ html, body{
 
 }
 
-.menu-bar{
-    background-color: #2a2e35;
-    padding: 20px 40px;
+.menu-bar {
+	background-color: #2a2e35;
+	padding: 20px 40px;
 }
 
-#anchor{
-    text-decoration: none;
-    color: white;
+#anchor {
+	text-decoration: none;
+	color: white;
 }
 
 a {
 	text-decoration: none;
-    color: white;
+	color: white;
 }
 .container1{
     width: 550px;
@@ -50,9 +48,9 @@ a {
     height: 400px;
     text-align: center;
 }
-.container1{
-   display:grid;
-   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+.container1 {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 button{
     color: white;
@@ -63,50 +61,47 @@ button{
     width: auto;
     height: 40px;
 }
-.box{
-    width: 600px;
-    height: 450px;
-    text-align: center;
-    margin: 100px 0 0 0;
-    background-color:  #2a2e35;
-    border-radius: 20px;
-    padding: 10px 10px 20px 10px;
+.box {
+	width: 600px;
+	height: 450px;
+	text-align: center;
+	margin: 100px 0 0 0;
+	background-color: #2a2e35;
+	border-radius: 20px;
+	padding: 10px 10px 20px 10px;
 }
 .wrapper.logo {
-    display: block;
-     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color:black;
-    padding: 10px;
-    height: 90px;
-    
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: black;
+	padding: 10px;
+	height: 90px;
 }
 
 @media screen and (max-width: 480px) {
-    .box{
-        width: 300px;
-        height: auto;
-        text-align: center;
-        margin: 90px 0 0 0;
-        background-color:  #2a2e35;
-        border-radius: 20px;
-        padding: 10px 20px 20px 10px;
-        
-    }
+	.box {
+		width: 300px;
+		height: auto;
+		text-align: center;
+		margin: 90px 0 0 0;
+		background-color: #2a2e35;
+		border-radius: 20px;
+		padding: 10px 20px 20px 10px;
+	}
 
-    .container1{
-        margin: 10px;
-        width: auto;
+	.container1 {
+		margin: 10px;
+		width: auto;
+	}
 
-    }
+	.email {
+		font-size: 17px;
+	}
 
-    .email{
-        font-size: 17px;
-    }
-
-    .title #title{
-        font-size: 16px;
-    }
+	.title #title {
+		font-size: 16px;
+	}
 }
