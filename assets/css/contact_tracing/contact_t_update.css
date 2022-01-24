@@ -80,17 +80,17 @@ body{
 /* header */
 
 #header{
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #2a2e35;
-    padding: 10px;
-    height: auto;
+    display: flex;
+	flex-wrap: wrap;
+	background-color: #2a2e35;
+	padding: 20px 0px 20px 0;
+	height: auto;
+	width: 100%;
+	color: white;
 }
 .header-title{
-    font-size: 28px;
-    margin: 10px 0 5px;
+    font-size: 30px;
+    margin-left: -10%;
   }
 
   @media screen and (max-width: 480px) {

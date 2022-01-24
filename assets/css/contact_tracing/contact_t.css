@@ -20,6 +20,8 @@ html, body{
     font-size: 30px;
     color: white;
     font-weight: bold;
+    font-family: 'Helvetica';
+    padding: 10px 0 0 1%;
 }
 .title #title:hover{
     color: blue;
