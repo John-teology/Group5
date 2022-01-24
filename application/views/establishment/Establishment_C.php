@@ -11,6 +11,12 @@
 
 
     </head>
+    <style>
+        .title1{
+            color: white;
+            font-size: 30px;
+        }
+    </style>
     <body>
 
         <?php  echo form_open("tracker/Establishment_auth", array(

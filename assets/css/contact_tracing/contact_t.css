@@ -14,13 +14,14 @@ body {
 
 /* header */
 
-.title #title {
-	font-size: 30px;
-	color: white;
-	font-weight: bold;
+.title #title{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
 }
-.title #title:hover {
-	color: blue;
+.title #title:hover{
+    color: blue;
+
 }
 
 .menu-bar {
@@ -37,26 +38,26 @@ a {
 	text-decoration: none;
 	color: white;
 }
-.container1 {
-	width: 550px;
-	background-color: #00994d;
-	border-radius: 10px;
-	margin: 20px auto;
-	height: 400px;
-	text-align: center;
+.container1{
+    width: 550px;
+    background-color: #00994d;
+    border-radius: 10px;
+    margin: 20px auto;
+    height: 400px;
+    text-align: center;
 }
 .container1 {
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
-button {
-	color: white;
-	font-weight: bold;
-	border-width: 0px;
-	background-color: #00994d;
-	border-radius: 10px;
-	width: auto;
-	height: 40px;
+button{
+    color: white;
+    font-weight: bold;
+    border-width: 0px;
+    background-color: #00994d;
+    border-radius: 10px;
+    width: auto;
+    height: 40px;
 }
 .box {
 	width: 600px;

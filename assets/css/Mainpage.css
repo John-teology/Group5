@@ -11,7 +11,7 @@ body {
 	background-size: cover;
 	background-position: center;
 
-	font-family: "Segoe UI";
+	font-family: 'Helvetica';
 }
 
 
@@ -20,11 +20,12 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	background-color: #2a2e35;
-	padding: 15px 0 0 0;
+	padding: 20px 0 20px 0;
 	height: auto;
 	width: 100%;
 	margin: 0 0 100px 0;
 	color: white;
+	font-weight: bold;
 }
 
 .menu-bar .title{
@@ -41,6 +42,10 @@ body {
 
 #profile{
 	background-color: #00994d;
+	font-weight: bold;
+	border-width: 0px;
+	 margin: 10px 0 0 30%;
+
 }
 
 @media screen and (max-width: 480px){

@@ -17,6 +17,12 @@
             button{
                 border-radius: 10px;
             }
+            h2{
+                font-weight: bold;
+            }
+            h2:hover{
+                color:blue;
+            }
 
         </style>
     </head>
