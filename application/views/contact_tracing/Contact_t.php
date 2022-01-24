@@ -14,25 +14,10 @@
         body{
             background-color: #1a1f22;
         }
-<<<<<<< HEAD
-        .btn{
-            background-color: #00994d;
-            border-color: #00994d;
-            border-radius: 10px;
-            border-width: 0px;
-            font-weight: bold;
-        }
-        .btn:hover {
-        background-color: #00994d;
-        }
-        .header-title:hover {
-            text-decoration: none;
-=======
         button{
             border-radius: 10px;
             margin: 10px 0 10px 0;
             font-size: 18px;
->>>>>>> 5e6d1307cd6955427bba4120e22a2e9ccca4ae48
         }
     </style>
 

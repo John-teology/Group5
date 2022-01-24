@@ -16,10 +16,10 @@ body{
 	display: flex;
 	flex-wrap: wrap;
 	background-color: #2a2e35;
-	padding: 15px 0 0 0;
-	height: 100%;
+	padding: 20px 0 20px 0;
+	height: auto;
 	width: 100%;
-	margin: 0 0 50px 0;
+	margin: 0 0 100px 0;
 	color: white;
 }
 
@@ -32,16 +32,17 @@ body{
 
 .title1{
     margin: 10px 0 20px 40px;
-    padding: 10px 0 10px 0;
+    padding: 30px 0 10px 0;
     font-weight: bold;
 }
 .title1:hover{
-    color: blue;
+    color: #4db882;
 }
 .container{
     background-color: #00994d;
     border-radius: 10px;
-
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .container00{
@@ -117,7 +118,13 @@ button{
     width: 300px;
     border-width: 0px;
     font-weight: bolder;
+    transition-duration: 0.4s;
 }
+
+button:hover{
+    background-color: #4db882;
+}
+
 
 @media screen and (max-width: 480px) {
     

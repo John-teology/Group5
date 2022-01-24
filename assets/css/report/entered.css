@@ -83,6 +83,10 @@ button {
 	background-color: #00994d;
 	width: 200px;
 	height: 50px;
+    transition-duration: 0.4s;
+}
+button:hover{
+    background-color: #4db882;
 }
 button a {
 	text-decoration: none;
