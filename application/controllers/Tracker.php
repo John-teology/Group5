@@ -104,7 +104,7 @@ class Tracker extends CI_Controller {
 
         if($this->form_validation->run() == false)
         {
-            $this->register();
+            $this->login();
         }
         else
         {
@@ -693,7 +693,15 @@ class Tracker extends CI_Controller {
         $data['establishments'] = $this->t_model->search($keyword);
         $this->load->view('display_results', $data);
     }
+    
+    public function api()
+    {
+        $list = $this->t_model->get_all_establishments();
+        print_r(json_encode($list,JSON_PRETTY_PRINT));
+        
 
+    }
 
 }
+
 

@@ -21,7 +21,6 @@
     </style>
     <script src="<?php echo site_url("assets/JS/qrcode.js") ?>"></script>
     <script src="<?php echo site_url("assets/JS/html2canvas.min.js") ?>"></script>
-    <script src="<?php echo site_url("assets/JS/establishment_specific.js") ?>"></script>
 
 </head>
 <body>

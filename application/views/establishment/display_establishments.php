@@ -14,6 +14,7 @@
             background-color: #1a1f22;
         }
     </style>
+    <script src="<?php echo site_url("assets/JS/display_establishment.js") ?>"></script>
 </head>
 <body>
 
@@ -36,7 +37,9 @@
         
     </div>
     <div class="spacer"></div>
-
+    
+    <div id="estab">
+        
     <?php
         $establishment_p = "Establishment: ";
         $noOfCustomer = "No. of Customer: ";
@@ -90,5 +93,11 @@
     <?php
         }
     ?>  
+
+    </div>
+
+    <div id="addnew"></div>
+
+
 </body>
 </html>
