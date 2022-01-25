@@ -198,7 +198,7 @@ class Tracker extends CI_Controller {
                 array (
                 "field" => "phone_txt",
                 "label" => "PhoneNumber",
-                "rules" =>"trim|required|min_length[11]|max_length[20]",
+                "rules" =>"trim|required|min_length[11]|max_length[11]",
             ),
                 array (
                 "field" => "age_txt",
@@ -302,7 +302,7 @@ class Tracker extends CI_Controller {
                 array (
                 "field" => "phone_txt",
                 "label" => "PhoneNumber",
-                "rules" =>"trim|required|min_length[11]|max_length[20]",
+                "rules" =>"trim|required|min_length[11]|max_length[11]",
             ),
                 array (
                 "field" => "age_txt",
