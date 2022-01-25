@@ -2,17 +2,16 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Helvetica';
+	font-family: "Helvetica";
 	font-size: 15px;
-    
 }
 
-body{
-    display: grid;
-    place-items: center;
+body {
+	display: grid;
+	place-items: center;
 }
 
-.menu-bar{
+.menu-bar {
 	display: flex;
 	flex-wrap: wrap;
 	background-color: #2a2e35;
@@ -23,109 +22,99 @@ body{
 	color: white;
 }
 
-
-#title{
-    margin: 0 0 0 40px;
-    color: white;
-    font-size: 30px;
+#title {
+	margin: 0 0 0 40px;
+	color: white;
+	font-size: 30px;
 }
 
-.title1{
-    margin: 10px 0 20px 40px;
-    padding: 30px 0 10px 0;
-    font-weight: bold;
+.title1 {
+	margin: 10px 0 20px 40px;
+	padding: 30px 0 10px 0;
+	font-weight: bold;
 }
-.title1:hover{
-    color: #4db882;
-}
-.container{
-    background-color: #00994d;
-    border-radius: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+.title1:hover {
+	color: #4db882;
 }
 
-.container00{
-    background-color: #2a2e35;
-    border-radius: 15px;
-    width: 500px;
+.container00 {
+	background-color: #2a2e35;
+	border-radius: 15px;
+	width: 500px;
 }
 
-.containerss{
-    margin: 0 0 10px 0;
-    padding: 10px 0 0 0;
-    background-color:#00994d ;
-    border-radius: 10px;
+.containerss {
+	margin: 0 0 10px 0;
+	padding: 10px 0 0 0;
+	background-color: #00994d;
+	border-radius: 10px;
 }
 
-.wrapper{
-    background-color: #2a2e35;
-    height: auto;
-    max-width: 3000px;
-    padding: 20px 40px 50px 40px;
-    border-radius: 15px;
-    /* width: 800px; */
+.wrapper {
+	background-color: #2a2e35;
+	height: auto;
+	max-width: 3000px;
+	padding: 20px 40px 50px 40px;
+	border-radius: 15px;
+	/* width: 800px; */
 }
 
-#output{
-    margin: 0 0 10px 0;
+#output {
+	margin: 0 0 10px 0;
 }
 
-
-
-h1, h4{
-    color: white;
+h1,
+h4 {
+	color: white;
 }
 
-.username{
-    text-align: center;
+.username {
+	text-align: center;
 }
 
-.numberC{
-    text-align: center;
-    font-size: 30px;
+.numberC {
+	text-align: center;
+	font-size: 30px;
 }
-
 
 /* button */
 
 .bondpaper ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 .bondpaper li {
-    display: inline;
+	display: inline;
 }
 .bondpaper li a {
-    padding: 10px;
-    font-size: 0.875rem;
-    text-decoration: none;
+	padding: 10px;
+	font-size: 0.875rem;
+	text-decoration: none;
 }
 
-button{
-    color: white;
+button {
+	color: white;
 	font-weight: bold;
 	border-width: 0px;
 	background-color: #00994d;
 	width: 200px;
 	height: 50px;
-    margin-bottom: 10%;
-    display: inline;
+	margin-bottom: 10%;
+	display: inline;
 }
 
-button:hover{
-    background-color: #4db882;
+button:hover {
+	background-color: #4db882;
 }
-
 
 @media screen and (max-width: 480px) {
-    
-    .bondpaper {
-        padding: 30px 0 10px 0;
-    }
-    .bondpaper li {
-        display: block;
-        margin: 5px 0;
-    }
-}  
+	.bondpaper {
+		padding: 30px 0 10px 0;
+	}
+	.bondpaper li {
+		display: block;
+		margin: 5px 0;
+	}
+}
+
