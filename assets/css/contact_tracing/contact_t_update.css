@@ -9,7 +9,7 @@ a {
 }
 strong:hover {
     background-color: #2a2e35;
-    color: blue;
+    color: #4db882;
   }
 body{
     display: grid;

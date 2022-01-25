@@ -30,14 +30,14 @@
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li class="list"><a id="listname" class="dropdown-item" href="<?php echo site_url('tracker/Establishment_Create') ?>">Create Establishment</a></li>
                 <li class="list"><a id="listname" class="dropdown-item" href="<?php echo site_url('tracker/user_profile') ?>">Contact Trace Profile</a></li>
-                <li class="list"><a id="listname" class="dropdown-item" href="<?php echo site_url('tracker/MyEstablishments') ?>">Establishment list</a></li>
+                <li class="list"><a id="listname" class="dropdown-item" href="<?php echo site_url('tracker/MyEstablishments') ?>">Establishment List</a></li>
                 <li class="list"><a id="listname" class="dropdown-item" href="<?php echo site_url("tracker/logout") ?>" > Log Out </a></li>
             </ul>
         </div>
         
     </div>
-    <div class="spacer"></div>
-    
+    <div class="spacer">
+    </div>
     <div id="estab">
         
     <?php
