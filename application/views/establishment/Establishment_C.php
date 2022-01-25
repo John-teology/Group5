@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Establishment</title>
     
+    <!-- For autocomplete thing -->
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"
+    />
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="<?php echo base_url('assets/js/establishment_C.js'); ?>"></script>
+    <!-- For autocomplete thing -->
+
+
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/Establishment/Establishment_C.css'); ?>">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -18,6 +29,9 @@
         }
     </style>
     <body>
+        <!-- i just need the link that is why -->
+        <input id= "url" type="text" value="<?php echo site_url("tracker/establishment_locations");?>" hidden >
+        <!-- i just need the link that is why -->
 
         <?php  echo form_open("tracker/Establishment_auth", array(
             "method" => "post",
@@ -53,7 +67,8 @@
                     <div class="div2">
                         <label class="form-label">Location</label>
                         <i class="fa fa-location-arrow"></i>
-                        <input type="text" class="form-control"  name="location_txt"  placeholder="Enter your Location" value="<?php echo set_value('location_txt') ?>" >
+                        <input type="text" class="form-control"  
+                        id="tags" name="name" placeholder="Enter your Location" value="<?php echo set_value('location_txt') ?>" >
                         <?php  echo form_error("location_txt","<div class='error'>","</div>"); ?>
                     </div>
 
