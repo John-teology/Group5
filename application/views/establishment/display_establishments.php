@@ -61,9 +61,9 @@
             <div class="container-xxl">
                 <a class="anchor" href= "<?php echo site_url("tracker/Establishment_specific/$id")?>">
                     <div class="row">
-                        <div class="col"></div>
+                        <div id="b1" class="col"></div>
                         <div class="col">
-                            <i class="fa fa-building-o" style="font-size:36px"></i>
+                            <i id="building"class="fa fa-building-o" style="font-size:36px"></i>
                             <strong><?php print_r($establishments[$i]['name']);?></strong>
                         </div>
                         <div class="col"></div>
@@ -80,7 +80,7 @@
                     <div class="col"></div>
 
                     <div class="col">
-                        <i class="fa fa-globe" style="font-size:36px"></i>
+                        <i id="globe" class="fa fa-globe" style="font-size:36px"></i>
                         <?php
                                 print_r($establishments[$i]['location']);
                         ?>
