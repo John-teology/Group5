@@ -19,7 +19,7 @@
            font-weight: bold;
        }
        h2:hover{
-           color:blue;
+           color: #4db882;
        }
     
     </style>

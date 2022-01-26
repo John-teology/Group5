@@ -43,6 +43,11 @@ body {
   border-width: 0px;
   margin: 10px 0 0 30%;
   font-family: 'Helvetica';
+  transition-duration: 0.4s;
+}
+
+#profile:hover{
+  background-color: #4db882;
 }
 
 .list{
@@ -186,7 +191,7 @@ h4{
 }
 
 .title1:hover{
-    color: blue;
+    color: #4db882;
 }
 
 .container-xxl{

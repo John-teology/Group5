@@ -112,6 +112,11 @@ body {
     border-width: 0px;
     border-color: #00994d;
     background-color: #00994d;
+	transition-duration: 0.4s;
+}
+
+#signup:hover {
+	background-color: #4db882;
 }
 
 input, i{
@@ -126,7 +131,11 @@ input, i{
     padding: 0 0 0 2%;
 }
 
-
+.success {
+	font-weight: lighter;
+	font-size: 12px;
+	color: #00994d;
+}
 
 
 
