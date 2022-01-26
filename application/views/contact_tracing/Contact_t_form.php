@@ -33,7 +33,7 @@
             <div class="div1">
                 <label for="exampleInputPassword1" class="form-label">First Name</label>
                 <!-- <i class="fa fa-user"></i>  -->
-                <input type="text" class="form-control"  name="firstname_txt"  placeholder="Enter your First Name" value="<?php echo set_value('firstname_txt') ?>" >
+                <input type="text" class="form-control"  name="firstname_txt"  placeholder="Enter your First Name" value="<?php echo set_value('firstname_txt') ?>" autofocus >
                 <?php  echo form_error("firstname_txt","<div class='error'>","</div>"); ?>
             </div>
 
