@@ -22,32 +22,28 @@ body {
 	color: white;
 }
 
-#title {
-	margin: 0 0 0 40px;
+.title {
+	margin: 0 0 0 25%;
+	padding-top: 40px;
 	color: white;
 	font-size: 30px;
 }
 
-<<<<<<< HEAD
-.title1{
-    margin: 5px 0 30px 40px;
-    padding: 30px 0 10px 0;
-    font-weight: bold;
-=======
 .title1 {
 	margin: 10px 0 20px 40px;
 	padding: 30px 0 10px 0;
 	font-weight: bold;
->>>>>>> 5e6bd54b817a39de757a6f5f129c9863b931b539
 }
 .title1:hover {
 	color: #4db882;
 }
 
-.container00 {
+.container {
 	background-color: #2a2e35;
 	border-radius: 15px;
 	width: 500px;
+	line-height: 20px;
+	height: auto;
 }
 
 .containerss {
@@ -125,3 +121,65 @@ button:hover {
 	}
 }
 
+.container .form .div2{
+    height: 45px;
+    margin-bottom: 15px;
+    position: relative;
+    margin: 35px 0 0 0;
+    
+}
+
+.container .form .div2 input{
+    color: white;
+    background-color: #454e56;
+    border-color: #454e56;
+    border-width: 0px;
+    height: 100%;
+    width: 100%;
+    padding-left: 60px;
+    font-size: 15px;
+	border-radius: 20px;
+}
+
+.container .form .div2 textarea{
+    color: white;
+    background-color: #454e56;
+    border-width: 0px;
+    height: 200%;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 60px;
+}
+
+.container .form .div2 i{
+    position: absolute;
+    width: 47px;
+    height: 100%;
+    color: white;
+    font-size: 18px;
+    background-color: #00994d;
+    border: 1px solid #00994d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .form .div2 #ii{
+    position: absolute;
+    width: 47px;
+    height: 200%;
+    color: white;
+    font-size: 18px;
+    background-color: #00994d;
+    border-color:  #00994d;
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-label{
+    margin: 40px 0 0 2%;
+    color: white;
+    font-weight: bold;
+}
