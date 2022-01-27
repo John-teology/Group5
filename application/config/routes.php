@@ -55,6 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 // routes for mainpage buttons
 $route['tracker'] = "tracker/mainpage";
+
 // $route['tracker/user_profile'] = "tracker/user_proc";
 
 // routes for login/register authetication

@@ -32,9 +32,32 @@
                 <li class="list"><a id="listname" class="dropdown-item" href="<?php echo site_url('tracker/MyEstablishments') ?>">Establishment list</a></li>
                 <li class="list"><a id="listname" class="dropdown-item" href="<?php echo site_url("tracker/logout") ?>" > Log Out </a></li>
             </ul>
+
+            
+
         </div>
+
+        <div class="dali">
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+                <i class="fas fa-moon">D</i>
+                <i class="fas fa-sun">L</i>
+                <div class="ball"></div>
+            </label>
+            
+        
+        </div>
+
+        
         
     </div>
+
+    <script>const chk = document.getElementById('chk');
+
+        chk.addEventListener('change', () => {
+            document.body.classList.toggle('dark');
+        });
+    </script>
 
     <?php
                     $establishment_p = "Establishment: ";
