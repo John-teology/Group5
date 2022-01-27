@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-	var refresh = 0;
 	window.onscroll = () => {
 		if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-			refresh += 1;
-			add();
+			add();	
 		}
 	};
 });

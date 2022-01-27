@@ -36,8 +36,7 @@
         </div>
         
     </div>
-    <div class="spacer">
-    </div>
+    <div class="spacer"></div>
     <div id="estab">
         
     <?php

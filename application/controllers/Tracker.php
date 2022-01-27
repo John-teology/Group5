@@ -198,7 +198,7 @@ class Tracker extends CI_Controller {
                 array (
                 "field" => "phone_txt",
                 "label" => "PhoneNumber",
-                "rules" =>"trim|required|min_length[11]|max_length[20]",
+                "rules" =>"trim|required|min_length[11]|max_length[11]",
             ),
                 array (
                 "field" => "age_txt",
@@ -302,7 +302,7 @@ class Tracker extends CI_Controller {
                 array (
                 "field" => "phone_txt",
                 "label" => "PhoneNumber",
-                "rules" =>"trim|required|min_length[11]|max_length[20]",
+                "rules" =>"trim|required|min_length[11]|max_length[11]",
             ),
                 array (
                 "field" => "age_txt",
@@ -375,7 +375,7 @@ class Tracker extends CI_Controller {
                 "rules" =>"trim|required|min_length[1]|max_length[200]",
             ),
                 array (
-                "field" => "location_txt",
+                "field" => "name",
                 "label" => "Location",
                 "rules" =>"trim|required|min_length[1]|max_length[100]",
             ),
@@ -396,7 +396,7 @@ class Tracker extends CI_Controller {
         {
             $user = $this->session->userdata("username"); 
             $name = $this->input->post("name_txt");
-            $location = $this->input->post("location_txt");
+            $location = $this->input->post("name");
             $description = $this->input->post("description_txt");
             // add_contract_tracing
             $this->t_model->add_establishment_try(
@@ -508,7 +508,7 @@ class Tracker extends CI_Controller {
                 "rules" =>"trim|required|min_length[3]|max_length[100]",
             ),
                 array (
-                "field" => "location_txt",
+                "field" => "name",
                 "label" => "location",
                 "rules" =>"trim|required|min_length[2]|max_length[100]",
             ),
@@ -530,7 +530,7 @@ class Tracker extends CI_Controller {
         else
             {
                 $name = $this->input->post("name_txt");
-                $location = $this->input->post("location_txt");
+                $location = $this->input->post("name");
                 $description = $this->input->post("description_txt");
                 $data= array(
                     "name" => $name,
@@ -693,12 +693,12 @@ class Tracker extends CI_Controller {
         $data['establishments'] = $this->t_model->search($keyword);
         $this->load->view('display_results', $data);
     }
-    
-    public function api()
+
+
+    public function establishment_locations()
     {
-        $list = $this->t_model->get_all_establishments();
+        $list = $this->t_model->establishments_location();
         print_r(json_encode($list,JSON_PRETTY_PRINT));
-        
 
     }
 

@@ -60,7 +60,6 @@ td{
 .wrapper{
     margin: 0 0 0 10px;
 }
-
 @media screen and (max-width: 480px) {
 
     .wrapper .wrap{
