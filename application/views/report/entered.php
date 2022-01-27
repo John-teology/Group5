@@ -17,6 +17,12 @@
             button{
                 border-radius: 10px;
             }
+            h2{
+                font-weight: bold;
+            }
+            h2:hover{
+                color:blue;
+            }
 
         </style>
     </head>
@@ -25,7 +31,7 @@
         <div class="menu-bar">
             
             <div class="title">
-                <a id="anchor" href="<?php echo site_url("tracker/display_establishment")?>"><h2 id="h2">Establishment Traffic Control System</h2></a>
+                <a id="anchor" href="<?php echo site_url("tracker")?>"><h2 id="h2">Establishment Traffic Control System</h2></a>
             </div>
             
         </div>

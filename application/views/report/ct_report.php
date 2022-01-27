@@ -15,7 +15,12 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/report/ct_report.css'); ?>">
 
     <style>
-       
+       h2{
+           font-weight: bold;
+       }
+       h2:hover{
+           color: #4db882;
+       }
     
     </style>
 </head>

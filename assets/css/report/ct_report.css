@@ -1,22 +1,24 @@
 
 body{
     background-color: #1a1f22;
+    font-family: 'Helvetica';
 }
-
 .menu-bar{
 	display: flex;
 	flex-wrap: wrap;
 	background-color: #2a2e35;
-	padding: 15px 0 0 0;
+	padding: 20px 0 20px 0;
 	height: auto;
 	width: 100%;
 	margin: 0 0 100px 0;
 	color: white;
+  font-family: 'Helvetica';
 }
 
 .menu-bar .title{
-	flex: 50%;
+	flex: 100%;
 	padding: 0 0 0 5%;
+    font-weight: bold;
 }
 
 #anchor{
@@ -26,10 +28,14 @@ body{
 
 #head{
     background-color: #00994d;
+    border-color:#00994d ;
+    border-width: 0px;
 }
 
 #tr{
     background-color: #2a2e35;
+    border-color:#2a2e35;
+    border-width: 0px;
 }
 
 td{
@@ -42,12 +48,11 @@ td{
 }
 
 .wrap{
-   width: 310px;
+   width: 300px;
 }
 
 .wrapper .wrap{
-    display: inline-block;
-    margin: 0;
+    display:table-cell;
     background-color:#2a2e35;
     height: auto;
 }
@@ -55,11 +60,6 @@ td{
 .wrapper{
     margin: 0 0 0 10px;
 }
-
-.wrapper .container{
-    
-}
-
 @media screen and (max-width: 480px) {
 
     .wrapper .wrap{

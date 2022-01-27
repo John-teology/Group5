@@ -54,7 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 // routes for mainpage buttons
-$route['tracker'] = "tracker/mainpage";
+// $route['tracker'] = "tracker/mainpage";
 
 // $route['tracker/user_profile'] = "tracker/user_proc";
 
@@ -87,6 +87,7 @@ $route['tracker'] = "tracker/mainpage";
 
 
 
+$route['tracker'] = "tracker/display_establishment";
 
 
 

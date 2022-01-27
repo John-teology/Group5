@@ -22,7 +22,7 @@
         <div class="header">
             <nav>
                 <ul>
-                <a href="<?php echo site_url("tracker/display_establishment")?>"><li class="li"><h1 class="title1">Establishment Traffic Control System</h1></li></a>
+                <a href="<?php echo site_url("tracker")?>"><li class="li"><h1 class="title1">Establishment Traffic Control System</h1></li></a>
                 </ul>
             </nav>
         </div>
@@ -39,7 +39,7 @@
                     <div class="div2">
                         <label class="form-label">Name</label>
                         <i class="fa fa-user"></i> 
-                        <input type="text" class="form-control"  name="name_txt"  placeholder="Enter Name" value="<?php print_r($data->name)?>" >
+                        <input type="text" class="form-control"  name="name_txt"  placeholder="Enter Name" value="<?php print_r($data->name)?>" autofocus >
                         <?php  echo form_error("name_txt","<div class='error'>","</div>"); ?>
                     </div>
 

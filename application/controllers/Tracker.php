@@ -4,31 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Tracker extends CI_Controller {
 
 
-		public function mainpage()
-	{
-        if($this->session->userdata("username") != "")
-        {
-            $this->session->unset_userdata('currentpage');
-            if($this->session->userdata("entered")!= "")
-            {
-                $est_id = $this->session->userdata("entered");
-                redirect("tracker/establishment_entry/$est_id");
-            }
-        
-            $user = $this->session->userdata("username"); 
-                $this->load->view("mainpage", array
-            (
-                "username" => $user,
-            ));
-
-        }
-        else{
-            redirect("tracker/login");
-        }
-	}
-
-
-    
 
     public function login()
     {  
@@ -73,7 +48,7 @@ class Tracker extends CI_Controller {
                 {
                     redirect($this->session->userdata("currentpage"));
                 }
-                redirect("tracker/display_establishment");
+                redirect("tracker");
             }
             else{
                 $this->session->set_flashdata("wrong", "Invalid Credentials");
@@ -129,7 +104,7 @@ class Tracker extends CI_Controller {
 
         if($this->form_validation->run() == false)
         {
-            $this->register();
+            $this->login();
         }
         else
         {
@@ -223,7 +198,7 @@ class Tracker extends CI_Controller {
                 array (
                 "field" => "phone_txt",
                 "label" => "PhoneNumber",
-                "rules" =>"trim|required|min_length[11]|max_length[20]",
+                "rules" =>"trim|required|min_length[11]|max_length[11]",
             ),
                 array (
                 "field" => "age_txt",
@@ -327,7 +302,7 @@ class Tracker extends CI_Controller {
                 array (
                 "field" => "phone_txt",
                 "label" => "PhoneNumber",
-                "rules" =>"trim|required|min_length[11]|max_length[20]",
+                "rules" =>"trim|required|min_length[11]|max_length[11]",
             ),
                 array (
                 "field" => "age_txt",
@@ -391,32 +366,6 @@ class Tracker extends CI_Controller {
 
     }
 
-    // public function user_prof_este()
-    // {
-    //     if($this->session->userdata("username") != "")
-    //     {   
-    //          if($this->session->userdata("entered")!= "")
-    //             {
-    //                 $est_id = $this->session->userdata("entered");
-    //                 redirect("tracker/establishment_entry/$est_id");
-    //             }
-    //         $user = $this->session->userdata("username"); 
-    //         $user_id = $this->t_model->get_user_id($user);
-    //         if($this->t_model->is_user_have_ctt($user_id))
-    //         {
-    //             redirect('tracker/Establishment_Create');
-    //         }
-    //         else
-    //         {
-    //             redirect("tracker/Establishment_Create");
-    //         }
-
-    //     }
-    //     else{
-    //         redirect("tracker/login");
-    //     }
-
-    // }
 
     public function Establishment_auth() {
         $config_rules = array(
@@ -426,7 +375,7 @@ class Tracker extends CI_Controller {
                 "rules" =>"trim|required|min_length[1]|max_length[200]",
             ),
                 array (
-                "field" => "location_txt",
+                "field" => "name",
                 "label" => "Location",
                 "rules" =>"trim|required|min_length[1]|max_length[100]",
             ),
@@ -447,7 +396,7 @@ class Tracker extends CI_Controller {
         {
             $user = $this->session->userdata("username"); 
             $name = $this->input->post("name_txt");
-            $location = $this->input->post("location_txt");
+            $location = $this->input->post("name");
             $description = $this->input->post("description_txt");
             // add_contract_tracing
             $this->t_model->add_establishment_try(
@@ -559,7 +508,7 @@ class Tracker extends CI_Controller {
                 "rules" =>"trim|required|min_length[3]|max_length[100]",
             ),
                 array (
-                "field" => "location_txt",
+                "field" => "name",
                 "label" => "location",
                 "rules" =>"trim|required|min_length[2]|max_length[100]",
             ),
@@ -581,7 +530,7 @@ class Tracker extends CI_Controller {
         else
             {
                 $name = $this->input->post("name_txt");
-                $location = $this->input->post("location_txt");
+                $location = $this->input->post("name");
                 $description = $this->input->post("description_txt");
                 $data= array(
                     "name" => $name,
@@ -591,7 +540,7 @@ class Tracker extends CI_Controller {
                 );
                 $this->t_model->update_establishment($este_id,$data);
 
-                redirect("tracker/MyEstablishments");
+                redirect("tracker/Establishment_specific/$este_id");
 
             }   
 
@@ -607,6 +556,7 @@ class Tracker extends CI_Controller {
             $data = array(
                 "inside" => 0
             );
+            
             $this->t_model->report_to_what($this->session->userdata("report"),$data); // this will change 0 to the 1 since the user left the estblishment
             $this->session->unset_userdata('entered');
             $this->session->unset_userdata('report');
@@ -617,7 +567,7 @@ class Tracker extends CI_Controller {
             ));
         }
         else{
-            $this->session->set_userdata("currentpage","tracker/display_establishment");
+            $this->session->set_userdata("currentpage","tracker");
             redirect("tracker/login");
         }
     }
@@ -634,7 +584,7 @@ class Tracker extends CI_Controller {
             if(empty($dat))
             {
                 // this will check if valid ba yung establish id that user's entered
-                redirect("tracker/display_establishment");
+                redirect("tracker");
             }
             $user_ct_id = $this->t_model->get_user_ct_by_id($user_id);
             if(empty($user_ct_id))
@@ -687,31 +637,46 @@ class Tracker extends CI_Controller {
 
     // alisin ang decrypt
     public function contact_tracing_report($est_id){
-        $data = $this->t_model->get_ct_ids($est_id);
-        if(empty($data))
+
+          if($this->session->userdata("username") != "")
         {
-             $this->load->view("report/ct_report",array(
-            "empty" => 0
+            if($this->session->userdata("entered")!= "")
+            {
+                $est_id = $this->session->userdata("entered");
+                redirect("tracker/establishment_entry/$est_id");
+            }
+            
+            $data = $this->t_model->get_ct_ids($est_id);
+            if(empty($data))
+            {
+                $this->load->view("report/ct_report",array(
+                "empty" => 0
 
-            ));
+                ));
 
+            }
+            else
+            {
+                $contact_id = array();
+                for($i = 0; $i < count($data); $i++)
+                {
+                    array_push($contact_id,$data[$i]->ct_id);
+                }
+                $contact_d = $this->t_model->get_ct_details($contact_id);
+                $this->load->view("report/ct_report",array(
+                    "data" => $contact_d,
+                    "empty" => 1,
+                    "test" => $contact_id
+
+                ));
+
+            }
         }
         else
-        {
-            $contact_id = array();
-            for($i = 0; $i < count($data); $i++)
             {
-                array_push($contact_id,$data[$i]->ct_id);
+                $this->session->set_userdata("currentpage","tracker/contact_tracing_report/$est_id");
+                redirect("tracker/login");
             }
-            $contact_d = $this->t_model->get_ct_details($contact_id);
-            $this->load->view("report/ct_report",array(
-                "data" => $contact_d,
-                "empty" => 1,
-                "test" => $contact_id
-
-            ));
-
-        }
        
     }
 
@@ -730,5 +695,13 @@ class Tracker extends CI_Controller {
     }
 
 
+    public function establishment_locations()
+    {
+        $list = $this->t_model->establishments_location();
+        print_r(json_encode($list,JSON_PRETTY_PRINT));
+
+    }
+
 }
+
 

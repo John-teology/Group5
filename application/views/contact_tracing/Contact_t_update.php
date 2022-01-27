@@ -44,9 +44,7 @@
             </div> 
         </div>
         
-     <!-- <button>
-        <a href="<?php echo site_url("tracker/contact_tracing")?>">back</a>
-    </button> -->
+    
     <?php  echo form_open("tracker/contact_tracing_update_auth/$data->id", array(
         "method" => "post",
         "enctype" => "multipart/form-data")); ?>
@@ -60,7 +58,7 @@
         <div class="div1">
         <div class="wrapper">
             <label for="exampleInputPassword1" class="form-label">First Name</label>
-            <input type="text" class="form-control"  name="firstname_txt"  placeholder="Enter your First Name" value="<?php print_r($data->first_name)?>" >
+            <input type="text" class="form-control"  name="firstname_txt"  placeholder="Enter your First Name" value="<?php print_r($data->first_name)?>" autofocus >
             <?php  echo form_error("firstname_txt","<div class='error'>","</div>"); ?>
 
             <label for="exampleInputPassword1" class="form-label"> Last Name</label>

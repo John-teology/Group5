@@ -241,9 +241,26 @@ class T_model extends CI_Model{
         $this->db->delete('report');
     }
 
-    public function search($keyword) {
+    function search($keyword) {
         $this->db->like('name', $keyword);
         $query = $this->db->get('establishment_try');
         return $query->result();
     }
+
+
+    function establishments_location()
+    {
+        $this->db->select("location");
+        $result = $this->db->get("establishment_try")->result();
+
+        return $result;
+
+
+    }
+
+
+
+
+
+
 }

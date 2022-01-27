@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monitoring</title>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/Establishment/establishment_monitor.css'); ?>">
+    
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/Establishment/Establishment_updates.css'); ?>">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <style>
@@ -18,18 +22,28 @@
             text-decoration: none;
             color: white;
         }
+        button{
+            border-radius: 10px;
+            font-weight:bolder;
+            font-size: 15px;
+            margin: 20px 0 0 10px;
+        }
     </style>
     <script src="<?php echo site_url("assets/JS/qrcode.js") ?>"></script>
+    <script src="<?php echo site_url("assets/JS/html2canvas.min.js") ?>"></script>
+
 </head>
 <body>
 
-            <div class="menu-bar">
-                <div class="title">
-                    <a id="anchor" href="<?php echo site_url("tracker/display_establishment")?>"><h2 class="title1">Establishment Traffic Control System</h2></a>
-                </div>
-            </div>
+            <div class="header">
+            <nav>
+                <ul>
+                <a href="<?php echo site_url("tracker")?>"><li class="li"><h1 class="title1">Establishment Traffic Control System</h1></li></a>
+                </ul>
+            </nav>
+        </div>
 
-
+<!-- 
         <div class="wrapper">
             <div class="container00">
                     <div class="row">
@@ -64,9 +78,12 @@
                     </div>
                     <div class="row">
                         <div class="col"></div>
-                        <div class="col"><div id="output"></div></div>
+                        <div class="col">
+                               <div id="output"></div>
+                        </div>
                         <div class="col"></div>
                     </div>
+                    
                    
                 </div>
                 
@@ -82,11 +99,94 @@
                             correctLevel : QRCode.CorrectLevel.H
                         });
                     </script>
+
+                    <script>
+                        document.getElementById("output").onclick = function() {
+                            const screenshotTarget = document.getElementById("output");
+
+                            html2canvas(screenshotTarget).then((canvas) => {
+                                const base64image = canvas.toDataURL("image/png");
+                                var anchor = document.createElement("a");
+                                anchor.setAttribute("href",base64image);
+                                anchor.setAttribute("download","<?php print_r($data->name)?>.png");
+                                anchor.click();
+                                anchor.remove();
+                            });
+                           
+                        };
+                    </script>
                  
 
+        </div> -->
+
+        
+        <div class="container">
+            <div class="logo">
+                <h3 class="title"><?php print_r($data->name)?></h3>
+            </div>
+            
+            <div class="form">
+                
+
+                    <div class="div2">
+                        <label class="form-label">Number of Customers</label>
+                        <i class="fa fa-user"></i> 
+                        <input type="text" class="form-control"  name="name_txt"  placeholder="Enter Name" value="<?php echo $cust_num; ?>" disabled >
+                    </div>
+
+                    <div class="div2">
+                        <label class="form-label">Location</label>
+                        <i class="fa fa-location-arrow"></i>
+                        <input type="text" class="form-control"  name="location_txt"  placeholder="Enter your Location" value="<?php print_r($data->location)?>" disabled >
+                    </div>
+
+                    <div class="div2">                       
+                        <label class="form-label">Description</label>
+                        <i class="fa fa-sticky-note"></i>
+                        <input type="text" class="form-control"  name="description_txt"  placeholder="Enter your Description" value="<?php print_r($data->description)?>" disabled >
+                          <div class="row">
+                        <div class="col"></div>
+                        <div class="col">
+                               <div id="output"></div>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    </div>
+
+                    
+                        
+                
+            </div>        
         </div>
 
+        
+                    <script>
+                        var qrcode = new QRCode("output", {
+                            text: "<?php echo site_url("tracker/Establishment_specific/$est_id")?>",
+                            width: 200,
+                            height: 150,
+                            colorDark : "black",
+                            colorLight : "#ffffff",
+                            correctLevel : QRCode.CorrectLevel.H
+                        });
+                    </script>
 
+                    <script>
+                        document.getElementById("output").onclick = function() {
+                            const screenshotTarget = document.getElementById("output");
+
+                            html2canvas(screenshotTarget).then((canvas) => {
+                                const base64image = canvas.toDataURL("image/png");
+                                var anchor = document.createElement("a");
+                                anchor.setAttribute("href",base64image);
+                                anchor.setAttribute("download","<?php print_r($data->name)?>.png");
+                                anchor.click();
+                                anchor.remove();
+                            });
+                           
+                        };
+                    </script>
+         
     <?php
     if($data->userID == $userid)
     {
@@ -126,84 +226,6 @@
     }
     ?> 
 
-
-    <!-- <div class="container">
-        <h1 class="arr2"><?php print_r($data->name)?></h1>
-        
-
-        <div class="row">
-            <div class="col">
-                <div class="container1">
-                    <h1 class="description">Number of Customers:</h1>
-                    <h4 class="arr1"><?php echo $cust_num; ?></h4>
-                    
-                </div>
-                <div class="container2">
-                    <div class="location1">
-                        <h1 class="location">Location:</h1>
-                        <h4 class="arr3"><?php print_r($data->location)?></h4>
-                    </div>
-                    <div class="container2_1">
-                        <h1 class="description1">Description:</h1>
-                        <h4 class="arr4"><?php print_r($data->description)?></h4>
-                    </div>
-                    <div class="container3" id="output">
-
-                </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-     <script>
-                        var qrcode = new QRCode("output", {
-                            text: "<?php echo site_url("tracker/Establishment_specific/$est_id")?>",
-                            width: 200,
-                            height: 150,
-                            colorDark : "black",
-                            colorLight : "#ffffff",
-                            correctLevel : QRCode.CorrectLevel.H
-                        });
-                    </script>
-
-
-<?php
-if($data->userID == $userid)
-{
-?>
-    <div class="wrapper">
-            <a href="<?php echo site_url("tracker/Establishment_update/$data->id") ?>">
-            <button>MODIFY</button>
-            </a>
-
-            <a href="<?php echo site_url("tracker/contact_tracing_report/$data->id")?>">
-            <button>CONTACT TRACING</button>
-            </a>
-
-            <a href="<?php echo site_url("tracker/establishment_entry/$data->id")?>" >
-            <button>ENTER ESTABLISHMENT</button>
-            </a>
-
-             <a href="<?php echo site_url("tracker/delete_establishment_r/$data->id")?>" >
-            <button>DELETE</button>
-            </a>
-    </div>
-<?php
-}
-?>
- 
-<?php
-if($data->userID != $userid)
-{
-?>
-<div class="wrapper">
-             <a href="<?php echo site_url("tracker/establishment_entry/$data->id")?>" >
-            <button id="id1">ENTER ESTABLISHMENT</button>
-            </a>
-     </div>
-<?php
-}
-?> -->
     
 </body>
 </html>
