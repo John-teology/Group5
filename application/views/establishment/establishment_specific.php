@@ -7,7 +7,7 @@
     <title>Monitoring</title>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/Establishment/establishment_monitor.css'); ?>">
     
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/Establishment/Establishment_updates.css'); ?>">
+    
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     
@@ -65,6 +65,7 @@
             transition: all 300ms ease-in-out;
             transform:translate(-50%, -50%) scale(1);
         }
+       
     
     </style>
     <script>
