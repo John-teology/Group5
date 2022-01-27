@@ -18,17 +18,61 @@
             background-color: #1a1f22;
         }
 
-        #anchor{
-            text-decoration: none;
-            color: white;
+      .popup .overlay {
+            position:fixed;
+            top:0px;
+            left:0px;
+            width:100vw;
+            height:100vh;
+            background:rgba(0,0,0,0.7);
+            z-index:1;
+            display: none;
         }
-        button{
-            border-radius: 10px;
-            font-weight:bolder;
-            font-size: 15px;
-            margin: 20px 0 0 10px;
+        .popup .content {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%) scale(0);
+            background:#fff;
+            width:400px;
+            height:200px;
+            z-index:2;
+            text-align:center;
+            box-sizing:border-box;
+            padding: 20px 40px 0 0;
         }
+        .popup .close-btn {
+            cursor: pointer;
+            position:absolute;
+            right:20px;
+            top:20px;
+            width:30px;
+            height:30px;
+            background: #222;
+            color:#fff;
+            font-size:25px;
+            font-weight:600;
+            line-height:30px;
+            text-align:center;
+            border-radius:50%;
+        }
+        
+        .popup.active .overlay {
+            display:block;
+        }
+
+        .popup.active .content {
+            transition: all 300ms ease-in-out;
+            transform:translate(-50%, -50%) scale(1);
+        }
+    
     </style>
+    <script>
+        function togglePopup() 
+            {
+            document.getElementById ("popup-1").classList.toggle("active");
+            }
+    </script>
     <script src="<?php echo site_url("assets/JS/qrcode.js") ?>"></script>
     <script src="<?php echo site_url("assets/JS/html2canvas.min.js") ?>"></script>
 
@@ -43,81 +87,6 @@
             </nav>
         </div>
 
-<!-- 
-        <div class="wrapper">
-            <div class="container00">
-                    <div class="row">
-                        <div class="col align-self-center">
-                            <h1 class="username"><?php print_r($data->name)?></h1>
-                        </div>
-                    </div>
-            </div>
-
-            <div class="containerss">
-                    <div class="row">
-                        <div class="col align-self-center">
-                            <h1 class="numberC">Number of Customers: <?php echo $cust_num; ?></h1>
-                        </div>
-                    </div>
-            </div>
-
-
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6 col-sm-4">
-                            <h1 class="location">Location: <?php print_r($data->location)?> </h1>
-                        </div>   
-                    </div>
-
-                    <div class="row">
-                        <div class="col-6 col-sm-4">
-                            <h1 class="description1">Description:</h1>
-                            <h4 class="arr4"><?php print_r($data->description)?></h4>
-                        </div> 
-                    </div>
-                    <div class="row">
-                        <div class="col"></div>
-                        <div class="col">
-                               <div id="output"></div>
-                        </div>
-                        <div class="col"></div>
-                    </div>
-                    
-                   
-                </div>
-                
-                
-
-                    <script>
-                        var qrcode = new QRCode("output", {
-                            text: "<?php echo site_url("tracker/Establishment_specific/$est_id")?>",
-                            width: 200,
-                            height: 150,
-                            colorDark : "black",
-                            colorLight : "#ffffff",
-                            correctLevel : QRCode.CorrectLevel.H
-                        });
-                    </script>
-
-                    <script>
-                        document.getElementById("output").onclick = function() {
-                            const screenshotTarget = document.getElementById("output");
-
-                            html2canvas(screenshotTarget).then((canvas) => {
-                                const base64image = canvas.toDataURL("image/png");
-                                var anchor = document.createElement("a");
-                                anchor.setAttribute("href",base64image);
-                                anchor.setAttribute("download","<?php print_r($data->name)?>.png");
-                                anchor.click();
-                                anchor.remove();
-                            });
-                           
-                        };
-                    </script>
-                 
-
-        </div> -->
 
         
         <div class="container">
@@ -147,13 +116,23 @@
                           <div class="row">
                         <div class="col"></div>
                         <div class="col">
-                               <div id="output"></div>
+                            <div class="popup" id="popup-1">
+                                    <div class="overlay"></div>
+                                    <div class="content">
+                                          <div class="close-btn" onclick="togglePopup()">&times;
+                                            </div>
+                                                <button id="id">
+                                                <div id="output"></div>
+                                                </button>
+                                    </div>
+                            </div>
+                <button onclick="togglePopup()">Generate Qr Code</button>
                         </div>
                         <div class="col"></div>
                     </div>
                     </div>
 
-                    
+             
                         
                 
             </div>        
@@ -163,7 +142,7 @@
                     <script>
                         var qrcode = new QRCode("output", {
                             text: "<?php echo site_url("tracker/Establishment_specific/$est_id")?>",
-                            width: 200,
+                            width: 250,
                             height: 150,
                             colorDark : "black",
                             colorLight : "#ffffff",
@@ -172,7 +151,7 @@
                     </script>
 
                     <script>
-                        document.getElementById("output").onclick = function() {
+                        document.getElementById("id").onclick = function() {
                             const screenshotTarget = document.getElementById("output");
 
                             html2canvas(screenshotTarget).then((canvas) => {
