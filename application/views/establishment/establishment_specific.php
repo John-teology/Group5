@@ -129,7 +129,7 @@
                 
 
                     <div class="div2">
-                        <label class="form-label">Number of Customer</label>
+                        <label class="form-label">Number of Customers</label>
                         <i class="fa fa-user"></i> 
                         <input type="text" class="form-control"  name="name_txt"  placeholder="Enter Name" value="<?php echo $cust_num; ?>" disabled >
                     </div>
