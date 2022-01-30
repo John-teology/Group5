@@ -98,11 +98,13 @@ a{
                 <a href="<?php echo site_url("tracker")?>"><li class="li"><h1 class="title1">Establishment Traffic Control System</h1></li></a>
                 </ul>
             </nav>
-        </div>
-
-
-        
-        <div class="container">
+        </div>           
+         
+    <?php
+    if($data->userID == $userid)
+    {
+    ?>
+     <div class="container">
             <div class="logo">
                 <h3 class="title"><?php print_r($data->name)?></h3>
             </div>
@@ -139,7 +141,7 @@ a{
                                                 </button>
                                     </div>
                             </div>
-                <button onclick="togglePopup()">Generate Qr Code</button>
+                            <button onclick="togglePopup()">Generate Qr Code</button>
                         </div>
                         <div class="col"></div>
                     </div>
@@ -147,42 +149,8 @@ a{
 
              
                         
-                
-            </div>        
-        </div>
-
-        
-                    <script>
-                        var qrcode = new QRCode("output", {
-                            text: "<?php echo site_url("tracker/Establishment_specific/$est_id")?>",
-                            width: 250,
-                            height: 150,
-                            colorDark : "black",
-                            colorLight : "#ffffff",
-                            correctLevel : QRCode.CorrectLevel.H
-                        });
-                    </script>
-
-                    <script>
-                        document.getElementById("id").onclick = function() {
-                            const screenshotTarget = document.getElementById("output");
-
-                            html2canvas(screenshotTarget).then((canvas) => {
-                                const base64image = canvas.toDataURL("image/png");
-                                var anchor = document.createElement("a");
-                                anchor.setAttribute("href",base64image);
-                                anchor.setAttribute("download","<?php print_r($data->name)?>.png");
-                                anchor.click();
-                                anchor.remove();
-                            });
-                           
-                        };
-                    </script>
-         
-    <?php
-    if($data->userID == $userid)
-    {
-    ?>
+            </div>
+            </div>  
             <div class="bondpaper">
                  <div class="container1">
                     <ul>
@@ -204,6 +172,37 @@ a{
     if($data->userID != $userid)
     {
     ?>
+     <div class="container">
+            <div class="logo">
+                <h3 class="title"><?php print_r($data->name)?></h3>
+            </div>
+            
+            <div class="form">
+                
+
+                    <div class="div2">
+                        <label class="form-label">Number of Customers</label>
+                        <i class="fa fa-user"></i> 
+                        <input type="text" class="form-control"  name="name_txt"  placeholder="Enter Name" value="<?php echo $cust_num; ?>" disabled >
+                    </div>
+
+                    <div class="div2">
+                        <label class="form-label">Location</label>
+                        <i class="fa fa-location-arrow"></i>
+                        <input type="text" class="form-control"  name="location_txt"  placeholder="Enter your Location" value="<?php print_r($data->location)?>" disabled >
+                    </div>
+
+                    <div class="div2">                       
+                        <label class="form-label">Description</label>
+                        <i class="fa fa-sticky-note"></i>
+                        <input type="text" class="form-control"  name="description_txt"  placeholder="Enter your Description" value="<?php print_r($data->description)?>" disabled >
+                       
+                    </div>
+
+             
+                        
+                </div>
+            </div>  
             <div class="whole">
                 <div class="whole1">
                     <div class="row">
@@ -218,6 +217,32 @@ a{
     }
     ?> 
 
-    
+  <script>
+    var qrcode = new QRCode("output", {
+        text: "<?php echo site_url("tracker/Establishment_specific/$est_id")?>",
+        width: 250,
+        height: 150,
+        colorDark : "black",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+
+<script>
+    document.getElementById("id").onclick = function() {
+        const screenshotTarget = document.getElementById("output");
+
+        html2canvas(screenshotTarget).then((canvas) => {
+            const base64image = canvas.toDataURL("image/png");
+            var anchor = document.createElement("a");
+            anchor.setAttribute("href",base64image);
+            anchor.setAttribute("download","<?php print_r($data->name)?>.png");
+            anchor.click();
+            anchor.remove();
+        });
+        
+    };
+</script>
+
 </body>
 </html>
