@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Establishments</title>
     <link rel="stylesheet"type="text/css"href="<?php echo base_url('assets/css/Establishment/display_establishments.css');?>">
+    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
@@ -59,14 +61,7 @@
                     
             <div class="container-xxl">
                 <a class="anchor" href= "<?php echo site_url("tracker/Establishment_specific/$id")?>">
-                    <div class="row">
-                        <div id="b1" class="col"></div>
-                        <div class="col">
-                            <i id="building"class="fa fa-building-o" style="font-size:36px"></i>
-                            <strong><?php print_r($establishments[$i]['name']);?></strong>
-                        </div>
-                        <div class="col"></div>
-                    </div>
+            
 
                 <div class="row">
                 
@@ -76,7 +71,10 @@
                             echo count($status);
                         ?>
                     </div>
-                    <div class="col"></div>
+                    <div class="col">
+                         <i id="building"class="fa fa-building-o" style="font-size:36px"></i>
+                            <strong><?php print_r($establishments[$i]['name']);?></strong>
+                    </div>
 
                     <div class="col">
                         <i id="globe" class="fa fa-globe" style="font-size:36px"></i>
