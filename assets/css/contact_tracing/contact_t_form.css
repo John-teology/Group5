@@ -117,6 +117,9 @@ html, body{
     color: white;
     font-weight: bold;
 }
+.but1:hover{
+    background-color: #4db882;
+}
 
 #but2{
 	border-radius: 20px 20px;
@@ -129,6 +132,9 @@ html, body{
     border-color: #00994d;
     border-width: 0px;
     font-size: 15px;
+}
+#but2:hover{
+    background-color: #4db882;
 }
 
 input{
