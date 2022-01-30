@@ -27,7 +27,7 @@
             font-weight: bold;
         }
         .btn:hover {
-        background-color: #00994d;
+        background-color: #4db882;
         }
         .header-title:hover {
             text-decoration: none;

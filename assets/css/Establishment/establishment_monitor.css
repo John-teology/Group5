@@ -1,92 +1,125 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Helvetica';
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Helvetica";
+	font-size: 15px;
 }
 
-html, body{
-    display: grid;
-    height: 100%;
-    place-items: center;
-    background-color: #1a1f22;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+body {
+	display: grid;
+	place-items: center;
 }
 
-
-.header {
-    display: block;
-     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #2a2e35;
-    padding: 10px;
-    height: 90px;
-    
-  }
-  
-  nav a:visited,
-  nav a:link {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  nav > ul {
-    display: inline;
-    padding: 0;
-  }
-  
-  nav > ul > li {
-    display: inline-block;
-    list-style: none;
-    margin: 0 5px 0 5px;
-    font-size: 20px;
-  }
-
-  
-
-  .li1{
-      padding: 0 0 0 38%;
-  }
-
-  .title1{
-      color: white;
-      padding: 20px 20px 50px 80px;
-      font-size: 30px;
-  }
-  .title1:hover{
-      color: #4db882;
-  }
-  .container{
-    width: 380px;
-    background-color: #2a2e35;
-    border-radius: 20px;
-    margin: 0 auto;
-    margin: 90px 0 0 0;
-    height: 500px;
-    
+.menu-bar {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #2a2e35;
+	padding: 15px 0 0 0;
+	height: auto;
+	width: 100%;
+	margin: 0 0 100px 0;
+	color: white;
 }
 
-
-.container .logo{
-    color: white;
-    font-size: 20px;
-    line-height: 50px;
-    background-color: #2a2e35;
-    border-radius: 15px 15px 0 0;
-    margin: auto 0 0 0;
+.title {
+	padding: 0px 0 0 20%;
+	color: white;
+	font-size: 30px;
+    font-weight: bold;
 }
 
-.container .title{
-    padding: 10px 0 0px 18%;
+.title1 {
+	padding: 20px 20px 50px 80px;
+	font-weight: bold;
+}
+.title1:hover {
+	color: #4db882;
+}
+
+.container {
+	background-color: #2a2e35;
+	border-radius: 15px;
+	width: 450px;
+	line-height: 15px;
+	height: auto;
+    margin: 110px 0 0 0;
+}
+
+.containerss {
+	margin: 0 0 10px 0;
+	padding: 10px 0 0 0;
+	background-color: #00994d;
+	border-radius: 10px;
+}
+
+.wrapper {
+	background-color: #2a2e35;
+	height: auto;
+	max-width: 3000px;
+	padding: 10px 40px 10px 40px;
+	border-radius: 15px;
+	/* width: 800px; */
+}
+
+#output {
+	margin: 0 0 10px 0;
+}
+
+h1,
+h4 {
+	color: white;
+}
+
+.username {
+	text-align: center;
+}
+
+.numberC {
+	text-align: center;
+	font-size: 30px;
+}
+
+/* button */
+
+.bondpaper ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.bondpaper li {
+	display: inline;
+}
+.bondpaper li a {
+	padding: 10px;
+	font-size: 0.875rem;
+	text-decoration: none;
+}
+
+button {
+	color: white;
+	font-weight: bold;
+	border-width: 0px;
+	background-color: #00994d;
+	width: 200px;
+	height: 50px;
+	margin-bottom: 10%;
+	display: inline;
 
 }
 
-.container .form{
-    padding: 10px 20px 25px 20px
+button:hover {
+	background-color: #4db882;
+}
+
+@media screen and (max-width: 480px) {
+	.bondpaper {
+		padding: 30px 0 10px 0;
+	}
+	.bondpaper li {
+		display: block;
+		margin: 5px 0;
+	}
 }
 
 .container .form .div2{
@@ -106,6 +139,7 @@ html, body{
     width: 100%;
     padding-left: 60px;
     font-size: 15px;
+	border-radius: 20px;
 }
 
 .container .form .div2 textarea{
@@ -117,7 +151,6 @@ html, body{
     padding-top: 10px;
     padding-left: 60px;
 }
-
 
 .container .form .div2 i{
     position: absolute;
@@ -146,53 +179,8 @@ html, body{
     justify-content: center;
 }
 
-
-
-.container .form .signup{
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    position: relative;
-    margin: 100px 0 0 25% ;
-    height: 40px;
-    width: 50%;
-    background-color: #00994d;
-    border-color: #00994d;
-    border-width: 0px;
-    border-radius: 20px;
-
-}
-
-.form-control, i{
-    border-radius: 20px;
-}
-
-i{
-    border-radius: 20px;
-}
-
 .form-label{
     margin: 40px 0 0 2%;
     color: white;
     font-weight: bold;
-}
-
-.error{
-    color: red;
-    font-weight: lighter;
-    font-size: 13px;
-}
-
-@media screen and (max-width: 480px) {
-    .title1{
-        color: white;
-        padding: 10px 20px 10px 5px;
-        font-size: 17px;
-    }
-
-    .container{
-        width: 300px;
-    }
-
-
 }
