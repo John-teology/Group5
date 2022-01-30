@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monitoring</title>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/Establishment/establishment_monitor.css'); ?>">
-    
-    <!-- <link rel="stylesheet"type="text/css"href="<?php echo base_url('assets/css/Establishment/Establishment_updates.css');?>"> -->
-    
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/Establishment/Establishment_updates.css'); ?>">
     
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -18,6 +16,16 @@
     <style>
         body{
             background-color: #1a1f22;
+        }
+button{
+    border-radius: 20px;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+        .popup{
+            margin: 40px 0 0 0;
         }
 
       .popup .overlay {
@@ -67,8 +75,10 @@
             transition: all 300ms ease-in-out;
             transform:translate(-50%, -50%) scale(1);
         }
-       
-    
+       .container{
+           width: 390px;
+           line-height: 15px;
+       }
     </style>
     <script>
         function togglePopup() 
@@ -176,10 +186,10 @@
             <div class="bondpaper">
                  <div class="container1">
                     <ul>
-                        <li><a href="<?php echo site_url("tracker/Establishment_update/$data->id") ?>"><button>MODIFY</button></a></li>
-                        <li><a href="<?php echo site_url("tracker/contact_tracing_report/$data->id")?>"><button>CONTACT TRACING</button></a></li>
-                        <li><a href="<?php echo site_url("tracker/establishment_entry/$data->id")?>"><button>ENTER ESTABLISHMENT</button></a></li>
-                        <li><a href="<?php echo site_url("tracker/delete_establishment_r/$data->id")?>" ><button>DELETE</button></a></li>
+                        <li><a href="<?php echo site_url("tracker/Establishment_update/$data->id") ?>"><button><b>Modify</button></a></li>
+                        <li><a href="<?php echo site_url("tracker/contact_tracing_report/$data->id")?>"><button><b>Contact Tracing</button></a></li>
+                        <li><a href="<?php echo site_url("tracker/establishment_entry/$data->id")?>"><button><b>Enter Establishment</button></a></li>
+                        <li><a href="<?php echo site_url("tracker/delete_establishment_r/$data->id")?>" ><button><b>Delete</button></a></li>
                     </ul>
                 </div>
             </div>

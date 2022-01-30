@@ -12,7 +12,11 @@
 
 </head>
 <body>    
-
+<style>
+    p{
+        text-align: center;
+    }
+</style>
 <?php  echo form_open("tracker/login_auth", array(
     "method" => "post",
     "enctype" => "multipart/form-data")); ?>
@@ -65,15 +69,12 @@
 
 <div class="wrapper1">
         <div class="container">
-        <img class="image" src="<?php echo base_url('assets/images/b5.png');?>" alt="">
+        <img class="image" src="<?php echo base_url('assets/images/arch.gif');?>" alt="">
         <div class="overlay">
             <div class="text">
-                <p>Designed to aid in the management of COVID-19 cases by reminding people</p>
-                <p>to maintain physical distance, as well as recording and monitoring COVID-19</p>
-                <p>symptoms, StaySafe.PH was developed by Multisystem Technologies</p>
-                <p>Corporation in collaboration with PLDT-Smart Group and PLDT Enterprise and</p>
-                <p>the Interagency Task Force on the Management of Emerging Infectious Diseases</p>
-                <p>(IATF-MEID) and the National Task Force on COVID-19.</p>
+                <p>Establishment Traffic Control System tracks the movement or flow of</p>
+                <p>people entering an establishment for traffic control as well as </p>
+                <p>contact tracing.</p>
             </div>
         </div>
         </div>

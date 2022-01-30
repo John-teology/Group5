@@ -30,6 +30,7 @@ body {
 	padding: 0 0 0 5%;
   margin: 10px 0 0 0;
   font-family: 'Helvetica';
+  font-weight: bold;
 }
 
 .menu-bar .dropdown {
@@ -207,16 +208,22 @@ h4{
 .anchor{
   text-decoration:none;
   color: white;
+  font-weight: bold;
+}
+.anchor:hover{
+  color:#4db882;
 }
 #usersnum {
-  margin: 0 0 50px 10%;
-  padding: 10px 0 0 0;
+  margin: 10px 0 50px 10%;
+  padding: 5% 0 0 0;
 }
 #globe{
-  margin: 0 0 50px 20%;
+  margin: 10px 0 50px 20%;
+  padding: 5% 0 0 0;
 }
 #building{
-  margin: 20px 0 20px 20%;
+  margin: 10px 0 20px 20%;
+  padding: 5% 0 0 0;
 }
 i{
   color: white;

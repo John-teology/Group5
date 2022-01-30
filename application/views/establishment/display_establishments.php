@@ -15,6 +15,7 @@
         body{
             background-color: #1a1f22;
         }
+        
     </style>
     <script src="<?php echo site_url("assets/JS/display_establishment.js") ?>"></script>
 </head>
@@ -66,7 +67,7 @@
                 <div class="row">
                 
                     <div class="col">
-                        <i id="usersnum" class="fa fa-users" style="font-size:36px"></i>
+                        <i id="usersnum" class="fa fa-users" style="font-size:35px"></i>
                         <?php
                             echo count($status);
                         ?>
@@ -77,7 +78,7 @@
                     </div>
 
                     <div class="col">
-                        <i id="globe" class="fa fa-globe" style="font-size:36px"></i>
+                        <i id="globe" class="fa fa-globe" style="font-size:35px"></i>
                         <?php
                                 print_r($establishments[$i]['location']);
                         ?>

@@ -70,7 +70,7 @@
                     </div>
 
                     
-                        <button class="signup"  type="submit" class="btn btn-primary">Update</button>
+                        <button id="btn1"class="signup"  type="submit" class="btn btn-primary">Update</button>
                         <?php echo form_close(); ?>
                     
                 

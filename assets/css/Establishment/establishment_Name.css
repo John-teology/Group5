@@ -65,7 +65,7 @@ html, body{
     padding: 10px 15px 10px 15px;
     font-weight: bold;
     border-width: 0px;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 h5{
@@ -98,6 +98,11 @@ i{
 .navbar-brand{
     color: white;
     font-size: 30px;
+    flex: 50%;
+  margin: 10px 0 0 -12%;
+}
+.navbar-brand:hover{
+    color: #4db882;
 }
 
 @media screen and (max-width: 480px){
