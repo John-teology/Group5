@@ -29,12 +29,12 @@ html,body {
 
 
 .containerf{
-    width: 1200px;
+    width: 400px;
     background-color: #2a2e35;
-    border-radius: 15px;
-    margin: 40px auto;
-    padding: 20px;
-    height: 600px;
+    border-radius: 20px;
+    margin: -45px auto;
+    padding: 10px;
+    height: 590px;
     
 }
 
@@ -43,16 +43,16 @@ html,body {
 }
 
 .container1{
-    width: 1100px;
+    width: 360px;
     background-color: #00994d;
     border-radius: 10px;
     margin: 10px auto;
-    height: 430px;
+    height: 390px;
 } 
 
 .arr {
 	white-space: pre-line;
-	margin: 5px 0 0 0;
+	margin: 0px 0 0 0;
 }
 
 .flexi1 {
@@ -60,20 +60,25 @@ html,body {
 }
 
 .arr1{
-    margin: 55px 0 0 5px;
+    margin: 60px 0 0 -60%;
 }
 
 .arr3{
     margin: 10px 0 0 30px;
+    text-align: left;
+    font-size: 20px;
+    font-style: italic;
 }
 
 .arr2{
     margin: 15px 0 0 0;
     text-align: center;
+    color: black;
 }
 
 .name, .location, .description{
-    margin: 40px 0 0 30px;
+    margin: 20px 0 0 30px;
+    font-size: 30px;
 }
 
 button {
@@ -98,11 +103,8 @@ button a {
 .name, .location, .description, .arr1, .arr2, .arr3{
     color: white;
 }
-
 .buto1{
-    margin: -15px 0 25px 43%;
-    font-size: 15px;
-
+    margin: 70px 0 20px 43%;
 }
 
 .location1{
