@@ -52,13 +52,16 @@
         
         
     </div>
-
+    
+    <!-- theme -->
     <script>const chk = document.getElementById('chk');
 
         chk.addEventListener('change', () => {
             document.body.classList.toggle('dark');
         });
     </script>
+
+
 
     <div class="spacer"></div>
     <div id="estab">
@@ -86,8 +89,8 @@
                     <div class="row">
                         <div class="col"></div>
                         <div class="col">
-                            <i class="fa fa-building-o" style="font-size:36px"></i>
-                            <strong><?php print_r($establishments[$i]['name']);?></strong>
+                            <!-- <i class="fa fa-building-o" style="font-size:36px"></i>
+                            <strong><?php print_r($establishments[$i]['name']);?></strong> -->
                         </div>
                         <div class="col"></div>
                     </div>
@@ -100,7 +103,10 @@
                             echo count($status);
                         ?>
                     </div>
-                    <div class="col"></div>
+                    <div class="col">
+                    <i class="fa fa-building-o" style="font-size:36px"></i>
+                            <strong><?php print_r($establishments[$i]['name']);?></strong>
+                    </div>
 
                     <div class="col">
                         <i class="fa fa-globe" style="font-size:36px"></i>
