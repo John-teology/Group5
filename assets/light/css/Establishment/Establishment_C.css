@@ -1,0 +1,198 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Helvetica";
+}
+
+html,
+body {
+	background-color: #1a1f22;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 100px 0 0 0;
+}
+
+.header {
+	display: block;
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2a2e35;
+    padding: 10px;
+    height: 100px;
+}
+
+nav a:visited,
+nav a:link {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav > ul {
+	display: inline;
+	padding: 0;
+}
+
+nav > ul > li {
+	display: inline-block;
+	list-style: none;
+	margin: 0 5px 0 5px;
+	font-size: 20px;
+}
+
+.li1 {
+	padding: 0 0 0 38%;
+}
+
+.title1 {
+	color: white;
+	padding: 20px 20px 50px 80px;
+	font-size: 30px;
+}
+
+.container {
+	color: white;
+	width: 380px;
+	background-color: #2a2e35;
+	border-radius: 15px;
+	margin: auto;
+	margin-top: -3%;
+	height: 500px;
+}
+
+.container .logo {
+	font-size: 20px;
+	line-height: 50px;
+	background-color: #2a2e35;
+	border-radius: 20px 20px 0 0;
+}
+
+.container .title {
+	padding: 10px 0px 0px 20%;
+}
+
+.container .form {
+	padding: 10px 20px 25px 20px;
+}
+
+.container .form .div2 {
+	height: 45px;
+	margin-bottom: 15px;
+	position: relative;
+	margin: 35px 0 0 0;
+}
+
+.container .form .div2 input {
+	color: white;
+	background-color: #454e56;
+	border-width: 0px;
+	height: 100%;
+	width: 100%;
+	padding-left: 60px;
+	font-size: 14px;
+}
+
+.container .form .div2 textarea {
+	color: white;
+	background-color: #454e56;
+	border-width: 0px;
+	height: 200%;
+	width: 100%;
+	padding-top: 10px;
+	padding-left: 60px;
+	font-size: 14px;
+}
+
+.container .form .div2 i {
+	position: absolute;
+	width: 47px;
+	height: 100%;
+	color: white;
+	font-size: 18px;
+	background-color: #00994d;
+	border: 1px solid #00994d;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container .form .div2 #ii {
+	position: absolute;
+	width: 47px;
+	height: 200%;
+	color: white;
+	font-size: 18px;
+	background-color: #00994d;
+	border-color: #00994d;
+	border-width: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container .form .signup {
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	position: relative;
+	margin: 100px 0 0 25%;
+	height: 40px;
+	width: 50%;
+	background-color: #00994d;
+	border-width: 0px;
+	border-radius: 20px;
+}
+.container .form .signup:hover{
+	background-color: #4db882;
+}
+.form-control,
+i {
+	border-radius: 20px;
+}
+
+i {
+	border-radius: 20px;
+}
+
+.form-label {
+	font-weight: bold;
+	margin: 40px 0 0 2%;
+	color: white;
+}
+
+.error {
+	font-weight: lighter;
+	font-size: 13px;
+	color: red;
+}
+
+.title1:hover {
+	color: #4db882;
+}
+.title {
+	font-size: 22px;
+	margin: 0 0 0 10px;
+}
+
+@media screen and (max-width: 480px) {
+	.container {
+		width: 300px;
+	}
+
+	.title1 {
+		color: white;
+		padding: 10px 20px 0 30px;
+
+	}
+
+	.header {
+		height: 80px;
+	}
+
+	body {
+		margin: 80px 0 0 0;
+	}
+}

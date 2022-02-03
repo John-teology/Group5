@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/report/ct_report.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/light/css/report/ct_report.css'); ?>">
 
     <style>
        h2{

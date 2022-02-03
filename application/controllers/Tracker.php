@@ -464,7 +464,8 @@ class Tracker extends CI_Controller {
                 "data" =>$data,
                 "userid" => $this->t_model->get_user_id($username),
                 "cust_num" => count($status),
-                "est_id" => $establishment_id
+                "est_id" => $establishment_id,
+                "theme" => $this->session->userdata("theme"),
             )) ;
             
         }
@@ -564,6 +565,7 @@ class Tracker extends CI_Controller {
             $this->load->view("establishment/display_establishments", array(
                 "establishments" => $list,
                 "username" => $user,
+                "theme" => $this->session->userdata("theme"),
             ));
         }
         else{
@@ -699,6 +701,14 @@ class Tracker extends CI_Controller {
     {
         $list = $this->t_model->establishments_location();
         print_r(json_encode($list,JSON_PRETTY_PRINT));
+
+    }
+
+    public function themes()
+    {
+        $them = $this->input->post("theme");
+        $this->session->set_userdata("theme",$them);
+        redirect("tracker");
 
     }
 

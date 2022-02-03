@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monitoring</title>
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/Establishment/establishment_monitor.css'); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/Establishment/Establishment_updates.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/light/css/Establishment/establishment_monitor.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/light/css/Establishment/Establishment_updates.css'); ?>">
     
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -106,7 +106,7 @@ a{
     ?>
      <div class="container">
             <div class="logo">
-                <h3 class="title"><?php print_r($data->name)?></h3>
+                <h3 class="title"><?php echo $theme; print_r($data->name)?></h3>
             </div>
             
             <div class="form">

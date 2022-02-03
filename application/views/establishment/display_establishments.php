@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Establishments</title>
-    <link rel="stylesheet"type="text/css"href="<?php echo base_url('assets/css/Establishment/display_establishments.css');?>">
+    <link rel="stylesheet"type="text/css"href="<?php echo base_url('assets/light/css/Establishment/display_establishments.css');?>">
     
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -49,9 +49,37 @@
 </head>
 <body>
 
+    <script>
+    function autoSubmit()
+    {
+        var formObject = document.forms['theForm'];
+        formObject.submit();
+    }
+    </script>
     <div class="menu-bar">
         <div class="title">
             <h2>Establishment Traffic Control System</h2>
+
+        <?php  echo form_open("tracker/themes", array(
+            "method" => "post",
+            "enctype" => "multipart/form-data",
+            "id" => 'theForm'
+        )); 
+        ?>
+            <div class="theme"  style="color: black;">
+                <input type="radio"  name="theme" <?php if ($theme == 'dark') { ?>checked='checked' <?php } ?> value="dark" onchange="autoSubmit();"> dark
+                <input type="radio" <?php if ($theme == 'light') { ?>checked='checked' <?php } ?>   value="light" name="theme" onchange="autoSubmit();"> light
+
+            </div>
+            
+
+        <!-- working -->
+
+
+
+        <?php echo form_close(); ?>
+
+
         </div>
 
         <div class="dropdown">
@@ -78,7 +106,9 @@
    
 
 
-    <div class="spacer"></div>
+    <div class="spacer">
+       
+    </div>
     <div id="estab">
         
     <?php
@@ -116,6 +146,7 @@
                     <div class="col">
                         <i id="usersnum" class="fa fa-users" style="font-size:35px"></i>
                         <?php
+                            echo $theme;
                             echo count($status);
                         ?>
                     </div>

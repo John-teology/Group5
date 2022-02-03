@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     /> -->
 
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/register/register.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/light/css/register/register.css'); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="<?php echo base_url('assets/js/register.js'); ?>"></script>
  
