@@ -5,8 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monitoring</title>
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/light/css/Establishment/establishment_monitor.css'); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/light/css/Establishment/Establishment_updates.css'); ?>">
+     <?php if($theme == ""){
+            $theme = 'light';
+        }
+        ?>
+     <link rel="stylesheet"type="text/css"href="<?php printf(base_url('assets/%s/css/Establishment/establishment_monitor.css'),$theme);?>">
+     <link rel="stylesheet"type="text/css"href="<?php printf(base_url('assets/%s/css/Establishment/Establishment_updates.css'),$theme);?>">
+    
     
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -106,7 +111,7 @@ a{
     ?>
      <div class="container">
             <div class="logo">
-                <h3 class="title"><?php echo $theme; print_r($data->name)?></h3>
+                <h3 class="title"><?php  print_r($data->name)?></h3>
             </div>
             
             <div class="form">
@@ -172,7 +177,7 @@ a{
     if($data->userID != $userid)
     {
     ?>
-     <div class="container">
+        <div class="container">
             <div class="logo">
                 <h3 class="title"><?php print_r($data->name)?></h3>
             </div>
@@ -212,6 +217,8 @@ a{
                     </div>
                 </div>
             </div>
+        </div>
+
 
     <?php
     }

@@ -1,198 +1,195 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Helvetica';
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Helvetica";
 }
-
-html, body{
-    display: grid;
-    height: 100%;
-    place-items: center;
-    background-color: #1a1f22;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+body {
+	background-color: #f7f7f7 !important;
 }
-
+html,
+body {
+	display: grid;
+	height: 100%;
+	place-items: center;
+	background-color: #f7f7f7;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 .header {
-    display: block;
-     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #2a2e35;
-    padding: 10px;
-    height: 100px;
-    
-  }
-  
-  nav a:visited,
-  nav a:link {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  nav > ul {
-    display: inline;
-    padding: 0;
-  }
-  
-  nav > ul > li {
-    display: inline-block;
-    list-style: none;
-    margin: 0 5px 0 5px;
-    font-size: 20px;
-  }
-
-  
-
-  .li1{
-      padding: 0 0 0 38%;
-  }
-
-  .title1{
-      color: white;
-      padding: 20px 20px 50px 80px;
-      font-size: 30px;
-  }
-  .title1:hover{
-      color: #4db882;
-  }
-  .container{
-    width: 380px;
-    background-color: #2a2e35;
-    border-radius: 20px;
-    height: 500px;
-    line-height: 30px;
-    
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	padding: 10px;
+	height: 100px;
+	box-shadow: 5px 5px rgb(192, 191, 191);
 }
 
-.container .logo{
-    color: white;
-    font-size: 20px;
-    line-height: 80px;
-    background-color: #2a2e35;
-    border-radius: 15px 15px 0 0;
-    margin: 20px 0 0 0;
+nav a:visited,
+nav a:link {
+	color: #fff;
+	text-decoration: none;
 }
 
-.container .title{
-    margin: 50px 0 -10% 20%;
-
+nav > ul {
+	display: inline;
+	padding: 0;
 }
 
-.container .form{
-    padding: 10px 20px 25px 20px
+nav > ul > li {
+	display: inline-block;
+	list-style: none;
+	margin: 0 5px 0 5px;
+	font-size: 20px;
 }
 
-.container .form .div2{
-    height: 45px;
-    margin-bottom: 15px;
-    position: relative;
-    margin: 35px 0 0 0;
-    
+.li1 {
+	padding: 0 0 0 38%;
 }
 
-.container .form .div2 input{
-    color: white;
-    background-color: #454e56;
-    border-color: #454e56;
-    border-width: 0px;
-    height: 100%;
-    width: 100%;
-    padding-left: 60px;
-    font-size: 15px;
+.title1 {
+	color: black;
+	padding: 20px 20px 50px 80px;
+	font-size: 30px;
+}
+.title1:hover {
+	color: #4db882;
+}
+.container {
+	width: 380px;
+	background-color: white;
+	border-radius: 20px;
+	height: 500px;
+	line-height: 30px;
+	box-shadow: 5px 5px rgb(192, 191, 191);
 }
 
-.container .form .div2 textarea{
-    color: white;
-    background-color: #454e56;
-    border-width: 0px;
-    height: 200%;
-    width: 100%;
-    padding-top: 10px;
-    padding-left: 60px;
+.container .logo {
+	color: white;
+	font-size: 20px;
+	line-height: 80px;
+	background-color: #2a2e35;
+	border-radius: 15px 15px 0 0;
+	margin: 20px 0 0 0;
 }
 
-
-.container .form .div2 i{
-    position: absolute;
-    width: 47px;
-    height: 100%;
-    color: white;
-    font-size: 18px;
-    background-color: #00994d;
-    border: 1px solid #00994d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container .title {
+	margin: 50px 0 -10% 20%;
+	color: black;
+	background-color: white;
 }
 
-.container .form .div2 #ii{
-    position: absolute;
-    width: 47px;
-    height: 200%;
-    color: white;
-    font-size: 18px;
-    background-color: #00994d;
-    border-color:  #00994d;
-    border: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container .form {
+	padding: 10px 20px 25px 20px;
+	background-color: white;
 }
 
-
-
-.container .form .signup{
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    position: relative;
-    margin: 100px 0 0 25% ;
-    height: 40px;
-    width: 50%;
-    background-color: #00994d;
-    border-color: #00994d;
-    border-width: 0px;
-    border-radius: 20px;
+.container .form .div2 {
+	height: 45px;
+	margin-bottom: 15px;
+	position: relative;
+	margin: 35px 0 0 0;
 }
 
-.form-control, i{
-    border-radius: 20px;
+.container .form .div2 input {
+	color: white;
+	background-color: #454e56;
+	border-color: #454e56;
+	border-width: 0px;
+	height: 100%;
+	width: 100%;
+	padding-left: 60px;
+	font-size: 15px;
 }
 
-i{
-    border-radius: 20px;
+.container .form .div2 textarea {
+	color: white;
+	background-color: #454e56;
+	border-width: 0px;
+	height: 200%;
+	width: 100%;
+	padding-top: 10px;
+	padding-left: 60px;
 }
 
-.form-label{
-    margin: 40px 0 0 2%;
-    color: white;
-    font-weight: bold;
-}
-#btn1:hover{
-    background-color: #4db882;
+.container .form .div2 i {
+	position: absolute;
+	width: 47px;
+	height: 100%;
+	color: white;
+	font-size: 18px;
+	background-color: #00994d;
+	border: 1px solid #00994d;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.error{
-    color: red;
-    font-weight: lighter;
-    font-size: 13px;
+.container .form .div2 #ii {
+	position: absolute;
+	width: 47px;
+	height: 200%;
+	color: white;
+	font-size: 18px;
+	background-color: #00994d;
+	border-color: #00994d;
+	border: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container .form .signup {
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+	position: relative;
+	margin: 100px 0 0 25%;
+	height: 40px;
+	width: 50%;
+	background-color: #00994d;
+	border-color: #00994d;
+	border-width: 0px;
+	border-radius: 20px;
+}
+
+.form-control,
+i {
+	border-radius: 20px;
+}
+
+i {
+	border-radius: 20px;
+}
+
+.form-label {
+	margin: 40px 0 0 2%;
+	color: white;
+	font-weight: bold;
+}
+#btn1:hover {
+	background-color: #4db882;
+}
+
+.error {
+	color: red;
+	font-weight: lighter;
+	font-size: 13px;
 }
 
 @media screen and (max-width: 480px) {
-    .title1{
-        color: white;
-        padding: 10px 20px 10px 5px;
-        font-size: 17px;
-    }
+	.title1 {
+		color: white;
+		padding: 10px 20px 10px 5px;
+		font-size: 17px;
+	}
 
-    .container{
-        width: 300px;
-    }
-
-
+	.container {
+		width: 300px;
+	}
 }

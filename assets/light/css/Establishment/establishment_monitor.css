@@ -26,7 +26,7 @@ body {
 	padding: 0px 0 0 20%;
 	color: white;
 	font-size: 30px;
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .title1 {
@@ -43,7 +43,7 @@ body {
 	width: 450px;
 	line-height: 15px;
 	height: auto;
-    margin: 110px 0 0 0;
+	margin: 110px 0 0 0;
 }
 
 .containerss {
@@ -105,7 +105,6 @@ button {
 	height: 50px;
 	margin-bottom: 10%;
 	display: inline;
-
 }
 
 button:hover {
@@ -122,65 +121,64 @@ button:hover {
 	}
 }
 
-.container .form .div2{
-    height: 45px;
-    margin-bottom: 15px;
-    position: relative;
-    margin: 35px 0 0 0;
-    
+.container .form .div2 {
+	height: 45px;
+	margin-bottom: 15px;
+	position: relative;
+	margin: 35px 0 0 0;
 }
 
-.container .form .div2 input{
-    color: white;
-    background-color: #454e56;
-    border-color: #454e56;
-    border-width: 0px;
-    height: 100%;
-    width: 100%;
-    padding-left: 60px;
-    font-size: 15px;
+.container .form .div2 input {
+	color: white;
+	background-color: #454e56;
+	border-color: #454e56;
+	border-width: 0px;
+	height: 100%;
+	width: 100%;
+	padding-left: 60px;
+	font-size: 15px;
 	border-radius: 20px;
 }
 
-.container .form .div2 textarea{
-    color: white;
-    background-color: #454e56;
-    border-width: 0px;
-    height: 200%;
-    width: 100%;
-    padding-top: 10px;
-    padding-left: 60px;
+.container .form .div2 textarea {
+	color: white;
+	background-color: #454e56;
+	border-width: 0px;
+	height: 200%;
+	width: 100%;
+	padding-top: 10px;
+	padding-left: 60px;
 }
 
-.container .form .div2 i{
-    position: absolute;
-    width: 47px;
-    height: 100%;
-    color: white;
-    font-size: 18px;
-    background-color: #00994d;
-    border: 1px solid #00994d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container .form .div2 i {
+	position: absolute;
+	width: 47px;
+	height: 100%;
+	color: white;
+	font-size: 18px;
+	background-color: #00994d;
+	border: 1px solid #00994d;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.container .form .div2 #ii{
-    position: absolute;
-    width: 47px;
-    height: 200%;
-    color: white;
-    font-size: 18px;
-    background-color: #00994d;
-    border-color:  #00994d;
-    border: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container .form .div2 #ii {
+	position: absolute;
+	width: 47px;
+	height: 200%;
+	color: white;
+	font-size: 18px;
+	background-color: #00994d;
+	border-color: #00994d;
+	border: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.form-label{
-    margin: 40px 0 0 2%;
-    color: white;
-    font-weight: bold;
+.form-label {
+	margin: 40px 0 0 2%;
+	color: white;
+	font-weight: bold;
 }
