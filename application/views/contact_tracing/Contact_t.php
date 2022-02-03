@@ -26,7 +26,7 @@
             border-radius: 10px;
         }
         .btn:hover {
-        background-color: #00994d;
+        background-color: #4db882;
         }
         a{
             color:white;
@@ -45,7 +45,7 @@
     
         <div id="header" class="navbar">
             <div class="container">
-                <a class="header-title" href="<?php echo site_url("tracker")?>" class="navbar-brand"><strong>Establishment Traffic Control System</strong></a>
+                <a class="header-title" href="<?php echo site_url("tracker")?>" class="navbar-brand">Establishment Traffic Control System</a>
             </div> 
         </div>
         
@@ -55,7 +55,7 @@
 
 <div class="logo">  
     
-    <h4 class="title"> Contact Tracing </h4>
+    <h4 class="title"> Contact Tracing Form </h4>
 </div>
     <div class="form">  
         <div class="div1">

@@ -23,15 +23,14 @@ body {
 }
 
 .title {
-	margin: 0 0 0 25%;
-	padding-top: 40px;
+	padding: 0px 0 0 20%;
 	color: white;
 	font-size: 30px;
+    font-weight: bold;
 }
 
 .title1 {
-	margin: 10px 0 20px 40px;
-	padding: 30px 0 10px 0;
+	padding: 20px 20px 50px 80px;
 	font-weight: bold;
 }
 .title1:hover {
@@ -41,9 +40,10 @@ body {
 .container {
 	background-color: #2a2e35;
 	border-radius: 15px;
-	width: 500px;
-	line-height: 20px;
+	width: 450px;
+	line-height: 15px;
 	height: auto;
+    margin: 110px 0 0 0;
 }
 
 .containerss {
@@ -57,7 +57,7 @@ body {
 	background-color: #2a2e35;
 	height: auto;
 	max-width: 3000px;
-	padding: 20px 40px 50px 40px;
+	padding: 10px 40px 10px 40px;
 	border-radius: 15px;
 	/* width: 800px; */
 }
@@ -105,6 +105,7 @@ button {
 	height: 50px;
 	margin-bottom: 10%;
 	display: inline;
+
 }
 
 button:hover {
