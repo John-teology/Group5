@@ -60,7 +60,6 @@
             </div>
             
         </div>
-    
         <div class="wrapper">
                 <a href="<?php echo site_url("tracker/display_establishment") ?>" >
                     <button class="buto1">LEAVE ESTABLISHMENT</button>
