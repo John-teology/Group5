@@ -13,8 +13,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
     <style>
         body{
-            background-color: #1a1f22;
+            background-color:#f7f7f7;
+            
         }
+
+        .menu-bar{
+            background-color: white;
+
+        }
+
+       .title h2{
+            color: black;
+        }
+
+        .spacer{
+            background-color: #f7f7f7;
+        }
+
+        .container-xxl {
+            background-color: white;
+            color: black;
+        }
+        .col, i{
+            color: black;
+        }
+
+        .row{
+            box-shadow: 5px 5px rgb(192, 191, 191);
+        }
+
+        
         
     </style>
     <script src="<?php echo site_url("assets/JS/display_establishment.js") ?>"></script>
@@ -41,29 +69,13 @@
 
         </div>
 
-        <div class="dali">
-            <input type="checkbox" class="checkbox" id="chk" />
-            <label class="label" for="chk">
-                <i class="fas fa-moon">D</i>
-                <i class="fas fa-sun">L</i>
-                <div class="ball"></div>
-            </label>
-            
-        
-        </div>
+        <
 
         
         
     </div>
     
-    <!-- theme -->
-    <script>const chk = document.getElementById('chk');
-
-        chk.addEventListener('change', () => {
-            document.body.classList.toggle('dark');
-        });
-    </script>
-
+   
 
 
     <div class="spacer"></div>
@@ -108,7 +120,7 @@
                         ?>
                     </div>
                     <div class="col">
-                    <i class="fa fa-building-o" style="font-size:36px"></i>
+                    <!-- <i class="fa fa-building-o" style="font-size:36px"></i> -->
                          <i id="building"class="fa fa-building-o" style="font-size:36px"></i>
                             <strong><?php print_r($establishments[$i]['name']);?></strong>
                     </div>
