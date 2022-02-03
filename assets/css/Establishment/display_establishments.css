@@ -1,5 +1,14 @@
+ body{
+    background-color: #1a1f22;
+    background-position: center center;
+    background-size: cover;
+    margin-top: 100px;
+    font-family: 'Helvetica'; 
+    transition: background 0.2s linear;
+ }
 body {
-	background-color: #1a1f22;
+	/* background-color: #1a1f22; */
+  background-color: rgb(231, 222, 222);
 
 	background-size: cover;
 
@@ -17,6 +26,7 @@ body {
 	margin: 0 0 100px 0;
 	color: white;
 	position: fixed;
+  box-shadow: 5px 5px rgb(192, 191, 191) ;
 }
 
 .spacer {
@@ -33,10 +43,21 @@ body {
   font-weight: bold;
 }
 
-.menu-bar .dropdown {
-	flex: 50%;
+.menu-bar .dropdown{
+	flex: 35%;
 	padding: 0 0 0 30%;
 }
+
+.menu-bar .dali{
+  flex: 15%;
+  padding: 0 0 0 5%;
+}
+
+#profile .menu-bar .dropdown{
+  flex: 50%;
+	padding: 0 0 0 30%;
+} 
+
 
 #profile {
 	background-color: #00994d;
@@ -233,4 +254,11 @@ i{
     display: block;
     text-align: center;
   }
+
+  #usersnum {
+    margin: 0 0 0 0;
+  }
 } 
+
+
+
