@@ -15,13 +15,14 @@
 
         <style>
             body{
-                background-color: #1a1f22;
+                background-color: #f7f7f7;
             }
             button{
                 border-radius: 20px;
             }
             h2{
                 font-weight: bold;
+                color: #005c2e;
             }
             h2:hover{
                 color:#4db882;

@@ -22,6 +22,7 @@
     <style>
        h2{
            font-weight: bold;
+           color: #005c2e;
        }
        h2:hover{
            color: #4db882;

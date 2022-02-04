@@ -7,15 +7,19 @@ a {
 	text-decoration: none;
 	font-weight: normal;
 }
+strong{
+    color: black;
+}
+
 strong:hover {
-    background-color: #2a2e35;
+    background-color: white;
     color: #4db882;
   }
 body{
     display: grid;
     height: 100%;
     place-items: center;
-    background-color: #1a1f22;
+    background-color: #f7f7f7;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,7 +35,7 @@ body{
 	color: white;
 }
 .wrapper .title{
-    color: white; 
+    color: black; 
     padding: 50px 10px 0 10%;
 	font-size: 22px;
     margin: 10% 0 0 1%;
@@ -39,17 +43,18 @@ body{
 }
 .form-label{
 	font-size: 16px;
-	color: white;
+	color: black;
     font-weight: bold;
     margin: 12px 0 8px 20px;
     padding: 0 0 0 8px;
 }
 .wrapper{
     width: 380px;
-    background-color:  #2a2e35;
+    background-color: white;
     border-radius: 15px;
 	line-height: 8px;
 	margin: 30px 0 25% 0;
+    box-shadow: 5px 5px rgb(192, 191, 191);
 }
 
 .wrapper .form .div{
@@ -58,8 +63,8 @@ body{
 }
 
 .wrapper .form .div1 input{
-    color: white;
-    background-color: #454e56;
+    color: black;
+    background-color: #b3e0ca;
     border-width: 0px;
 	border-color: #454e56;
 	border-radius: 20px;
@@ -82,11 +87,12 @@ body{
 #header{
     display: flex;
 	flex-wrap: wrap;
-	background-color: #2a2e35;
+	background-color: white;
 	padding: 20px 0px 20px 0;
 	height: auto;
 	width: 100%;
 	color: white;
+    box-shadow: 5px 5px rgb(192, 191, 191);
 }
 .header-title{
     font-size: 30px;

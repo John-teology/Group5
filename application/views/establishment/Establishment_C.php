@@ -28,8 +28,11 @@
     </head>
     <style>
         .title1{
-            color: white;
+            color: #005c2e;
             font-size: 30px;
+        }
+        h3{
+            color: black;
         }
         
     </style>
