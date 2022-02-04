@@ -12,7 +12,9 @@ class Tracker extends CI_Controller {
             redirect("tracker");
         }
         unset($_SESSION['not_equal']);
-        $this->load->view("login/login");
+        $this->load->view("login/login",array(
+            "theme" => $this->session->userdata("theme"),
+        ));
     }
 
     public function login_auth()
@@ -74,7 +76,9 @@ class Tracker extends CI_Controller {
         }
         unset($_SESSION['registered']);
         unset($_SESSION['wrong']);
-        $this->load->view("register/register");
+        $this->load->view("register/register",array(
+            "theme" => $this->session->userdata("theme"),
+        ));
     }
 
 
@@ -174,7 +178,9 @@ class Tracker extends CI_Controller {
                     $est_id = $this->session->userdata("entered");
                     redirect("tracker/establishment_entry/$est_id");
                 }
-            $this->load->view('contact_tracing/contact_t_form');
+            $this->load->view('contact_tracing/contact_t_form',array(
+                "theme" => $this->session->userdata("theme"),
+            ));
         }
         else{
             $this->session->set_userdata("currentpage","tracker/contact_tracing_form");
@@ -256,6 +262,7 @@ class Tracker extends CI_Controller {
                 $data = $this->t_model->get_user_ct($user_id);
                 $this->load->view('contact_tracing/contact_t',array(
                     "data"=>$data,
+                    "theme" => $this->session->userdata("theme"),
                 ));
             }
         else{
@@ -278,6 +285,7 @@ class Tracker extends CI_Controller {
             $data = $this->t_model->get_ct_by_id($id);
             $this->load->view("contact_tracing/contact_t_update",array(
                 "data" => $data,
+                "theme" => $this->session->userdata("theme"),
             ));
         }
         else{
@@ -357,7 +365,9 @@ class Tracker extends CI_Controller {
                         $est_id = $this->session->userdata("entered");
                         redirect("tracker/establishment_entry/$est_id");
                     }
-            $this->load->view('establishment/Establishment_C');
+            $this->load->view('establishment/Establishment_C',array(
+                "theme" => $this->session->userdata("theme"),
+            ));
          }
         else{
             $this->session->set_userdata("currentpage","tracker/Establishment_Create");
@@ -428,6 +438,7 @@ class Tracker extends CI_Controller {
             $this->load->view('establishment/Establishmentown',array(
                 "data"=>$data,
                 "username" => $user,
+                "theme" => $this->session->userdata("theme"),
             ));
         }
     else{
@@ -447,7 +458,7 @@ class Tracker extends CI_Controller {
                     redirect("tracker/establishment_entry/$est_id");
                 } 
            $username = $this->session->userdata("username");
-           $user_id = $this->t_model->get_user_id($this->session->userdata("username"));
+        //    $user_id = $this->t_model->get_user_id($this->session->userdata("username"));
            $data = $this->t_model->get_establishment_by_id($establishment_id);
            if(empty($data))
            {
@@ -492,6 +503,7 @@ class Tracker extends CI_Controller {
             $data = $this->t_model->get_establishment_by_id($id);
             $this->load->view("establishment/establishment_update",array(
                 "data" => $data,
+                "theme" => $this->session->userdata("theme"),
             ));
         }
         else{
@@ -626,6 +638,7 @@ class Tracker extends CI_Controller {
                     'usserid' => $est_id,
                     "ct_id" => $user_ct_id,
                     "data" => $list,
+                    "theme" => $this->session->userdata("theme"),
 
                 ));
         }
@@ -652,7 +665,8 @@ class Tracker extends CI_Controller {
             if(empty($data))
             {
                 $this->load->view("report/ct_report",array(
-                "empty" => 0
+                "empty" => 0,
+                "theme" => $this->session->userdata("theme"),
 
                 ));
 
@@ -668,7 +682,8 @@ class Tracker extends CI_Controller {
                 $this->load->view("report/ct_report",array(
                     "data" => $contact_d,
                     "empty" => 1,
-                    "test" => $contact_id
+                    "test" => $contact_id,
+                    "theme" => $this->session->userdata("theme"),
 
                 ));
 

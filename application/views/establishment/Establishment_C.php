@@ -16,8 +16,12 @@
     <script src="<?php echo base_url('assets/js/establishment_C.js'); ?>"></script>
     <!-- For autocomplete thing -->
 
-
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/light/css/Establishment/Establishment_C.css'); ?>">
+        
+     <?php if($theme == ""){
+            $theme = 'light';
+        }
+        ?>
+        <link rel="stylesheet"type="text/css"href="<?php printf(base_url('assets/%s/css/Establishment/Establishment_C.css'),$theme);?>">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 

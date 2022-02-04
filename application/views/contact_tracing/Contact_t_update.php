@@ -12,7 +12,11 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/light/css/contact_tracing/contact_t_update.css'); ?>">
+      <?php if($theme == ""){
+            $theme = 'light';
+        }
+        ?>
+    <link rel="stylesheet"type="text/css"href="<?php printf(base_url('assets/%s/css/contact_tracing/contact_t_update.css'),$theme);?>">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
  
     <style>
