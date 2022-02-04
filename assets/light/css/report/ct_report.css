@@ -1,18 +1,19 @@
 
 body{
-    background-color: #1a1f22;
+    background-color: #f7f7f7;
     font-family: 'Helvetica';
 }
 .menu-bar{
 	display: flex;
 	flex-wrap: wrap;
-	background-color: #2a2e35;
+	background-color: white;
 	padding: 20px 0 20px 0;
 	height: auto;
 	width: 100%;
 	margin: 0 0 100px 0;
-	color: white;
+	color: #005c2e;
   font-family: 'Helvetica';
+  box-shadow: 5px 5px rgb(192, 191, 191);
 }
 
 .menu-bar .title{

@@ -53,7 +53,7 @@ nav > ul > li {
 }
 
 .title1 {
-	color: black;
+	color: #005c2e;
 	padding: 20px 20px 50px 80px;
 	font-size: 30px;
 }
@@ -73,7 +73,7 @@ nav > ul > li {
 	color: white;
 	font-size: 20px;
 	line-height: 80px;
-	background-color: #2a2e35;
+	background-color: white;
 	border-radius: 15px 15px 0 0;
 	margin: 20px 0 0 0;
 }
@@ -97,8 +97,8 @@ nav > ul > li {
 }
 
 .container .form .div2 input {
-	color: white;
-	background-color: #454e56;
+	color: black;
+	background-color: #b3e0ca;
 	border-color: #454e56;
 	border-width: 0px;
 	height: 100%;
@@ -108,8 +108,8 @@ nav > ul > li {
 }
 
 .container .form .div2 textarea {
-	color: white;
-	background-color: #454e56;
+	color: black;
+	background-color: #f7f7f7;
 	border-width: 0px;
 	height: 200%;
 	width: 100%;
@@ -134,7 +134,7 @@ nav > ul > li {
 	position: absolute;
 	width: 47px;
 	height: 200%;
-	color: white;
+	color: black;
 	font-size: 18px;
 	background-color: #00994d;
 	border-color: #00994d;
@@ -145,7 +145,7 @@ nav > ul > li {
 }
 
 .container .form .signup {
-	color: white;
+	color: black;
 	font-weight: bold;
 	font-size: 15px;
 	position: relative;
@@ -172,6 +172,10 @@ i {
 	color: white;
 	font-weight: bold;
 }
+#btn1{
+	color: white;
+}
+
 #btn1:hover {
 	background-color: #4db882;
 }
