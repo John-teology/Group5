@@ -15,7 +15,7 @@
       
     <style>
         body{
-            background-color: #1a1f22;
+            background-color:#1a1f22;
             font-family: 'Helvetica';
         }
         button{
@@ -40,6 +40,9 @@
         a:hover{
             color: white;
         }
+        .navbar{
+            color: white;
+        }
     </style>
 
 
@@ -55,7 +58,7 @@
         
     
 
-    <div class="wrapper">
+    <div class="wrappers">
 
 <div class="logo">  
     

@@ -1,6 +1,6 @@
 html,
 body {
-	background-color: #1a1f22;
+    background-color: #f7f7f7;
 }
 
 .menu-bar {
@@ -33,7 +33,7 @@ body {
 	border-radius: 20px;
 	margin: -45px auto;
 	padding: 10px;
-	height: auto;
+	height: 500px;
 	box-shadow: 5px 5px rgb(192, 191, 191);
 }
 
@@ -47,7 +47,7 @@ body {
 	border-radius: 10px;
 	margin: 10px auto;
 	padding-bottom: 30px;
-	height: auto;
+	height: 300px;
 }
 
 .arr {

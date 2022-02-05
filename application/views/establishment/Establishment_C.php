@@ -26,16 +26,7 @@
 
 
     </head>
-    <style>
-        .title1{
-            color: #005c2e;
-            font-size: 30px;
-        }
-        h3{
-            color: black;
-        }
-        
-    </style>
+   
     <body>
         <!-- i just need the link that is why -->
         <input id= "url" type="text" value="<?php echo site_url("tracker/establishment_locations");?>" hidden >

@@ -32,7 +32,7 @@ body {
 	border-radius: 20px;
 	margin: -45px auto;
 	padding: 10px;
-	height: auto;
+	height: 500px;
 }
 
 .col {
@@ -45,7 +45,7 @@ body {
 	border-radius: 10px;
 	margin: 10px auto;
 	padding-bottom: 30px;
-	height: auto;
+	height: 310px;
 }
 
 .arr {
