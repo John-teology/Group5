@@ -1,3 +1,4 @@
+
 .error {
 	color: red;
     margin: 5px 0 0 7%;
@@ -8,7 +9,7 @@ a {
 	font-weight: normal;
 }
 strong{
-    color: black;
+    color: #005c2e;
 }
 
 strong:hover {
@@ -19,13 +20,13 @@ body{
     display: grid;
     height: 100%;
     place-items: center;
-    background-color: #f7f7f7;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 18px;
     font-family: 'Helvetica';
     box-sizing: border-box;
+    background-color: white;
 }
 *{
     margin: 0;
@@ -83,7 +84,6 @@ body{
 }
 
 /* header */
-
 #header{
     display: flex;
 	flex-wrap: wrap;

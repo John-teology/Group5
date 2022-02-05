@@ -7,9 +7,10 @@
 #header {
 	position: fixed;
 	width: 100%;
-	background-color: #2a2e35;
+	background-color: white;
 	padding: 10px;
 	height: 100px;
+	box-shadow: 5px 5px rgb(192, 191, 191);
 }
 
 .div1 {
@@ -19,22 +20,25 @@
 
 html,
 body {
-	background-color: #1a1f22;
+    background-color: #f7f7f7;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin: 100px 0 0 0;
 }
 
+
 .scroll-div {
 	color: white;
 	width: 400px;
 	border-radius: 15px 15px;
-	background-color: #2a2e35;
+	background-color: white;
 	height: 450px;
 	overflow: hidden;
 	overflow-y: scroll;
+	box-shadow: 5px 5px rgb(192, 191, 191);
 }
+
 
 .but1 {
 	color: white;
@@ -45,6 +49,9 @@ body {
 	background-color: #00994d;
 	border-color: #00994d;
 	border-radius: 10px 10px;
+}
+.but1:hover{
+	background-color: #4db882;
 }
 
 .but2 {
@@ -66,7 +73,9 @@ body {
 	border-width: 0px;
 	border-radius: 20px;
 }
-
+.but3:hover{
+	background-color: #4db882;
+}
 h5 {
 	color: white;
 	text-transform: capitalize;
@@ -94,7 +103,7 @@ i {
 }
 
 .navbar-brand {
-	color: white;
+	color: #005c2e;
 	font-size: 30px;
 	flex: 50%;
 	margin: 10px 0 0 -12%;

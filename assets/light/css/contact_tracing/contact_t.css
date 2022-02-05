@@ -1,7 +1,9 @@
+
 .error {
 	color: red;
     margin: 5px 0 0 7%;
 }
+
 a {
 	color: black;
 	text-decoration: none;
@@ -20,20 +22,20 @@ body{
     display: grid;
     height: 100%;
     place-items: center;
-    background-color: #f7f7f7;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 18px;
     font-family: 'Helvetica';
-    box-sizing: border-box;
+
 }
-.wrapper .title{
+.wrappers .title{
     color: black; 
     padding: 10px 10px 0 20%;
 	font-size: 22px;
-    margin: 10% 0 0 1%;
+    margin: 5% 0 20px 1%;
     font-weight: bold;
+
 }
 .form-label{
 	font-size: 16px;
@@ -42,20 +44,22 @@ body{
     margin: 12px 0 8px 20px;
     padding: 0 0 0 8px;
 }
-.wrapper{
+.wrappers{
     width: 380px;
-    background-color:  white;
+    background-color:white;
     border-radius: 15px;
 	line-height: 8px;
-	margin: 30px 0 20px 0;
+	margin: 50px 0 20px 0;
+    padding-bottom: 20px;
+    box-shadow: 5px 5px rgb(192, 191, 191);
 }
-
 .wrapper .form .div{
     height: 50%;
     position: relative;
+    
 }
 
-.wrapper .form .div1 input{
+.wrappers .form .div1 input{
     color: black;
     background-color: #b3e0ca;
     border-width: 0px;
@@ -94,7 +98,9 @@ body{
 	text-decoration: none;
     font-family: 'Helvetica';
     font-weight: bold;
-  }
+    color: #005c2e;
+    margin-left: -2%;
+}
 
   @media screen and (max-width: 480px) {
       .header-title{

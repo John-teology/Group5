@@ -28,19 +28,19 @@ body{
 }
 
 #head{
-    background-color: #00994d;
-    border-color:#00994d ;
+    background-color: #4db882;
+    border-color:#4db882 ;
     border-width: 0px;
+    color: white;
 }
 
 #tr{
-    background-color: #2a2e35;
-    border-color:#2a2e35;
-    border-width: 0px;
+    background-color: #b3e0ca;
+    border-color: #b3e0ca;
 }
 
 td{
-    color: white;
+    color: #005c2e;
 }
 
 
@@ -54,7 +54,7 @@ td{
 
 .wrapper .wrap{
     display:table-cell;
-    background-color:#2a2e35;
+    background-color:#b3e0ca;
     height: auto;
 }
 

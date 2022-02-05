@@ -44,7 +44,7 @@
     
         <div id="header" class="navbar">
             <div class="container">
-                <a class="header-title" href="<?php echo site_url("tracker")?>" class="navbar-brand"><strong>Establishment Tracking Control System</strong></a>
+                <a class="header-title" href="<?php echo site_url("tracker")?>" class="navbar-brand"><strong>Establishment Traffic Control System</strong></a>
             </div> 
         </div>
         

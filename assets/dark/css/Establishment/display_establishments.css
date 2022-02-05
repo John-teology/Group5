@@ -6,7 +6,10 @@ body {
 	font-family: "Helvetica";
 	transition: background 0.2s linear;
 }
-
+.title h2{
+	color: white;
+	font-weight: bold;
+}
 /* header */
 .menu-bar {
 	display: flex;
