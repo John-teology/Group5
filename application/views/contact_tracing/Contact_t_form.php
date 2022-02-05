@@ -20,11 +20,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<style>
-    body{
-        background-color: white;
-    }
-</style>
+
 
     
     <?php  echo form_open("tracker/contact_tracing_auth", array(
