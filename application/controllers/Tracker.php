@@ -573,10 +573,8 @@ class Tracker extends CI_Controller {
             $this->t_model->report_to_what($this->session->userdata("report"),$data); // this will change 0 to the 1 since the user left the estblishment
             $this->session->unset_userdata('entered');
             $this->session->unset_userdata('report');
-            $list = $this->t_model->get_all_establishments();
             $this->counting_customer();
             $this->load->view("establishment/display_establishments", array(
-                "establishments" => $list,
                 "username" => $user,
                 "theme" => $this->session->userdata("theme"),
             ));
