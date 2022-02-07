@@ -117,6 +117,7 @@ class T_model extends CI_Model{
     {
         $this->db->select("*");
         $this->db->where("userID",$user_id);
+        $this->db->order_by('id', 'DESC');
         $result = $this->db->get("establishment_try")->result();
 
         return $result;
@@ -143,6 +144,7 @@ class T_model extends CI_Model{
     function get_all_establishments()
     {
         $this->db->select("*");
+        $this->db->order_by('id', 'DESC');
         $result = $this->db->get("establishment_try")->result_array();
 
         return $result;
@@ -217,6 +219,12 @@ class T_model extends CI_Model{
     {
         $this->db->where('id', $report_id);
         $this->db->update('report', $data);
+    }
+
+    function update_noCustomer($establishment_id,$data)
+    {
+        $this->db->where('id', $establishment_id);
+        $this->db->update('establishment_try', $data);
     }
 
     function get_report_status($data)
