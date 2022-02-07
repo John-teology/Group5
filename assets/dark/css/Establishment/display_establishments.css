@@ -3,7 +3,6 @@ body {
 	background-position: center center;
 	background-size: cover;
 	margin-top: 100px;
-	font-family: "Helvetica";
 	transition: background 0.2s linear;
 }
 .title h2{
@@ -26,14 +25,14 @@ body {
 .spacer {
 	height: 200px;
 	background-color: #1a1f22;
-	font-family: "Helvetica";
+	font-family: 'Arial';
 }
 
 .menu-bar .title {
 	flex: 50%;
 	padding: 0 0 0 5%;
 	margin: 10px 0 0 0;
-	font-family: "Helvetica";
+	font-family: 'Arial';
 	font-weight: bold;
 }
 
@@ -57,7 +56,7 @@ body {
 	font-weight: bold;
 	border-width: 0px;
 	margin: 10px 0 0 30%;
-	font-family: "Helvetica";
+	font-family: 'Arial';
 	transition-duration: 0.4s;
 }
 
@@ -71,7 +70,7 @@ body {
 }
 #listname {
 	color: white;
-	font-family: "Helvetica";
+	font-family: 'Arial';
 }
 #listname:hover {
 	color: #1a1f22;

@@ -25,6 +25,16 @@
 button{
     border-radius: 20px;
     text-decoration: none;
+    font-family: 'Arial';
+}
+
+.container .logo .title {
+    text-align: center;
+    margin: 30px 0 -10% 0;
+    padding: 0;
+}
+.div2{
+    margin: 0;
 }
 a{
     text-decoration: none;

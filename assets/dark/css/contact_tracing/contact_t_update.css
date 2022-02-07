@@ -20,7 +20,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 18px;
-    font-family: 'Helvetica';
+    font-family: 'Arial';
     box-sizing: border-box;
 }
 
@@ -32,7 +32,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Helvetica';
+    font-family: 'Arial';
 	color: white;
 }
 .wrapper .title{

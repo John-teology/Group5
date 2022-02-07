@@ -2,13 +2,17 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Helvetica";
+	font-family: 'Arial';
 	font-size: 15px;
+}
+.container1{
+	font-family: 'Arial';
 }
 
 body {
 	display: grid;
 	place-items: center;
+	font-family: 'Arial';
 }
 
 .menu-bar {
@@ -23,15 +27,17 @@ body {
 }
 
 .title {
-	padding: 0px 0 0 20%;
+	padding: 0px 0 0 15%;
 	color: white;
 	font-size: 30px;
     font-weight: bold;
+	font-family: 'Arial';
 }
 
 .title1 {
 	padding: 20px 20px 50px 80px;
 	font-weight: bold;
+	font-family: 'Arial';
 }
 .title1:hover {
 	color: #4db882;
@@ -51,6 +57,7 @@ body {
 	padding: 10px 0 0 0;
 	background-color: #00994d;
 	border-radius: 10px;
+	font-family: 'Arial';
 }
 
 .wrapper {
@@ -95,7 +102,9 @@ h4 {
 	font-size: 0.875rem;
 	text-decoration: none;
 }
-
+.form-label{
+	font-family: 'Arial';
+}
 button {
 	color: white;
 	font-weight: bold;

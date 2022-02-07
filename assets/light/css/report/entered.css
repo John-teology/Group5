@@ -1,8 +1,11 @@
 html,
 body {
     background-color: #f7f7f7;
+	font-family: 'Arial';
 }
-
+.boddy{
+	background-color: #f7f7f7;
+}
 .menu-bar {
 	display: flex;
 	flex-wrap: wrap;
@@ -12,7 +15,6 @@ body {
 	width: auto;
 	margin: 0 0 90px 0;
 	color: white;
-	font-family: "Helvetica";
 	box-shadow: 5px 5px rgb(192, 191, 191);
 }
 
@@ -24,9 +26,13 @@ body {
 .menu-bar .title {
 	font-weight: bold;
 	flex: 100%;
+	font-family: 'Arial';
 	padding: 0 0 0 5%;
 }
-
+.menu-bar .title #anchor{
+	color: #005c2e ;
+	font-weight: bold;
+}
 .containerf {
 	width: 400px;
 	background-color: white;

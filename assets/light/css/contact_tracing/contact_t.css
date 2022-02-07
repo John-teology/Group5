@@ -28,8 +28,11 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 18px;
-    font-family: 'Helvetica';
+    font-family: 'Arial';
 
+}
+.bodyy{
+    background-color: #f7f7f7;
 }
 .wrappers .title{
     color: black; 
@@ -37,6 +40,7 @@ body{
 	font-size: 22px;
     margin: 5% 0 20px 1%;
     font-weight: bold;
+    font-family: 'Arial';
 
 }
 .form-label{
@@ -45,6 +49,7 @@ body{
     font-weight: bold;
     margin: 12px 0 8px 20px;
     padding: 0 0 0 8px;
+    font-family: 'Arial';
 }
 .wrappers{
     width: 380px;
@@ -78,6 +83,7 @@ body{
 }
 
 .btn {
+    font-family: 'Arial';
 	margin: 20px 0 20px 40%;
 }
 /* header */
@@ -98,7 +104,7 @@ body{
 .header-title{
     font-size: 30px;
 	text-decoration: none;
-    font-family: 'Helvetica';
+    font-family: 'Arial';
     font-weight: bold;
     color: #005c2e;
     margin-left: -2%;

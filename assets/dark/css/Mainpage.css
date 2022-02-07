@@ -2,7 +2,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: "Helvetica";
+	font-family: 'Arial';
 }
 
 body {
@@ -11,7 +11,7 @@ body {
 	background-size: cover;
 	background-position: center;
 
-	font-family: 'Helvetica';
+	font-family: 'Arial';
 }
 
 
