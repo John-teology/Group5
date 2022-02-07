@@ -31,12 +31,16 @@ body{
     font-family: 'Arial';
 
 }
+.bodyy{
+    background-color: #f7f7f7;
+}
 .wrappers .title{
     color: black; 
     padding: 10px 10px 0 20%;
 	font-size: 22px;
     margin: 5% 0 20px 1%;
     font-weight: bold;
+    font-family: 'Arial';
 
 }
 .form-label{
@@ -45,6 +49,7 @@ body{
     font-weight: bold;
     margin: 12px 0 8px 20px;
     padding: 0 0 0 8px;
+    font-family: 'Arial';
 }
 .wrappers{
     width: 380px;
@@ -78,6 +83,7 @@ body{
 }
 
 .btn {
+    font-family: 'Arial';
 	margin: 20px 0 20px 40%;
 }
 /* header */

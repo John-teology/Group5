@@ -26,7 +26,10 @@ body{
     font-size: 18px;
     font-family: 'Arial';
     box-sizing: border-box;
-    background-color: white;
+    background-color: #f7f7f7;
+}
+.bodyy{
+    background-color: #f7f7f7;
 }
 *{
     margin: 0;
