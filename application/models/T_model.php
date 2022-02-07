@@ -97,13 +97,13 @@ class T_model extends CI_Model{
     function add_establishment_try($data)
     {
         
-        return $this->db->insert("establishment_try",$data);        
+        return $this->db->insert("establishment",$data);        
     }
 
     function is_user_have_ctt($user_id){
 
         $this->db->where("Id",$user_id);
-        if($this->db->get("establishment_try")->num_rows() > 0)
+        if($this->db->get("establishment")->num_rows() > 0)
         {
             return true;
         }
@@ -118,7 +118,7 @@ class T_model extends CI_Model{
         $this->db->select("*");
         $this->db->where("userID",$user_id);
         $this->db->order_by('id', 'DESC');
-        $result = $this->db->get("establishment_try")->result();
+        $result = $this->db->get("establishment")->result();
 
         return $result;
     }
@@ -127,7 +127,7 @@ class T_model extends CI_Model{
     {
         $this->db->select("*");
         $this->db->where("id",$establishment_id);
-        $result = $this->db->get("establishment_try")->row();
+        $result = $this->db->get("establishment")->row();
 
         return $result;
     }
@@ -138,14 +138,14 @@ class T_model extends CI_Model{
     function update_establishment($establishment_id,$data)
     {
         $this->db->where('id', $establishment_id);
-        $this->db->update('establishment_try', $data);
+        $this->db->update('establishment', $data);
     }
 
     function get_all_establishments()
     {
         $this->db->select("*");
         $this->db->order_by('id', 'DESC');
-        $result = $this->db->get("establishment_try")->result_array();
+        $result = $this->db->get("establishment")->result_array();
 
         return $result;
 
@@ -224,7 +224,7 @@ class T_model extends CI_Model{
     function update_noCustomer($establishment_id,$data)
     {
         $this->db->where('id', $establishment_id);
-        $this->db->update('establishment_try', $data);
+        $this->db->update('establishment', $data);
     }
 
     function get_report_status($data)
@@ -241,7 +241,7 @@ class T_model extends CI_Model{
     function delete_establishmemt($est_id)
     {
         $this->db->where('id', $est_id);
-        $this->db->delete('establishment_try');
+        $this->db->delete('establishment');
     }
      function delete_report($est_id)
     {
@@ -251,7 +251,7 @@ class T_model extends CI_Model{
 
     function search($keyword) {
         $this->db->like('name', $keyword);
-        $query = $this->db->get('establishment_try');
+        $query = $this->db->get('establishment');
         return $query->result();
     }
 
@@ -259,7 +259,7 @@ class T_model extends CI_Model{
     function establishments_location()
     {
         $this->db->select("location");
-        $result = $this->db->get("establishment_try")->result();
+        $result = $this->db->get("establishment")->result();
 
         return $result;
 
