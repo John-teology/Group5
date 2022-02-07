@@ -22,7 +22,6 @@
             <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
             <script src="<?php echo base_url('assets/js/establishment_C.js'); ?>"></script>
             <!-- For autocomplete thing -->
-
     </head>
     <body>
           <!-- i just need the link that is why -->

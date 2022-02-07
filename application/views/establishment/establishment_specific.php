@@ -21,6 +21,7 @@
     <style>
         body{
             background-color: #1a1f22;
+    
         }
 button{
     border-radius: 20px;

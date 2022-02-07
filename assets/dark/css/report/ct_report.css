@@ -1,7 +1,7 @@
 
 body{
     background-color: #1a1f22;
-    font-family: 'Helvetica';
+    font-family: 'Arial';
 }
 .menu-bar{
 	display: flex;
@@ -12,7 +12,7 @@ body{
 	width: 100%;
 	margin: 0 0 100px 0;
 	color: white;
-  font-family: 'Helvetica';
+  font-family: 'Arial';
 }
 
 .menu-bar .title{

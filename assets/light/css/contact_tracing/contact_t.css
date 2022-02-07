@@ -26,7 +26,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 18px;
-    font-family: 'Helvetica';
+    font-family: 'Arial';
 
 }
 .wrappers .title{
@@ -96,7 +96,7 @@ body{
 .header-title{
     font-size: 30px;
 	text-decoration: none;
-    font-family: 'Helvetica';
+    font-family: 'Arial';
     font-weight: bold;
     color: #005c2e;
     margin-left: -2%;

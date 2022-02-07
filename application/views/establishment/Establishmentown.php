@@ -13,12 +13,11 @@
     <link rel="stylesheet"type="text/css"href="<?php printf(base_url('assets/%s/css/Establishment/establishment_Name.css'),$theme);?>">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
 </head>
 <body>
         <div id="header" class="navbar  fixed-top">
             <div class="container">
-                <a href="<?php echo site_url("tracker")?>" class="navbar-brand"><strong>Establishment Tracking Control System</strong></a>
+                <a href="<?php echo site_url("tracker")?>" class="navbar-brand"><strong>Establishment Traffic Control System</strong></a>
                 <button class="profbut"> <?php echo $username ?><i class="fa fa-user"></i> </button>
             </div>
         </div>

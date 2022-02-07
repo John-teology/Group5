@@ -15,8 +15,7 @@
       
     <style>
         body{
-            background-color:#1a1f22;
-            font-family: 'Helvetica';
+            font-family: 'Arial';
         }
         button{
             border-radius: 10px;
