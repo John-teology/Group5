@@ -1,3 +1,6 @@
+/* 
+for dark theme */
+
 .error {
 	color: red;
     margin: 5px 0 0 7%;
@@ -22,6 +25,10 @@ body{
     font-size: 18px;
     font-family: 'Arial';
     box-sizing: border-box;
+}
+
+.bodyy{
+    background-color: #1a1f22;
 }
 .wrappers .title{
     color: white; 

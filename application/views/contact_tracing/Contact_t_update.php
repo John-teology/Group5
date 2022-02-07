@@ -21,7 +21,7 @@
  
     <style>
         body{
-            background-color: #1a1f22;
+            /* background-color: #1a1f22; */
         }
         .btn{
             background-color: #00994d;
@@ -39,7 +39,7 @@
     </style>
 
 </head>
-<body>
+<body class="bodyy">
 
     
         <div id="header" class="navbar">
