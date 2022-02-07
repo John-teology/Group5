@@ -1,0 +1,97 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Arial';
+}
+
+body {
+	background-color: #1a1f22;
+	
+	background-size: cover;
+	background-position: center;
+
+	font-family: 'Arial';
+}
+
+
+/* header */
+.menu-bar{
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #2a2e35;
+	padding: 20px 0 20px 0;
+	height: auto;
+	width: 100%;
+	margin: 0 0 100px 0;
+	color: white;
+	font-weight: bold;
+}
+
+.menu-bar .title{
+	/* padding: 0 0 0 40px; */
+	flex: 50%;
+	padding: 0 0 0 5%;
+}
+
+.menu-bar .dropdown{
+	/* padding: 0 0 0 450px; */
+	flex: 50%;
+	padding: 0 0 0 30%;
+}
+
+#profile{
+	background-color: #00994d;
+	font-weight: bold;
+	border-width: 0px;
+	 margin: 10px 0 0 30%;
+
+}
+
+@media screen and (max-width: 480px){
+	.title, .dropdown{
+		flex: 100%;
+	}
+}
+
+
+/* body */
+
+.container{
+	/* display: flex;
+	flex-wrap: wrap; */
+	background-color: #2a2e35;
+	width: 100px;
+	height: auto;
+	margin: auto;
+	padding: 20px 10px 20px 350px;
+	border-radius: 10px 10px;
+	
+}
+
+#box1{
+	background-color: #00994d;
+	margin: auto;
+	border-radius: 15px 15px;
+	height: 200px;
+	
+}
+
+#box2{
+	background-color: #00994d;
+	margin: auto;
+	border-radius: 15px 15px;
+	height: 200px;
+	
+}
+
+#box1 a, #box2 a{
+	text-decoration: none;
+	color: white;
+	
+}
+
+.createE, .viewE{
+	padding: 80px 0 0 0;
+}
+

@@ -12,7 +12,12 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/report/ct_report.css'); ?>">
+    
+    <?php if($theme == ""){
+        $theme = 'light';
+    }
+    ?>
+    <link rel="stylesheet"type="text/css"href="<?php printf(base_url('assets/%s/css/report/ct_report.css'),$theme);?>">  
 
     <style>
        h2{

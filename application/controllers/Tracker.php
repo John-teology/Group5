@@ -12,7 +12,9 @@ class Tracker extends CI_Controller {
             redirect("tracker");
         }
         unset($_SESSION['not_equal']);
-        $this->load->view("login/login");
+        $this->load->view("login/login",array(
+            "theme" => $this->session->userdata("theme"),
+        ));
     }
 
     public function login_auth()
@@ -74,7 +76,9 @@ class Tracker extends CI_Controller {
         }
         unset($_SESSION['registered']);
         unset($_SESSION['wrong']);
-        $this->load->view("register/register");
+        $this->load->view("register/register",array(
+            "theme" => $this->session->userdata("theme"),
+        ));
     }
 
 
@@ -174,7 +178,9 @@ class Tracker extends CI_Controller {
                     $est_id = $this->session->userdata("entered");
                     redirect("tracker/establishment_entry/$est_id");
                 }
-            $this->load->view('contact_tracing/contact_t_form');
+            $this->load->view('contact_tracing/contact_t_form',array(
+                "theme" => $this->session->userdata("theme"),
+            ));
         }
         else{
             $this->session->set_userdata("currentpage","tracker/contact_tracing_form");
@@ -256,6 +262,7 @@ class Tracker extends CI_Controller {
                 $data = $this->t_model->get_user_ct($user_id);
                 $this->load->view('contact_tracing/contact_t',array(
                     "data"=>$data,
+                    "theme" => $this->session->userdata("theme"),
                 ));
             }
         else{
@@ -278,6 +285,7 @@ class Tracker extends CI_Controller {
             $data = $this->t_model->get_ct_by_id($id);
             $this->load->view("contact_tracing/contact_t_update",array(
                 "data" => $data,
+                "theme" => $this->session->userdata("theme"),
             ));
         }
         else{
@@ -357,7 +365,9 @@ class Tracker extends CI_Controller {
                         $est_id = $this->session->userdata("entered");
                         redirect("tracker/establishment_entry/$est_id");
                     }
-            $this->load->view('establishment/Establishment_C');
+            $this->load->view('establishment/Establishment_C',array(
+                "theme" => $this->session->userdata("theme"),
+            ));
          }
         else{
             $this->session->set_userdata("currentpage","tracker/Establishment_Create");
@@ -428,6 +438,7 @@ class Tracker extends CI_Controller {
             $this->load->view('establishment/Establishmentown',array(
                 "data"=>$data,
                 "username" => $user,
+                "theme" => $this->session->userdata("theme"),
             ));
         }
     else{
@@ -447,7 +458,7 @@ class Tracker extends CI_Controller {
                     redirect("tracker/establishment_entry/$est_id");
                 } 
            $username = $this->session->userdata("username");
-           $user_id = $this->t_model->get_user_id($this->session->userdata("username"));
+        //    $user_id = $this->t_model->get_user_id($this->session->userdata("username"));
            $data = $this->t_model->get_establishment_by_id($establishment_id);
            if(empty($data))
            {
@@ -464,7 +475,8 @@ class Tracker extends CI_Controller {
                 "data" =>$data,
                 "userid" => $this->t_model->get_user_id($username),
                 "cust_num" => count($status),
-                "est_id" => $establishment_id
+                "est_id" => $establishment_id,
+                "theme" => $this->session->userdata("theme"),
             )) ;
             
         }
@@ -491,6 +503,7 @@ class Tracker extends CI_Controller {
             $data = $this->t_model->get_establishment_by_id($id);
             $this->load->view("establishment/establishment_update",array(
                 "data" => $data,
+                "theme" => $this->session->userdata("theme"),
             ));
         }
         else{
@@ -548,7 +561,7 @@ class Tracker extends CI_Controller {
 
     // DISPLAY ALL ESTABLISHMENT
     public function display_establishment()
-    {
+    {   
         if($this->session->userdata("username") != "")
         {
             $user = $this->session->userdata("username"); 
@@ -561,9 +574,11 @@ class Tracker extends CI_Controller {
             $this->session->unset_userdata('entered');
             $this->session->unset_userdata('report');
             $list = $this->t_model->get_all_establishments();
+            $this->counting_customer();
             $this->load->view("establishment/display_establishments", array(
                 "establishments" => $list,
                 "username" => $user,
+                "theme" => $this->session->userdata("theme"),
             ));
         }
         else{
@@ -600,7 +615,7 @@ class Tracker extends CI_Controller {
                     " est_id"=> $est_id
                     ));
                 }
-
+            
             $report = array(
                 "ct_id" => $user_ct_id,
                 " est_id"=> $est_id,
@@ -620,10 +635,12 @@ class Tracker extends CI_Controller {
             $this->session->set_userdata("report",$report_id); // this will hold the report id
 
             $list = $this->t_model->get_establishment_by_id($est_id);
+            $this->counting_customer();
             $this->load->view("report/entered", array(
                     'usserid' => $est_id,
                     "ct_id" => $user_ct_id,
                     "data" => $list,
+                    "theme" => $this->session->userdata("theme"),
 
                 ));
         }
@@ -632,9 +649,8 @@ class Tracker extends CI_Controller {
                 $this->session->set_userdata("currentpage","tracker/Establishment_entry/$est_id");
                 redirect("tracker/login");
             }
-    
     }
-
+    
     // alisin ang decrypt
     public function contact_tracing_report($est_id){
 
@@ -650,7 +666,8 @@ class Tracker extends CI_Controller {
             if(empty($data))
             {
                 $this->load->view("report/ct_report",array(
-                "empty" => 0
+                "empty" => 0,
+                "theme" => $this->session->userdata("theme"),
 
                 ));
 
@@ -666,7 +683,8 @@ class Tracker extends CI_Controller {
                 $this->load->view("report/ct_report",array(
                     "data" => $contact_d,
                     "empty" => 1,
-                    "test" => $contact_id
+                    "test" => $contact_id,
+                    "theme" => $this->session->userdata("theme"),
 
                 ));
 
@@ -687,18 +705,47 @@ class Tracker extends CI_Controller {
         redirect("tracker/Myestablishments");
     }
 
-
-    public function key() {
-        $keyword = $this->input->post('name');
-        $data['establishments'] = $this->t_model->search($keyword);
-        $this->load->view('display_results', $data);
-    }
-
-
     public function establishment_locations()
     {
         $list = $this->t_model->establishments_location();
         print_r(json_encode($list,JSON_PRETTY_PRINT));
+
+    }
+
+    public function themes()
+    {
+        $them = $this->input->post("theme");
+        $this->session->set_userdata("theme",$them);
+        redirect("tracker");
+
+    }
+
+
+    public function estab_api()
+    {
+        $list = $this->t_model->get_all_establishments();
+        print_r(json_encode($list,JSON_PRETTY_PRINT));
+
+    }
+
+    public function counting_customer(){
+        $establishments = $this->t_model->get_all_establishments();
+        for($i = 0; $i < count($establishments); $i++) {
+            $id = $establishments[$i]['id'];
+            $report = array(
+            // this will select all report that inside column is equal to 1
+            " est_id"=> $id,
+            "date_t" => date("Y-m-d"),
+            "inside" => 1
+                        );
+            $status = $this->t_model->get_report_status($report);
+            $no_of_customer = count($status);
+            $data = array(
+                "No_customer" => $no_of_customer
+            );
+            $this->t_model->update_noCustomer($id,$data);
+        }
+
 
     }
 

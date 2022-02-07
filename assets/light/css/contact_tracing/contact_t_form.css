@@ -7,43 +7,44 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Helvetica';
+    font-family: 'Arial';
 }
 
 html, body{
     display: grid;
     height: 100%;
     place-items: center;
-    /* background-image: url(../images/bg1_body.jpg); */
-    background-color: #1a1f22;;
+    background-color: #f7f7f7;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Arial';
 }
 
 .wrapper{
     width: 380px;
-    background-color: #2a2e35;
+    background-color: white;
     border-radius: 15px;
 	line-height: 30px;
 	margin: 40px 0 0 0;
+    box-shadow: 5px 5px rgb(192, 191, 191);
 
 }
 
 .wrapper .logo{
-    color: white;
     font-size: 20px;
     /* For the logo icon */
     line-height: 5px;
-    background-color: #2a2e35;
+    background-color: white;
     border-radius: 15px 15px 0 0;
-	padding: 40px 0 20px 0;
+	padding: 35px 0 0px 0;
+    
     
 
 }
 
 .wrapper .title{
-    color: white; 
+    color: black; 
     padding: 0 0 10px 20%;
 
 
@@ -71,8 +72,8 @@ html, body{
 }
 
 .wrapper .form .div1 input{
-    color: white;
-    background-color: #454e56;
+    color: black;
+    background-color: #b3e0ca;
     border-width: 0px;
 	border-color: #454e56;
 	border-radius: 20px 20px;
@@ -143,7 +144,7 @@ input{
 }
 
 .form-label{
-	color: white;
+	color: black;
     font-weight: bold;
     margin: 40px 0 0 2%;
 }

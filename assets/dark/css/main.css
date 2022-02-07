@@ -1,0 +1,105 @@
+@media screen and (min-width: 60px) {
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		font-family: 'Arial';
+	}
+
+	body {
+		background-color: #1a1f22;
+
+		background-size: cover;
+		background-position: center;
+
+		font-family: 'Arial';
+	}
+
+	.title {
+		margin: 30px 0 0 20px;
+	}
+
+	#profile {
+		margin: 5px 0 0 750px;
+	}
+	.menu-bar {
+		background-color: blue;
+		width: auto;
+		height: 50px;
+	}
+
+	.menu-bar {
+		background-color: #2a2e35;
+		margin: 0 0 70px 0;
+	}
+	.menu-bar .title {
+		font-size: 25px;
+		color: white;
+		margin: 30px 15px 0px 35px;
+		height: 70px;
+	}
+
+	/* body */
+	.bondpaper {
+		display: grid;
+		margin: -20px auto 25px;
+		background-color: #2a2e35;
+		height: auto;
+		width: 500px;
+		border-radius: 15px 15px 15px 15px;
+	}
+
+	.createE,
+	.viewE {
+		padding: 0 0 0 10px;
+
+		background-color: #00994d;
+		margin: 30px;
+		text-align: center;
+		padding: 80px;
+		border-radius: 10px;
+		color: white;
+	}
+
+	.createE {
+		text-decoration: none;
+	}
+
+	a {
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	.box1,
+	.box2 {
+		display: grid;
+		grid-template-rows: auto;
+		padding: 0 0 20px 0;
+	}
+
+	.buttn {
+		height: 50px;
+		width: 80px;
+		margin: auto;
+	}
+
+	.title {
+		margin: 0 0 20px 0;
+	}
+	.title {
+		font-size: 30px;
+	}
+
+	.profbut {
+		color: white;
+		background-color: #00994d;
+		border-width: 0px;
+		border-color: #00994d;
+		width: fit-content;
+		padding: 0px 30px;
+		height: 40px;
+		border-radius: 5px;
+		margin: 10px 10px 0 10px;
+		margin-left: -65px;
+	}
+}
