@@ -15,7 +15,8 @@
       
     <style>
         body{
-            background-color:#1a1f22;
+            /* background-color:#1a1f22; */
+            
             font-family: 'Helvetica';
         }
         button{
@@ -47,7 +48,7 @@
 
 
 </head>
-<body>
+<body class="bodyy">
 
     
         <div id="header" class="navbar">
