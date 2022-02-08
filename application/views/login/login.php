@@ -13,6 +13,7 @@
     ?>
     <link rel="stylesheet"type="text/css"href="<?php printf(base_url('assets/%s/css/login/login.css'),$theme);?>">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 
 </head>
 <body>    
@@ -28,14 +29,14 @@
 
     <div class="topnav">
         
-            <a id="glow" class="active" href="#home"><h2>Establishment Traffic Control System</h2></a>
+            <a id="glow" class="active" href="#home"><h2 id="htext">Establishment Traffic Control System</h2></a>
        
         
         <div class="login-container">
             <form action="/action_page.php">
                 <div class="input-icons">
                 <i id="icon" class="fa fa-user"></i> 
-                <input id="input" type="text"  class="form-control" name="username_txt" placeholder="Enter username" value="<?php echo set_value('username_txt') ?>">
+                <input id="input" type="text"  class="form-control" name="username_txt" placeholder="Enter username" value="<?php echo set_value('username_txt') ?>" autofocus>
                 <?php  echo form_error("username_txt","<div class='error'>","</div>"); ?>
 
                 <i id="icon" class="fa fa-lock"></i>
@@ -94,7 +95,7 @@
             <div id="div2" class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Username</label>
                 <i class="fa fa-user"></i>
-                <input type="text" class="form-control" value="<?php echo set_value("username_txt") ?>" name="username_txt" placeholder="Enter username">
+                <input id="in" type="text" class="form-control" value="<?php echo set_value("username_txt") ?>" name="username_txt" placeholder="Enter username">
                 <?php  echo form_error("username_txt","<div class='error'>","</div>"); ?>
 
             </div>
