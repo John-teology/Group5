@@ -35,10 +35,10 @@ function post() {
                         <i id="usersnum" class="fa fa-users" style="font-size:35px"></i>
                         ${estab.No_customer}
                     </div>
-                    <div class="col">
-                    <!-- <i class="fa fa-building-o" style="font-size:36px"></i> -->
-                         <i id="building"class="fa fa-building-o" style="font-size:36px"></i>
-                            <strong>${estab.name}</strong>
+
+                    <div class="col" id="estabname">
+							<i id="building"class="fa fa-building-o" style="font-size:36px"></i>
+								<strong>${estab.name}</strong>
                     </div>
 
                     <div class="col">

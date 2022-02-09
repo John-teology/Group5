@@ -68,7 +68,7 @@
                         <i class="fa fa-location-arrow"></i>
                         <input type="text" class="form-control"  
                         id="tags" name="name" placeholder="Enter your Location" value="<?php echo set_value('location_txt') ?>" >
-                        <?php  echo form_error("location_txt","<div class='error'>","</div>"); ?>
+                        <?php  echo form_error("name","<div class='error'>","</div>"); ?>
                     </div>
 
                     <div class="div2">                       

@@ -126,13 +126,15 @@ i {
 	border-radius: 20px;
 }
 
-.error {
+
+div .error {
 	font-weight: lighter;
 	font-size: 11px;
 	color: red;
-	padding: 0 0 0 2%;
+	padding-right: 50px;
 }
 
+#error_holder,
 .success {
 	font-weight: bold;
 	font-size: 12px;

@@ -37,14 +37,13 @@
                 <div class="input-icons">
                 <i id="icon" class="fa fa-user"></i> 
                 <input id="input" type="text"  class="form-control" name="username_txt" placeholder="Enter username" value="<?php echo set_value('username_txt') ?>" autofocus>
-                <?php  echo form_error("username_txt","<div class='error'>","</div>"); ?>
-
+               
                 <i id="icon" class="fa fa-lock"></i>
                 <input id="input" type="password" class="form-control"  name="password_txt" id="exampleInputPassword1" placeholder="Enter password" value="<?php echo set_value('password_txt') ?>">
-                <?php  echo form_error("password_txt","<div class='error'>","</div>"); ?>
-                
-
-            <?php if($this->session->flashdata("wrong")) { 
+              
+            
+            <button type="submit">Login</button>
+              <?php if($this->session->flashdata("wrong")) { 
             ?>
             <div class="error">
                 <?php echo $this->session->flashdata("wrong") ?>
@@ -52,14 +51,16 @@
             <?php 
             }
             ?>
-
-
-            <button type="submit">Login</button>
-
+            <div id="error_holder">
+            <?php  echo form_error("username_txt","<span class='error'>","</span>"); ?>
+            <?php  echo form_error("password_txt","<span class='error'>","</span>"); ?>
+            </div>
+             
             <?php if($this->session->flashdata("registered")) { 
             ?>
             <div class="success">   
                 <?php echo $this->session->flashdata("registered") ?>
+                
             </div>
             <?php 
             }
