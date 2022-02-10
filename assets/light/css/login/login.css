@@ -26,8 +26,9 @@ body {
 	width: 350px;
 	background-color: white;
 	border-radius: 20px;
-	margin: 90px 0 0 310px;
-	height: 500px;
+	margin: 70px 0 0 310px;
+	height: auto;
+	box-shadow: 5px 5px rgb(192, 191, 191);
 }
 
 .wrapper .logo {

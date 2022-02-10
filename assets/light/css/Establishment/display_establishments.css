@@ -11,24 +11,14 @@ body {
 #estabname,
 strong {
 	width: auto;
-	height: 200px;
+	height: auto;
 }
 
 .container-xxl {
 	background-color: white;
 	color: black;
 }
-#estabname,
-.col {
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
 
-.col {
-	padding-top: 60px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
 
 .col,
 i {
@@ -39,7 +29,9 @@ i {
 }
 
 .row {
+	background-color: white;
 	box-shadow: 5px 5px rgb(192, 191, 191);
+	border-radius: 10px;
 }
 
 /* header */
@@ -215,6 +207,7 @@ nav > ul > li {
 #globe {
 	margin: 10px 0 50px 20%;
 	padding: 5% 0 0 0;
+	
 }
 #building {
 	margin: 10px 0 20px 20%;
