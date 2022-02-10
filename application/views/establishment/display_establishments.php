@@ -38,7 +38,7 @@
             "id" => 'theForm'
         )); 
         ?>
-            <div class="theme"  style="color: black;">
+            <div class="theme"  ">
 
                 <input type="radio"  name="theme" <?php if ($theme == 'dark') { ?>checked='checked' <?php } ?> value="dark" onchange="autoSubmit();"> dark
 

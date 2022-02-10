@@ -24,10 +24,6 @@ strong {
 i {
 	color: #005c2e;
 }
-.col:hover {
-	color: #4db882;
-}
-
 .row {
 	background-color: white;
 	box-shadow: 5px 5px rgb(192, 191, 191);
