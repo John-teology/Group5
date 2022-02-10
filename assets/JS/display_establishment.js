@@ -31,19 +31,19 @@ function post() {
                 <a class="anchor" href="${specific}/${estab.id}">
                 <div class="row">
                 
-                    <div class="col">
+                    <div class="col" id = "estabname">
                         <i id="usersnum" class="fa fa-users" style="font-size:35px"></i>
                         ${estab.No_customer}
                     </div>
 
-                    <div class="col" id="estabname">
+                    <div class="col">
 							<i id="building"class="fa fa-building-o" style="font-size:36px"></i>
-								<strong>${estab.name}</strong>
+								${estab.name.slice(0, 14)}
                     </div>
 
                     <div class="col">
                         <i id="globe" class="fa fa-globe" style="font-size:35px"></i>
-                       ${estab.location}
+                       ${estab.location.slice(0, 14)}
                     </div> 
                 </div>
                 </a>

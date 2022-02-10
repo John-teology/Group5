@@ -8,19 +8,17 @@ body {
 	color: #005c2e;
 }
 
-#estabname,
-strong {
-	width: auto;
-	height: auto;
+#estabname {
+	/* vertical-align: top; */
+	display: inline;
 }
-.theme{
+.theme {
 	color: #005c2e;
 }
 .container-xxl {
 	background-color: white;
 	color: black;
 }
-
 
 .col,
 i {
@@ -205,7 +203,6 @@ nav > ul > li {
 #globe {
 	margin: 10px 0 50px 20%;
 	padding: 5% 0 0 0;
-	
 }
 #building {
 	margin: 10px 0 20px 20%;

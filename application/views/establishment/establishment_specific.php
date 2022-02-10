@@ -120,12 +120,16 @@ a{
     {
     ?>
      <div class="container">
-            <div class="logo">
-                <h3 class="title"><?php  print_r($data->name)?></h3>
-            </div>
+           
             
-            <div class="form">
-                
+                <div class="form">
+                    <div class="row">
+
+                    </div>
+                    <div class="logo">
+                            <h3 class="title"><?php  print_r($data->name)?></h3>
+                        </div>
+                        
 
                     <div class="div2">
                         <label class="form-label">Number of Customers</label>
@@ -160,14 +164,14 @@ a{
                         </div>
                         <div class="col"></div>
                     </div>
-                    </div>
+                </div>
 
              
                         
-            </div>
-            </div>  
-            <div class="bondpaper">
-                 <div class="container1">
+                    </div>
+                </div>  
+                <div class="bondpaper">
+                    <div class="container1">
                     <ul>
                         <li><a href="<?php echo site_url("tracker/Establishment_update/$data->id") ?>"><button><b>Modify</button></a></li>
                         <li><a href="<?php echo site_url("tracker/contact_tracing_report/$data->id")?>"><button><b>Contact Tracing</button></a></li>
@@ -177,7 +181,7 @@ a{
                 </div>
             </div>
 
-
+    </div>
     <?php
     }
     ?> 

@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Arial';
+	font-family: "Arial";
 }
 #header {
 	position: fixed;
@@ -11,7 +11,7 @@
 	padding: 10px;
 	height: 100px;
 	box-shadow: 5px 5px rgb(192, 191, 191);
-	font-family: 'Arial';
+	font-family: "Arial";
 }
 
 .div1 {
@@ -21,13 +21,12 @@
 
 html,
 body {
-    background-color: #f7f7f7;
+	background-color: #f7f7f7;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin: 100px 0 0 0;
 }
-
 
 .scroll-div {
 	color: white;
@@ -40,7 +39,6 @@ body {
 	box-shadow: 5px 5px rgb(192, 191, 191);
 }
 
-
 .but1 {
 	color: white;
 	width: 90%;
@@ -50,8 +48,11 @@ body {
 	background-color: #00994d;
 	border-color: #00994d;
 	border-radius: 10px 10px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
-.but1:hover{
+.but1:hover {
 	background-color: #4db882;
 }
 
@@ -74,7 +75,7 @@ body {
 	border-width: 0px;
 	border-radius: 20px;
 }
-.but3:hover{
+.but3:hover {
 	background-color: #4db882;
 }
 h5 {

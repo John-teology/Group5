@@ -69,18 +69,23 @@ nav > ul > li {
 	box-shadow: 5px 5px rgb(192, 191, 191);
 }
 
-.container .logo {
-	color: white;
+/* .container .logo .title {
+	color: black;
 	font-size: 20px;
 	line-height: 80px;
-	background-color: white;
 	border-radius: 15px 15px 0 0;
 	margin: 20px 0 0 0;
+} */
+
+.form .logo .title {
+	color: black;
+	font-size: 20px;
+	line-height: 80px;
 }
 
-.container .title {
+.logo .title {
 	margin: 50px 0 -10% 20%;
-	color: black;
+	color: red;
 	background-color: white;
 }
 
@@ -172,7 +177,7 @@ i {
 	color: white;
 	font-weight: bold;
 }
-#btn1{
+#btn1 {
 	color: white;
 }
 

@@ -47,6 +47,9 @@ html, body{
     background-color: #00994d;
     border-color: #00994d;
     border-radius: 10px 10px;
+    text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .but2{
