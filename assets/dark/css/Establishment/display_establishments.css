@@ -210,11 +210,6 @@ nav > ul > li {
 	color: #4db882;
 }
 
-.col {
-	padding-top: 60px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
 
 .container-xxl {
 	background-color: #2a2e35;
